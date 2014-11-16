@@ -5,5 +5,7 @@ $(document).ready(function(){
     'width' : 200, 
     'theme' : 'random' 
   });
+  
+  DET HER ER NYT!!
 
 });
