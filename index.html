@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+  
 <head>
   
   <title>The Projectbank</title>
@@ -12,11 +13,16 @@
 
 </head>
   
+
 <body>
+  
+  <header>
+  
+  </header>
 
   <div id="wrapper">
     
-    <a href=#>
+    <a href="company_no_login.html">
       <div id="companybox">
         <div id="companybox-text">
 <!--          <p>Er du</p>-->
@@ -30,29 +36,26 @@
     </a>
     
     <div id="c-or-s">
-      <p>eller</p>
+<!--      <p>eller</p>-->
       <div id="divider_line"></div>
     </div>
     
-    <a href=#>
-      <div id="login_btn">
-        <h5>Log Ind</h5>
-      </div>
-    </a>
+
+    <div id="login_btn">
+      <h5>Log Ind</h5>
+    </div>
+
     <form id="login_form" action="my_site.html" method="post">
       <i id="close-login-form" class="fa fa-close"></i>
       <input type="text" name="username" placeholder="Brugernavn">
       <input type="text" name="password" placeholder="Kodeord">
-      <div id="login-radios">
-        <input type="radio" name="com-or-stud" id="radio-com" value="virksomhed">
-        <label for="radio-com">Virksomhed</label>
-        <input type="radio" name="com-or-stud" id="radio-stu" value="studerende">
-        <label for="radio-stu">Studerende</label>
-      </div>  
+      <input type="radio" name="com-or-stud" id="radio-com" value="virksomhed">
+      <label for="radio-com">Virksomhed</label>
+      <input type="radio" name="com-or-stud" id="radio-stu" value="studerende">
+      <label for="radio-stu">Studerende</label>
       <input type="submit" value="Log Ind">
     </form>
-      
-
+    
     
     <a href=#>
       <div id="studentbox">
@@ -67,11 +70,35 @@
     </a>
   
   </div>
+  
+  <footer>
+    <div id="footer">
+      <div id="footer-left">
+        <div id="contact-info">
+          <strong>Projektbanken</strong>
+          <p class="contact-info">
+            <a href="mailto:goddaw@projektbanken.dk?Subject=Goddaw">goddaw@projektbanken.dk</a><br>
+            +45 49 82 73 39
+          </p>
+        </div>
+      </div>
+      <div id="footer-divider"></div>
+      <div id="footer-right">
+        <div id="sm-icons">
+          <a href="http://www.twitter.com"><i id="twitter" class="sm fa fa-twitter"></i></a>
+          <a href="http://www.facebook.com"><i id="facebook" class="sm fa fa-facebook"></i></a>
+          <a href="http://www.linkedin.com"><i id="linked_in" class="sm fa fa-linkedin"></i></a>
+          <a href="http://www.instagram.com"><i id="instagram" class="sm fa fa-instagram"></i></a>
+        </div>
+      </div>  
+    </div>
+  </footer>
 
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jquery-ui.js"></script>
   
 </body>
+  
 
 </html>
