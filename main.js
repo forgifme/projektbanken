@@ -44,8 +44,10 @@ $(document).ready(function(){
   
 // ---------- Log ind dropdown -----------------
   
+  $("#login_form").hide();
+  
   $("#login_btn").click(function(){
-    $("#login_form").toggle().css('visibility', 'visible'); 
+    $("#login_form").toggle();
   });
   
   $('#close-login-form').click(function(){
