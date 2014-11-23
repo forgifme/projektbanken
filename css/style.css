@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-a, p, h1, h2, h3, h4, h5, h6, input, label, #contact-info {
+a, p, h1, h2, h3, h4, h5, h6, svg, input, label, #contact-info {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 0.03em;
@@ -106,7 +106,7 @@ h6 {
   display: block;
   height: 2px;
   width: 0;
-  background-color: #ddd;
+  background-color: #ccc;
   margin: 0 auto;
 }
 
@@ -164,7 +164,7 @@ h6 {
   width: 100px;
   background-color: white;
   z-index: 100;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 4px;
   text-transform: uppercase;
   /* Hack for at centrere absolute-div */
@@ -188,8 +188,8 @@ h6 {
   top: 130px;
   width: 240px;
   padding: 20px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background-color: white;
   z-index: 110;
   /* Hack for at centrere absolute-div */
@@ -201,7 +201,7 @@ h6 {
 
 #close-login-form {
   position: absolute;
-  color: #eee;
+  color: #ccc;
   top: 5px;
   right: 5px;
 }
@@ -219,7 +219,7 @@ h6 {
 #login_form input[type="text"],
 #login_form input[type="submit"] {
   display: block;
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
   width: 200px;
@@ -276,15 +276,16 @@ label {
   width: 1px;
   height: 100%;
   margin: 0 auto;
-  border-left: 1px dashed #ddd;
+  border-left: 1px dashed #ccc;
 }
 
 #footer {
-  position: relative;
+  position: absolute;
   display: block;
   width: 100%;
   height: 300px;
-  background-color: rgb(225,245,230);
+  background-color: rgb(200,230,220);
+  z-index: 0;
 }
 
 #footer-left {
@@ -357,24 +358,43 @@ label {
 
 /*----------------- Page: company-no-login.html -----------------------*/
 
+#wrapper_not_frontpage {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 1500px;
+}
+
 #descr-and-create-acc-btn {
+  position: relative;
   display: block;
   height: 400px;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
 #description {
   position: relative;
+  display: block;
   float: left;
-  width: 600px;
-  height: 80%;
-  top: 10%;
+  width: 70%;
+  height: 100%;
   float: left;
 }
 
+#description h1 {
+  margin: 60px 0 0 20px;
+  padding: 10px;
+}
+
 #description p {
-  margin-top: -10px;
+  margin: 0px 20px;
+  padding: 10px;
+}
+
+#create-account-btn {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  float: left;
 }
 
 #create-account-btn h5 {
@@ -382,16 +402,215 @@ label {
   text-align: center; 
   padding: 10px;
   width: 100px;
-  top: 160px;
+  top: 180px;
+  margin: 0 auto;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 4px;
   text-transform: uppercase;
-  float: right;
 }
 
 #create-account-btn h5:hover {
   color: #fff;
   background-color: rgb(212, 62, 73);
 }
+
+#intro-3btn {
+  position: relative;
+  display: block;
+  width: 70%;
+  height: 320px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 100;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-3btn-content {
+  position: relative;
+  width: 33.33333333333%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+#three-ways {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#see-stud-projects {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Alternative for animated #underline */
+/*
+#three-ways:hover,
+#others-use:hover,
+#see-stud-projects:hover {
+  border-bottom: 10px solid #ccc;
+} 
+*/
+
+.icon-3btn {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 8em;
+  font-weight: 100;
+  color: rgb(212,62,73);
+  margin-top: 50px;
+  z-index: 100;
+}
+
+#three {
+  position: absolute;
+  width: 100%;
+  font-size: 10em; 
+  font-weight: 600;
+  line-height: 0em;
+  top: 65px;
+}
+
+.underline {
+  position: absolute;
+  bottom: 5%;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Underlines, being actual lines */
+/*
+#underline3,
+#underline4,
+#underline5 {
+  height: 4px;
+  width: 0;
+  background-color: #ccc;
+  margin: 30px auto;
+}
+*/
+
+/* Boxes as alternatives to underines */
+#underline3,
+#underline4,
+#underline5 {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.whitebox-hor,
+.whitebox-ver {
+  position: absolute;
+  z-index: 50;
+  background-color: white;
+}
+
+.whitebox-hor {
+  width: 100%;
+  height: 80%;
+  top: 10%;
+}
+
+.whitebox-ver {
+  width: 80%;
+  height: 100%;
+  left: 10%;
+}
+
+.intro-3btn-content p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+  bottom: 35px;
+  z-index: 100;
+}
+
+#intro-3btn-content {
+  position: relative;
+  display: block;
+  width: 65%;
+  margin: 100px auto;
+}
+
+#three-ways-content,
+#others-use-content,
+#stud-projects-content {
+  position: relative;
+  display: block;
+  margin: 50px 0 50px 0;
+  width: 50%;
+  z-index: 100;
+  clear: both;
+}
+
+#three-ways-content,
+#stud-projects-content{
+  float: left;
+}
+
+#others-use-content {
+  float: right;
+}
+
+#footer_not_frontpage {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  height: 300px; /* Hvis dette ændres skal padding på "wrapper" ændres */
+  background-color: rgb(200,230,220);
+  z-index: 0; 
+}
+
+/*----------------- Page: my-page.html -----------------------*/
+
+/* Wheel */
+
+svg {
+  font-size: 0.6em;
+  display: block;
+}
+
+.tagwheel-arla-wrapper {
+  position: relative;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#tagwheel-arla-wrapper-2 {
+  position: relative;
+  width: 250px;
+}
+
+#tagwheel-arla-wrapper-2 h3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center; 
+}
+
+#tagwheel-arla-wrapper-2 div {
+  width: 210px;
+  margin: 0 auto;
+}
+
   
