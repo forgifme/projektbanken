@@ -363,6 +363,14 @@ label {
   height: 1500px;
 }
 
+#bg-descr-company {
+  position: absolute;
+  background: url("../img/blyant_spids.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+}
+
 #descr-and-create-acc-btn {
   position: relative;
   display: block;
@@ -383,11 +391,13 @@ label {
 #description h1 {
   margin: 60px 0 0 20px;
   padding: 10px;
+  color: #fff;
 }
 
 #description p {
   margin: 0px 20px;
   padding: 10px;
+  color: #fff;
 }
 
 #create-account-btn {
@@ -404,15 +414,15 @@ label {
   width: 100px;
   top: 180px;
   margin: 0 auto;
-  background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 4px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 #create-account-btn h5:hover {
-  color: #fff;
-  background-color: rgb(212, 62, 73);
+  color: rgb(212, 62, 73);
+  background-color: #fff;
 }
 
 #intro-3btn {
@@ -424,11 +434,7 @@ label {
   border: 1px solid #ccc;
   border-radius: 4px;
   z-index: 100;
-  /* Hack for at centrere absolute-div */
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 60px auto;
 }
 
 .intro-3btn-content {
