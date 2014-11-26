@@ -10,68 +10,30 @@
   <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-
+  <link rel="stylesheet" href="css/wheel.css">
+  
 </head>
   
 
 <body>
   
   <header>
-  
+    
   </header>
 
   <div id="wrapper">
     
-    <a href="company_no_login.html">
-      <div id="companybox">
-        <div id="companybox-text">
-<!--          <p>Er du</p>-->
-          <h2>Virksomhed
-            <div id="underline1"></div>
-          </h2>
-          
-          <i id="icon-company" class="fa fa-building"></i>
-        </div>
+    <div class="tagwheel-arla-wrapper" id="tagwheel-arla">
+      <div id="tagwheel-arla-wrapper-2">
+        <h3>Arlas tags</h3>
+        <div class="tagwheel"></div>
       </div>
-    </a>
-    
-    <div id="c-or-s">
-<!--      <p>eller</p>-->
-      <div id="divider_line"></div>
     </div>
     
-
-    <div id="login_btn">
-      <h5>Log Ind</h5>
-    </div>
-
-    <form id="login_form" action="my_site.html" method="post">
-      <i id="close-login-form" class="fa fa-close"></i>
-      <input type="text" name="username" placeholder="Brugernavn">
-      <input type="text" name="password" placeholder="Kodeord">
-      <input type="radio" name="com-or-stud" id="radio-com" value="virksomhed">
-      <label for="radio-com">Virksomhed</label>
-      <input type="radio" name="com-or-stud" id="radio-stu" value="studerende">
-      <label for="radio-stu">Studerende</label>
-      <input type="submit" value="Log Ind">
-    </form>
-    
-    
-    <a href=#>
-      <div id="studentbox">
-        <div id="studentbox-text">
-<!--          <p>Er du</p>-->
-          <h2>Studerende
-              <div id="underline2"></div>
-          </h2>
-          <i id="icon-student" class="fa fa-graduation-cap"></i>
-        </div>
-      </div>
-    </a>
-  
   </div>
   
   <footer>
+    
     <div id="footer">
       <div id="footer-left">
         <div id="contact-info">
@@ -92,13 +54,20 @@
         </div>
       </div>  
     </div>
+    
   </footer>
 
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script src="js/d3.v2.js"></script> <!-- script bag wheel script -->
+  <script src="js/wheel.js"></script>
+  
+  <script type="text/javascript">
+    drawPie("ArlaTags", dataSet1, "#tagwheel-arla .tagwheel", "colorScale20", 10, 100, 50, 0);
+  </script>
   
 </body>
   
-
+  
 </html>
