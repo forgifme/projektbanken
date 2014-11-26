@@ -4,6 +4,12 @@
        url('fonts/roboto/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/bitter/Bitter-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/bitter/Bitter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 /* Margin and padding reset */
 
 html, body {
@@ -16,7 +22,15 @@ a {
   text-decoration: none;
 }
 
-a, p, h1, h2, h3, h4, h5, h6, svg, input, label, #contact-info {
+h1, h2, h3 {
+  font-family: Bitter, sans-serif;
+/*  font-style: italic;*/
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a, p, h4, h5, h6, svg, input, label, blockquote, #contact-info {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 0.03em;
@@ -52,6 +66,17 @@ h5 {
 
 h6 {
   font-size: .8em;
+}
+
+blockquote {
+  font-size: 1.8em;
+  font-style: italic;
+  color: #222;
+}
+
+.quotationmark {
+  font-size: 8em;
+  color: rgb(212,62,73);
 }
 
 #wrapper {
@@ -284,13 +309,13 @@ label {
   display: block;
   width: 100%;
   height: 300px;
-  background-color: rgb(200,230,220);
+  background-color: rgb(140, 200, 220);
   z-index: 0;
 }
 
 #footer-left {
   position: relative;
-  width: 50%;
+  width: 45%;
   margin: 100px auto;
   float: left;
 }
@@ -327,16 +352,12 @@ label {
   top: 20%;
   height: 60%;
   border-left: 1px solid #fff;
-  /* Hack for at centrere absolute-div */
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  left: 45%;
 }
 
 #footer-right {
   position: relative;
-  width: 50%;
+  width: 55%;
   margin: 100px auto;
   float: left;
 }
@@ -345,7 +366,7 @@ label {
   position: relative;
   display: block;
   width: 330px;
-  margin-left: 60px;
+  margin-left: 90px;
 }
 
 .sm {
@@ -358,17 +379,49 @@ label {
 
 /*----------------- Page: company-no-login.html -----------------------*/
 
+
+/* Hack to keep footer at bottom */
 #wrapper_not_frontpage {
   padding-bottom: 300px; /* Højde på footer! */
-  height: 1500px;
+  height: 3000px;
+}
+
+#to-top {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  z-index: 1000;
+  padding: 10px;
+  padding-right: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #222;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom: 1px solid rgba(212, 62, 73, 0.3);
+}
+
+#to-top:hover {
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  padding-bottom: 12px;
 }
 
 #bg-descr-company {
   position: absolute;
-  background: url("../img/blyant_spids.jpg") no-repeat;
+  background: url("../img/blyant_papir.jpg") no-repeat;
   background-size: cover;
+  background-clip: rect(100%, 100px);
   width: 100%;
-  height: 550px;
+  height: 75%;
+  /* Spejlvend billede */
+/*
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+*/
 }
 
 #descr-and-create-acc-btn {
@@ -391,38 +444,41 @@ label {
 #description h1 {
   margin: 60px 0 0 20px;
   padding: 10px;
-  color: #fff;
+  color: rgb(212, 62, 73);
 }
 
 #description p {
   margin: 0px 20px;
   padding: 10px;
-  color: #fff;
+  color: #222;
 }
 
-#create-account-btn {
+.create-account-btn {
   position: relative;
   width: 30%;
   height: 100%;
   float: left;
 }
 
-#create-account-btn h5 {
+.create-account-btn h5 {
   position: relative;
   text-align: center; 
+  font-weight: 400;
   padding: 10px;
   width: 100px;
   top: 180px;
   margin: 0 auto;
-  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+/*  border: 1px solid rgba(212, 62, 73, .5);*/
   border-radius: 4px;
   text-transform: uppercase;
-  color: #fff;
+  color: rgba(212, 62, 73);
 }
 
-#create-account-btn h5:hover {
-  color: rgb(212, 62, 73);
-  background-color: #fff;
+.create-account-btn h5:hover {
+  color: #fff;
+  background-color: rgba(212, 62, 73, 0.75);
+/*  border: 1px solid rgba(0,0,0,0);*/
 }
 
 #intro-3btn {
@@ -431,13 +487,14 @@ label {
   width: 70%;
   height: 320px;
   background-color: #fff;
-  border: 1px solid #ccc;
+/*  border: 1px solid #ccc;*/
   border-radius: 4px;
   z-index: 100;
   margin: 60px auto;
+  margin-bottom: 250px;
 }
 
-.intro-3btn-content {
+.intro-3btn {
   position: relative;
   width: 33.33333333333%;
   height: 100%;
@@ -538,7 +595,7 @@ label {
   left: 10%;
 }
 
-.intro-3btn-content p {
+.intro-3btn p {
   position: absolute;
   width: 100%;
   text-align: center;
@@ -547,33 +604,201 @@ label {
   opacity: 0.9;
   bottom: 35px;
   z-index: 100;
+  color: #222;
 }
 
-#intro-3btn-content {
+.intro-3btn-content {
   position: relative;
   display: block;
   width: 65%;
   margin: 100px auto;
+  /* Hack til at lade højden være det som content'et er */
+  min-height: 10px;
+  overflow: hidden;
 }
 
-#three-ways-content,
-#others-use-content,
-#stud-projects-content {
+.content-splitter-text {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 22px;
+}
+
+#twc-header h2 {
+  padding-bottom: 20px;
+  margin-top: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#three-ways-content {
   position: relative;
   display: block;
-  margin: 50px 0 50px 0;
-  width: 50%;
-  z-index: 100;
+  width: 100%;
   clear: both;
+  color: #222;
+  /* Hack til at lade højden være det som content'et er */
+  min-height: 10px;
 }
 
-#three-ways-content,
-#stud-projects-content{
+#three-ways-content h3 {
+  position: relative;
+  padding-left: 5%;
+  width: 45%;
+}
+
+#three-ways-content-1,
+#three-ways-content-2,
+#three-ways-content-3 {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 100px 0;
+}
+
+#three-ways-content-1 p,
+#three-ways-content-2 p,
+#three-ways-content-3 p {
+  width: 45%;
+  float: left;
+  display: block;
+  padding: 0 5%;
+}
+  
+.bg-twc {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+
+#bg-twc-1 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+
+#bg-twc-2 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
   float: left;
 }
 
-#others-use-content {
-  float: right;
+#bg-twc-3 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+
+#twc-create-account {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 50px 0;
+}
+
+#twc-create-account h5 {
+  top: 0;
+  border: 1px solid #ccc;
+}
+
+#twc-create-account h5:hover {
+  background-color: rgb(212,62,73);
+  border: 1px solid rgb(212,62,73);
+}
+
+.content-splitter {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: rgb(140, 200, 220);
+/*
+  background: url(../img/blyantspidser_gammeldags.jpg);
+  background-size: cover;
+*/
+}
+
+.whitebox-content-splitter {
+  width: 75%;
+  height: 6px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.content-splitter h2 {
+  top: -50px;
+  height: 0;
+  width: 65%;
+  color: rgb(140, 200, 220);
+}
+
+#twc-splitter {
+  background: rgb(212,62,73);
+}
+
+#twc-splitter h2 {
+  color: rgb(212,62,73);
+}
+
+.quoteblock-others-use {
+  position: absolute;
+  right: 0;
+  width: 45%;
+  height: 140px;
+  z-index: 100;
+}
+
+#quotemark-others-use {
+  height: 100%;
+  position: absolute;
+  float: left;
+  color: rgb(140, 200, 220);
+}
+
+#quote-others-use {
+  position: relative;
+  float: left;
+  width: 80%;
+  padding-left: 20px;
+  margin: 70px 120px;
+}
+
+#others-use-1 {
+  position: relative;
+  margin: 50px 0;
+  width: 60%;
+  height: 400px;
+  color: #222;
+}
+
+#bg-twc-4 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+  height: 50%;
+  width: 100%;
+}
+
+#others-use-1 p {
+  padding-top: 40px;
+  width: 100%;
+  clear: both;
+}
+
+#ouc-create-account {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 50px 0;
+}
+
+#ouc-create-account h5 {
+  color: rgb(140, 200, 220);
+  top: 0;
+  border: 1px solid #ccc;
+}
+
+#ouc-create-account h5:hover {
+  color: #fff;
+  background-color: rgb(140, 200, 220);
+  border: 1px solid rgb(140, 200, 220);
 }
 
 #footer_not_frontpage {
@@ -582,7 +807,7 @@ label {
   margin-bottom: 0;
   width: 100%;
   height: 300px; /* Hvis dette ændres skal padding på "wrapper" ændres */
-  background-color: rgb(200,230,220);
+  background-color: rgb(140, 200, 220);
   z-index: 0; 
 }
 

@@ -56,6 +56,22 @@ $(document).ready(function(){
       
 });
 
+// --------- To-top button: show after scroll --------
+
+  $('#to-top').hide();
+
+  $(window).scroll(function() { 
+    if($(window).scrollTop() > 100) {
+      $('#to-top').fadeIn('slow');
+    }
+  })
+  
+  $(window).scroll(function() { 
+    if($(window).scrollTop() < 100) {
+      $('#to-top').fadeOut('fast');
+    }
+  })
+
 // ---------- Animated stroke under intro-3btn (company) -----------
 
 //  var underlineWidth = '10%';
