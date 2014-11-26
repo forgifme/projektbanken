@@ -1,48 +1,115 @@
 <!DOCTYPE html>
+
 <html>
 
-<head>
-  
-  <title>The Projectbank</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/statiSquare.css" media="all">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-
-</head>
-  
-<body>
-
-  <div id="wrapper">
+  <head>
+   
+    <title>Min side | Projektbanken</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+<!--    <link rel="stylesheet" type="text/css" href="ggl.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="css/layout.css"> -->
+<!--    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" href="css/jquery-ui.css">-->
+<!--    <link rel="stylesheet" href="css/responsive.css">-->
     
-    <a href=#>
-      <div id="virksomhedsboks">
-        <div id="virksomhedsboks-tekst">
-          <p>Er du</p>
-          <h2>Virksomhed</h2>
+  </head>	
+   
+  <body>
+    <div id="wrapper">
+    
+      <header id="header">
+        <div id="nav">
+          <a title="Home" href="/index.html">Hjem</a>
+          <ul>
+            <li class="New project">
+              <a title="New project" href="/NewProject">Nyt projekt</a>
+            </li>
+            <li class="Projects & members">
+              <a title="Projects & members" href="/Projects">Projekter og medlemmer</a>
+            </li>
+            <li class="Historik">
+              <a title="Projects & members" href="/Projects">Articles</a>
+            </li>
+            <li class="Rediger profil">..</li>
+          </ul>
+        </div> 
+      </header>
+    
+      <div id="myStudPage">
+        <h2>Dine oplysninger</h2>
+
+        <div id="personalContent">
+          <a href="modalLeft">
+            <section id="personalInfo">
+              <h3>Personlige oplysninger</h3>
+                <div class="boxLeft">
+                  <h4>Navn og alder</h4>
+                </div>
+                <div class="boxLeft">
+                  <h4>Universitet/studiested<h4>
+                </div>
+                <div class="boxLeft">
+                  <h4>Studd.retning<h4>
+                </div>
+                <div class="boxLeft">
+                  <h4>Pers. beskriv.<h4>
+                </div>
+                <div class="boxLeft">
+                  <h4>Beskrv. af stud.retng.<h4>
+                </div>   
+            </section>
+          </a>
+          <a href="modalMiddle">
+            <section id="activeProjects">
+              <h3>Nuværende projekter</h3>
+              <p>Generisk "Google cards" med info om projekter her</p>
+            </section>
+          </a>
+          <a href="modalRight">         
+            <section id="previousProjects">
+              <h3>Historik</h3>
+              <p>Liste over tidligere projekter</p>
+            </section>
+          </a>
         </div>
+                <!-- This is code for modal view -->
+        <div id="openModal" class="modalDialog">
+	    
+        </div>
+
       </div>
-    </a>
+
+              
+              
+<!--  Dette er kode til Material design input-box            -->
+      <div id="materialBox">
+        <form>
+          <div id="materialContent">
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Name</label>
+            </div>
+            <div class="group">
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <p>Insert awesome footer here!</p>
+      </footer>
     
-    <div id="v-eller-s">
-      <p>eller</p>
     </div>
-    
-    <a href=#>
-      <div id="studenterboks">
-        <div id="studenterboks-tekst">
-          <p>Er du</p>
-          <h2>Studerende</h2>
-        </div>
-      </div>
-    </a>
-  
-  </div>
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="js/statiSquare.min.js"></script>
-  <script src="js/main.js"></script>
-
-</body>
+                  
+    <script src="js/jquery-ui.js"></script>      
+                  
+  </body>
 
 </html>
