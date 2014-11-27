@@ -12,6 +12,26 @@ var hoverColor = "White";
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"}];
 
+      var dataSet2 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet3 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet4 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
 // Tagwheel MED labels
 //      var dataSet1 = [
 //        {legendLabel: "Legend String 1", magnitude: 1, link: "index.html"},

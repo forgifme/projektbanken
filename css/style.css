@@ -30,7 +30,7 @@ h1, h2, h3 {
   color: rgb(212,62,73);
 }
 
-a, p, h4, h5, h6, svg, input, label, blockquote, #contact-info {
+a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 0.03em;
@@ -68,15 +68,28 @@ h6 {
   font-size: .8em;
 }
 
-blockquote {
+ul {
+  list-style: none;
+}
+
+blockquote p {
   font-size: 1.8em;
+  line-height: 1.4em;
   font-style: italic;
   color: #222;
+  position: absolute;
 }
 
 .quotationmark {
   font-size: 8em;
   color: rgb(212,62,73);
+}
+
+.quote-source {
+  font-size: 1em;
+  line-height: 1em;
+  color: #ccc;
+  top: 100px;
 }
 
 #wrapper {
@@ -334,7 +347,7 @@ label {
 
 #contact-info strong {
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.2em;w
   padding-bottom: 6px;
   border-bottom: 1px solid white;
 }
@@ -381,7 +394,7 @@ label {
 
 
 /* Hack to keep footer at bottom */
-#wrapper_not_frontpage {
+.wrapper_not_frontpage {
   padding-bottom: 300px; /* Højde på footer! */
   height: 3000px;
 }
@@ -612,7 +625,7 @@ label {
   display: block;
   width: 65%;
   margin: 100px auto;
-  /* Hack til at lade højden være det som content'et er */
+  /* Hack to follow height of content */ 
   min-height: 10px;
   overflow: hidden;
 }
@@ -636,19 +649,11 @@ label {
   width: 100%;
   clear: both;
   color: #222;
-  /* Hack til at lade højden være det som content'et er */
+  /* Hack to follow height of content */ 
   min-height: 10px;
 }
 
-#three-ways-content h3 {
-  position: relative;
-  padding-left: 5%;
-  width: 45%;
-}
-
-#three-ways-content-1,
-#three-ways-content-2,
-#three-ways-content-3 {
+.three-ways-content {
   display: block;
   position: relative;
   width: 100%;
@@ -656,20 +661,32 @@ label {
   margin: 100px 0;
 }
 
-#three-ways-content-1 p,
-#three-ways-content-2 p,
-#three-ways-content-3 p {
+#three-ways-content h3 {
+  position: absolute;
+  padding: 0 20px;
   width: 45%;
-  float: left;
-  display: block;
-  padding: 0 5%;
 }
-  
+
+#three-ways-content p {
+  position: absolute;
+  width: 45%;
+  padding: 0 20px;
+  top: 60px; 
+}
+
 .bg-twc {
-  position: relative;
-  float: left;
-  width: 40%;
+  position: absolute;
+  width: 45%;
   height: 100%;
+}
+
+/* twc-content box 1 */
+#three-ways-content-1 h3 {
+  right: 0;
+}
+
+#three-ways-content-1 p {
+  right: 0;
 }
 
 #bg-twc-1 {
@@ -677,10 +694,25 @@ label {
   background-size: cover; 
 }
 
+/* twc-content box 2 */
+#three-ways-content-2 p {
+  left: 0;
+}
+
 #bg-twc-2 {
+  right: 0;
   background: url("../img/blyant_papir.jpg") no-repeat;
   background-size: cover; 
   float: left;
+}
+
+/* twc-content box 3 */
+#three-ways-content-3 h3 {
+  right: 0;
+}
+
+#three-ways-content-3 p {
+  right: 0;
 }
 
 #bg-twc-3 {
@@ -761,26 +793,48 @@ label {
   margin: 70px 120px;
 }
 
-#others-use-1 {
+.others-use-content {
+  display: block;
   position: relative;
-  margin: 50px 0;
   width: 60%;
-  height: 400px;
-  color: #222;
+  height: 500px;
+  margin: 100px 0;
 }
 
-#bg-twc-4 {
-  background: url("../img/blyant_papir.jpg") no-repeat;
-  background-size: cover; 
-  height: 50%;
+.others-use-content h3 {
+  position: absolute;
+  padding: 40px 0 0 0;
   width: 100%;
+  color: rgb(140, 200, 220);
+}
+
+.others-use-content p {
+  position: absolute;
+  width: 100%;
+  padding: 0 0 20px 0;
+}
+
+.bg-ouc {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+/* ouc-content box 1 */
+#others-use-1 h3 {
+  top: 225px;
 }
 
 #others-use-1 p {
-  padding-top: 40px;
-  width: 100%;
-  clear: both;
+  bottom: 0;
 }
+
+#bg-ouc-1 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+/* ou-content box 1 end */
+
 
 #ouc-create-account {
   position: relative;
@@ -811,7 +865,7 @@ label {
   z-index: 0; 
 }
 
-/*----------------- Page: my-page.html -----------------------*/
+/*----------------- Page: projects.html -------------------*/
 
 /* Wheel */
 
@@ -820,28 +874,297 @@ svg {
   display: block;
 }
 
-.tagwheel-arla-wrapper {
-  position: relative;
-  display: block;
+.tags-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.tags-wrap p,
+.tags-wrap h4 {
+  position: absolute;
   width: 70%;
-  margin: 0 auto;
+  text-align: right; 
+  right: 280px;
+  color: #222;
 }
 
-#tagwheel-arla-wrapper-2 {
-  position: relative;
-  width: 250px;
+.tags-wrap p {
+  top: 25px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #ccc;
 }
 
-#tagwheel-arla-wrapper-2 h3 {
-  position: relative;
-  display: block;
-  width: 100%;
-  text-align: center; 
+.tags-wrap h4 {
+  top: 35px;
 }
 
-#tagwheel-arla-wrapper-2 div {
+.tagwheel {
+  position: absolute;
   width: 210px;
-  margin: 0 auto;
+  height: 210px;
+  right: 40px;
+  top: calc(50% - 105px); /* 50% minus half height */
 }
 
-  
+/* Wheel end */
+
+#projects-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 50px auto;   
+/*
+  border-radius: 10px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+*/
+}
+
+#projects-header {
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+}
+
+#projects-header li {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#projects-header-items-split {
+  position: absolute;
+  background-color: #ccc;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+}
+
+#projects-header,
+#projects-header-titles,
+#projects-header-items {
+  position: absolute;
+  width: 100%;
+}
+
+.projects-header-title {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+
+.projects-header-title:hover {
+  border-bottom: 3px solid rgb(212,62,73);
+  cursor: pointer;
+}
+
+#projects-header-titles ul li {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222;
+  font-size: 0.8em;
+  padding: 5px 0 5px 0;
+  top: 0px;
+}
+
+#projects-header-title-1 {
+  left: 0;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+#projects-header-title-2 {
+  right: 0;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#projects-header-items {
+  height: 0;
+}
+
+#projects-header-items ul li {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  color: #222;
+  top: 28px;
+  padding: 10px 0 10px 0;
+  width: 25%;
+  left: 0;
+  border-left: 1px solid #ccc;
+}
+
+#projects-header-items ul li:hover {
+  border-bottom: 3px solid rgb(212,62,73);
+  cursor: pointer;
+}
+
+#projects-header-item-2 {
+  margin-left: 25%;
+}
+
+#projects-header-item-3 {
+  margin-left: 50%;
+}
+
+#projects-header-item-4 {
+  margin-left: 75%;
+  border-right: 1px solid #ccc;
+}
+
+#projects-content-wrap {
+  position: absolute;
+  margin-top: 70px; /* Height of #projects-header */
+  width: 100%;
+}
+
+.project {
+  position: relative;
+  width: 99.7%;
+  height: 260px;
+  border: 1px solid #ccc;
+  margin: 40px 0 40px 0;
+  border-radius: 4px;
+}
+
+.project:hover {
+  box-shadow: 4px 4px 8px #ccc;
+}
+
+.project-headline h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #222;
+  text-align: left;
+  padding: 5px;
+  margin: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.p-data-table {
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: #222;
+  top: 100px;
+  left: 40px;
+}
+
+.p-data {
+  padding: 5px;
+/*  border-bottom: 1px solid #ccc;*/
+}
+
+.p-data-headline {
+  font-weight: 700;
+}
+
+.avatars li {
+  display: inline-block;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin: 15px 10px 10px 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+#avatar-1-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-1-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-1-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-1-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-2-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-2-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-2-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-3-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-3-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-5 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-4-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-4-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}

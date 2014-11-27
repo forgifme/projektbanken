@@ -22,7 +22,7 @@ $(document).ready(function(){
 
   $('#companybox').mouseenter(function(){
     $('#companybox-text').children().css('opacity', 1);
-    $('#underline1').animate({width: "100%"}, 250, 'easeInOutQuint');
+    $('.underline1').animate({width: "100%"}, 250, 'easeInOutQuint');
   }).mouseleave(function(){
     $('#companybox-text').children().css('opacity', 0.9);
     $('#underline1').animate({width: "0"}, 150, 'easeOutQuint');  
