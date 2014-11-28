@@ -37,6 +37,10 @@ a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
   color: rgb(212,62,73);
 }
 
+a {
+  text-decoration: none;
+}
+
 p {
   font-size: 1em;
   font-weight: 300;
@@ -69,7 +73,9 @@ h6 {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote p {
@@ -1167,4 +1173,61 @@ svg {
   background: url(../img/avatars/luigi.jpg) no-repeat;
   background-size: 100px;
   background-position: -24px -4px;
+}
+
+/*----------------- Page: header.html -------------------*/
+
+#header {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5); 
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav {
+  position: relative;
+  width: 100%;
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav ul li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+}
+
+#main_nav-left {
+  float: left;
+  width: 25%;
+}
+
+#main_nav-left li a {
+  padding: 40px;
+}
+
+#main_nav-middle {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#main_nav-middle li a {
+  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+#main_nav-right {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+#main_nav-right li a {
+  padding: 40px;
 }
