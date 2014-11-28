@@ -16,6 +16,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #f2f1f1;
 }
 
 a {
@@ -34,7 +35,12 @@ a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 0.03em;
-  color: rgb(212,62,73);
+/*  color: rgb(212,62,73);*/
+  color: #222;
+}
+
+a, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 a {
@@ -97,6 +103,66 @@ blockquote p {
   color: #ccc;
   top: 100px;
 }
+
+/*----------------- Header -------------------*/
+
+#header {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 100;
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav {
+  position: relative;
+  width: 100%;
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav ul li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+}
+
+#main_nav-left {
+  float: left;
+  width: 25%;
+}
+
+#main_nav-left li a {
+  padding: 40px;
+}
+
+#main_nav-middle {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#main_nav-middle li a {
+  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+#main_nav-right {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+#main_nav-right li a {
+  padding: 40px;
+}
+
+/*--------------- Header slut ----------------*/
 
 #wrapper {
   display: block;
@@ -234,7 +300,7 @@ blockquote p {
   padding: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: white;
+  background-color: #f2f1f1;
   z-index: 110;
   /* Hack for at centrere absolute-div */
   left: 0;
@@ -433,7 +499,8 @@ label {
   background-size: cover;
   background-clip: rect(100%, 100px);
   width: 100%;
-  height: 75%;
+  height: 85%;
+  top: 0;
   /* Spejlvend billede */
 /*
   -moz-transform: scaleX(-1);
@@ -491,7 +558,7 @@ label {
 /*  border: 1px solid rgba(212, 62, 73, .5);*/
   border-radius: 4px;
   text-transform: uppercase;
-  color: rgba(212, 62, 73);
+  color: rgb(212, 62, 73);
 }
 
 .create-account-btn h5:hover {
@@ -669,15 +736,13 @@ label {
 
 #three-ways-content h3 {
   position: absolute;
-  padding: 0 20px;
   width: 45%;
 }
 
 #three-ways-content p {
   position: absolute;
   width: 45%;
-  padding: 0 20px;
-  top: 60px; 
+  top: 45px; 
 }
 
 .bg-twc {
@@ -688,31 +753,37 @@ label {
 
 /* twc-content box 1 */
 #three-ways-content-1 h3 {
-  right: 0;
+  text-align: right;
+/*  left: 5%;*/
 }
 
 #three-ways-content-1 p {
-  right: 0;
+  text-align: right;
+/*  left: 5%;*/
 }
 
 #bg-twc-1 {
+  right: 5%;
   background: url("../img/blyant_papir.jpg") no-repeat;
   background-size: cover; 
 }
 
 /* twc-content box 2 */
+#three-ways-content-2 h3 {
+  right: 0%;
+}
+
 #three-ways-content-2 p {
-  left: 0;
+  right: 0%;
 }
 
 #bg-twc-2 {
-  right: 0;
+  left: 5%;
   background: url("../img/blyant_papir.jpg") no-repeat;
   background-size: cover; 
-  float: left;
 }
 
-/* twc-content box 3 */
+/* twc-content box 3 
 #three-ways-content-3 h3 {
   right: 0;
 }
@@ -722,6 +793,21 @@ label {
 }
 
 #bg-twc-3 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+*/
+
+#three-ways-content-3-student h3 {
+  text-align: right;
+}
+
+#three-ways-content-3-student p {
+  text-align: right;
+}
+
+#bg-twc-3-student {
+  right: 5%;
   background: url("../img/blyant_papir.jpg") no-repeat;
   background-size: cover; 
 }
@@ -758,7 +844,7 @@ label {
   width: 75%;
   height: 6px;
   margin: 0 auto;
-  background: #fff;
+  background: #f2f1f1;
 }
 
 .content-splitter h2 {
@@ -809,7 +895,7 @@ label {
 
 .others-use-content h3 {
   position: absolute;
-  padding: 40px 0 0 0;
+  margin-top: 60px;
   width: 100%;
   color: rgb(140, 200, 220);
 }
@@ -817,7 +903,7 @@ label {
 .others-use-content p {
   position: absolute;
   width: 100%;
-  padding: 0 0 20px 0;
+  top: 330px;
 }
 
 .bg-ouc {
@@ -906,7 +992,7 @@ svg {
 }
 
 .tags-wrap h4 {
-  top: 35px;
+  top: 50px;
 }
 
 .tagwheel {
@@ -919,21 +1005,21 @@ svg {
 
 /* Wheel end */
 
+#wrap_projects {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 1200px;
+}
+
 #projects-wrapper {
   position: relative;
   width: 90%;
-  margin: 50px auto;   
-/*
-  border-radius: 10px;
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-*/
+  margin: 50px auto;  
 }
 
 #projects-header {
-  height: 70px;
-  border-bottom: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  height: 72px;
 }
 
 #projects-header li {
@@ -942,16 +1028,6 @@ svg {
   -webkit-box-sizing: border-box;
 }
 
-#projects-header-items-split {
-  position: absolute;
-  background-color: #ccc;
-  width: 4px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-}
-
-#projects-header,
 #projects-header-titles,
 #projects-header-items {
   position: absolute;
@@ -960,75 +1036,84 @@ svg {
 
 .projects-header-title {
   width: 50%;
-  border-bottom: 1px solid #ccc;
 }
 
 .projects-header-title:hover {
-  border-bottom: 3px solid rgb(212,62,73);
-  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: translateY(1px) translateZ(0);
+  transform: translateY(1px) translateZ(0);
 }
 
 #projects-header-titles ul li {
-  position: absolute;
+  position: relative;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
   color: #222;
-  font-size: 0.8em;
-  padding: 5px 0 5px 0;
+  font-size: 0.7em ;
   top: 0px;
+  float: left;
+}
+
+#projects-header-titles ul li a {
+  padding: 5px 0 5px 0;
+  display: block;
 }
 
 #projects-header-title-1 {
-  left: 0;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  width: 49%;
 }
 
 #projects-header-title-2 {
-  right: 0;
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-#projects-header-items {
-  height: 0;
+  width: 49%;
+  left: 2%;
 }
 
 #projects-header-items ul li {
   position: absolute;
   display: inline-block;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #222;
   top: 28px;
-  padding: 10px 0 10px 0;
-  width: 25%;
+  width: 24.5%;
   left: 0;
-  border-left: 1px solid #ccc;
+  background-color: #fff;
 }
 
-#projects-header-items ul li:hover {
-  border-bottom: 3px solid rgb(212,62,73);
-  cursor: pointer;
+#projects-header-items ul li a {
+  padding: 10px 0 10px 0;
+  display: block;
+}
+
+#projects-header-item-1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 #projects-header-item-2 {
-  margin-left: 25%;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-left: 24.5%;
 }
 
 #projects-header-item-3 {
-  margin-left: 50%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-left: 51%;
 }
 
 #projects-header-item-4 {
-  margin-left: 75%;
-  border-right: 1px solid #ccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-left: 75.5%;
+}
+
+.phi-active {
+  -webkit-transform: translateY(5px) translateZ(0);
+  -moz-transfomr: translateY(5px) translateZ(0);
+  transform: translateY(5px) translateZ(0);
 }
 
 #projects-content-wrap {
@@ -1039,15 +1124,23 @@ svg {
 
 .project {
   position: relative;
-  width: 99.7%;
+  width: 100%;
   height: 260px;
-  border: 1px solid #ccc;
   margin: 40px 0 40px 0;
   border-radius: 4px;
+  background-color: #fff;
 }
 
 .project:hover {
   box-shadow: 4px 4px 8px #ccc;
+  -moz-box-shadow: 4px 4px 8px #ccc;
+  -webkit-box-shadow: 4px 4px 8px #ccc;  
+  transition-duration: 0.3s;
+  -moz-transition-property: bottom;
+  -webkit-transition-duration: 0.3s;
+  transform: translateY(5px) translateZ(0);
+  -moz-transform: translateY(5px) translateZ(0);
+  -webkit-transform: translateY(5px) translateZ(0);
 }
 
 .project-headline h2 {
@@ -1079,16 +1172,18 @@ svg {
   font-weight: 700;
 }
 
-.avatars li {
-  display: inline-block;
+.avatars {
+  position: absolute;
+  margin: 30px 0 0 40px;
 }
 
 .avatar {
   width: 50px;
   height: 50px;
-  margin: 15px 10px 10px 0;
+  margin-right: 10px;
   border-radius: 50%;
   border: 1px solid #ccc;
+  display: inline-block;
 }
 
 #avatar-1-1 {
@@ -1175,59 +1270,14 @@ svg {
   background-position: -24px -4px;
 }
 
-/*----------------- Page: header.html -------------------*/
+/*----------------- Modal -------------------*/
 
-#header {
-  position: relative;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5); 
-  /* Hack to let height follow height of content */
-  min-height: 5px;
-  overflow: hidden;
+.validateTips {
+  font-size: 0.8em;
+  color: rgb(212,62,73); 
+  padding: 10px 0 10px 0;
 }
 
-#main_nav {
-  position: relative;
-  width: 100%;
-  /* Hack to let height follow height of content */
-  min-height: 5px;
-  overflow: hidden;
-}
-
-#main_nav ul li a {
-  position: relative;
-  display: block;
-  color: #222;
-  padding: 20px;
-}
-
-#main_nav-left {
-  float: left;
-  width: 25%;
-}
-
-#main_nav-left li a {
-  padding: 40px;
-}
-
-#main_nav-middle {
-  width: 50%;
-  margin: 0 auto;
-}
-
-#main_nav-middle li a {
-  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
-  position: relative;
-  float: left;
-  text-align: center;
-}
-
-#main_nav-right {
-  float: right;
-  width: 25%;
-  text-align: right;
-}
-
-#main_nav-right li a {
-  padding: 40px;
+.text.ui-widget-content {
+  color: 
 }
