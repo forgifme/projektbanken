@@ -7,82 +7,121 @@
     <title>Min side | Projektbanken</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css"> 
-<!--    <link rel="stylesheet" type="text/css" href="ggl.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/layout.css"> -->
-<!--    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">-->
-<!--    <link rel="stylesheet" href="css/jquery-ui.css">-->
-<!--    <link rel="stylesheet" href="css/responsive.css">-->
+    <link rel="stylesheet" type="text/css" href="ggl.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
     
   </head>	
    
   <body>
-    <div id="wrapper">
+    <div class="wrapper_not_frontpage">
     
       <header id="header">
-        <div id="nav">
-          <a title="Home" href="/index.html">Hjem</a>
-          <ul>
-            <li class="New project">
-              <a title="New project" href="/NewProject">Nyt projekt</a>
-            </li>
-            <li class="Projects & members">
-              <a title="Projects & members" href="/Projects">Projekter og medlemmer</a>
-            </li>
-            <li class="Historik">
-              <a title="Projects & members" href="/Projects">Articles</a>
-            </li>
-            <li class="Rediger profil">..</li>
+        <nav id="main_nav">
+          <ul id="main_nav-left">
+            <li><a href="#">Logo</a></li>
           </ul>
-        </div> 
+          <ul id="main_nav-middle">
+            <li><a href="#">Opret Projekt</a></li>
+            <li><a href="#">Se Tilmeldte</a></li>
+            <li><a href="#">Se Projektbasen</a></li>
+          </ul>
+          <ul id="main_nav-right">
+            <li><a href="#">Navn+Dropd.</a></li>
+          </ul>
+        </nav>
       </header>
     
       <div id="myStudPage">
-        <h2>Dine oplysninger</h2>
-
+        <h2 id="myStudHead">Dine oplysninger</h2>
         <div id="personalContent">
-          <a href="modalLeft">
-            <section id="personalInfo">
-              <h3>Personlige oplysninger</h3>
-                <div class="boxLeft">
-                  <h4>Navn og alder</h4>
-                </div>
-                <div class="boxLeft">
-                  <h4>Universitet/studiested<h4>
-                </div>
-                <div class="boxLeft">
-                  <h4>Studd.retning<h4>
-                </div>
-                <div class="boxLeft">
-                  <h4>Pers. beskriv.<h4>
-                </div>
-                <div class="boxLeft">
-                  <h4>Beskrv. af stud.retng.<h4>
-                </div>   
-            </section>
-          </a>
-          <a href="modalMiddle">
-            <section id="activeProjects">
-              <h3>Nuværende projekter</h3>
-              <p>Generisk "Google cards" med info om projekter her</p>
-            </section>
-          </a>
-          <a href="modalRight">         
-            <section id="previousProjects">
-              <h3>Historik</h3>
-              <p>Liste over tidligere projekter</p>
-            </section>
-          </a>
+          <section id="personalInfo">
+            <h3 class="boxHeaders" id="bh1">Personlige oplysninger</h3>
+            <a href="#">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Navn og alder</h4>
+              </div>
+            </a>
+            <a href="#">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Universitet/studiested</h4>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Studd.retning</h4>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Pers. beskriv.</h4>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Beskrv. af stud.retng.</h4>
+              </div> 
+            </a>  
+          </section>
+          
+          <section id="activeProjects">
+            <h3 class="boxHeaders" id="bh2">Nuværende projekter</h3>
+            <a href="#">
+              <div class="smallBoxMid float" id="midBox1">
+                <h4 class="inBoxHeaders" >Nyt website for X</h4>
+                  <ul id="avatars-p1" class="avatars">
+                    <li id="avatar-p1-1" class="avatar"></li>
+                    <li id="avatar-p1-2" class="avatar"></li>
+                    <li id="avatar-p1-3" class="avatar"></li>
+                    <li id="avatar-p1-4" class="avatar"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="smallBoxMid float" id="midBox2">
+                <h4 class="inBoxHeaders">Regnskabsanalyse</h4>
+                <ul id="avatars-p2" class="avatars">
+                    <li id="avatar-p2-1" class="avatar"></li>
+                    <li id="avatar-p2-2" class="avatar"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxMid float">
+                <h4 class="inBoxHeaders">Ny grafisk identitet for X</h4>
+              </div>
+            </a>  
+          </section>
+    
+        
+          <section id="previousProjects">
+            <h3 class="boxHeaders" id="bh3">Historik</h3>
+            <a href="#">
+              <div class="smallBoxRight float">
+                <h4 class="inBoxHeaders">Det der awesome projekt</h4>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxRight float">
+                <h4 class="inBoxHeaders">Ny hjerne til Julie</h4>
+              </div> 
+            </a>   
+          </section>
         </div>
-                <!-- This is code for modal view -->
-        <div id="openModal" class="modalDialog">
-	    
-        </div>
-
       </div>
-
-              
+    </div>       
               
 <!--  Dette er kode til Material design input-box            -->
+                    
+<!--
       <div id="materialBox">
         <form>
           <div id="materialContent">
@@ -101,12 +140,30 @@
           </div>
         </form>
       </div>
-
-      <footer>
-        <p>Insert awesome footer here!</p>
-      </footer>
+--> 
     
-    </div>
+    <footer>
+      <div id="footer_not_frontpage">
+        <div id="footer-left">
+          <div id="contact-info">
+            <strong>Projektbanken</strong>
+            <p class="contact-info">
+              <a href="mailto:goddaw@projektbanken.dk?Subject=Goddaw">goddaw@projektbanken.dk</a><br>
+              +45 49 82 73 39
+            </p>
+          </div>
+        </div>
+        <div id="footer-divider"></div>
+        <div id="footer-right">
+          <div id="sm-icons">
+            <a href="http://www.twitter.com"><i id="twitter" class="sm fa fa-twitter"></i></a>
+            <a href="http://www.facebook.com"><i id="facebook" class="sm fa fa-facebook"></i></a>
+            <a href="http://www.linkedin.com"><i id="linked_in" class="sm fa fa-linkedin"></i></a>
+            <a href="http://www.instagram.com"><i id="instagram" class="sm fa fa-instagram"></i></a>
+          </div>
+        </div>  
+      </div>
+    </footer>
                   
     <script src="js/jquery-ui.js"></script>      
                   
