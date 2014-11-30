@@ -1,0 +1,391 @@
+/*------------ Overall css --------------*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/Roboto.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/roboto/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/bitter/Bitter-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/bitter/Bitter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+/*---------- Margin and padding reset ---------*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: Bitter, sans-serif;
+/*  font-style: italic;*/
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #222;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: .8em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper_not_frontpage {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 800px;
+  width: 100%;
+/*  background-color: rgba(241, 245, 241, 1);*/
+  background-color: #F2F1F1;
+}
+
+/*----- Footer css --------*/
+#footer_not_frontpage {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  height: 300px; /* Hvis dette ændres skal padding på "wrapper" ændres */
+  background-color: rgba(140, 200, 220, 0.3);
+  z-index: 0; 
+}
+
+#footer-left {
+  position: relative;
+  width: 45%;
+  margin: 100px auto;
+  float: left;
+}
+
+#contact-info {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-right: 100px;
+  color: #fff;
+  font-size: .8em;
+  line-height: 2em;
+  text-align: right;
+  float: right;
+}
+
+#contact-info strong {
+  font-weight: 400;
+  font-size: 1.2em;w
+  padding-bottom: 6px;
+  border-bottom: 1px solid white;
+}
+
+.contact-info,
+.contact-info a {
+  color: #fff;
+  margin-top: 15px;
+  line-height: 1.6em;
+}
+
+#footer-divider {
+  position: absolute;
+  width: 1px;
+  top: 20%;
+  height: 60%;
+  border-left: 1px solid #fff;
+  left: 45%;
+}
+
+#footer-right {
+  position: relative;
+  width: 55%;
+  margin: 100px auto;
+  float: left;
+}
+
+#sm-icons {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-left: 90px;
+}
+
+.sm {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 3em;
+  padding: 20px;
+}
+
+/*---------- Header --------------*/
+#header {
+  opacity: 0.3;
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); 
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(212, 62, 73, 0.5);
+}
+
+#main_nav {
+  position: relative;
+  width: 100%;
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav ul li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+}
+
+#main_nav-left {
+  float: left;
+  width: 25%;
+}
+
+#main_nav-left li a {
+  padding: 40px;
+}
+
+#main_nav-middle {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#main_nav-middle li a {
+  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+#main_nav-right {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+#main_nav-right li a {
+  padding: 40px;
+}
+
+/* GOOGLE MATRIAL CARDS CSS */
+
+#materialBox {
+  min-height: 50px;
+  overflow: hidden;
+  width: 250px;
+  border: 1px solid black;
+  margin: 50px auto;
+  position: relative;
+} 
+#materialContent {
+  min-height: 20px;
+  overflow: hidden;
+  width: 165px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 2px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.group        { 
+  position:relative; 
+  margin-bottom:45px;
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:150px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { 
+  outline:none;
+}
+
+/* LABEL */
+
+label {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS */
+
+.bar  { position:relative; display:block; width:165px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+
+input:focus ~ .highlight { 
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@keyframes inputHighlighter {
+  from  { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+/*------- APPLY BUTTON -------*/
+
+#updateButton {
+  width: 52%;
+  min-height: 10px;
+  overflow: hidden;
+  margin: 0px 10px 20px 55px;
+}
+
+.myButton {
+	background-color: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border:1px solid #ccc;
+	display:inline-block;
+	cursor:pointer;
+	color: #222;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration: none;
+}
+.myButton:hover {
+	background-color: rgb(212, 62, 73);
+  color: #fff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+           
+/*
+#applyBox {
+  height: 40px;
+  width: 150px;
+  margin: 5px auto;
+  position: relative;
+  background-color: rgba(46, 204, 113,1.0);
+}
+#applyButton {
+  position: relative;
+  height: 80%;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+*/
+
+/*-------- Float animation for hover ------------*/
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-1.5px);
+  transform: translateY(-1.5px);
+}

@@ -205,6 +205,7 @@
 	left: 0;
 	cursor: default;
 }
+/*
 .ui-button {
 	display: inline-block;
 	position: relative;
@@ -214,8 +215,10 @@
 	cursor: pointer;
 	vertical-align: middle;
 	text-align: center;
-	overflow: visible; /* removes extra width in IE */
+	overflow: visible;  /* removes extra width in IE */
 }
+*/
+/*
 .ui-button,
 .ui-button:link,
 .ui-button:visited,
@@ -223,22 +226,30 @@
 .ui-button:active {
 	text-decoration: none;
 }
+*/
 /* to make room for the icon, a width needs to be set here */
+/*
 .ui-button-icon-only {
 	width: 2.2em;
 }
+*/
 /* button elements seem to need a little more width */
+/*
 button.ui-button-icon-only {
 	width: 2.4em;
 }
+*/
+/*
 .ui-button-icons-only {
 	width: 3.4em;
 }
 button.ui-button-icons-only {
 	width: 3.7em;
 }
+*/
 
 /* button text element */
+/*
 .ui-button .ui-button-text {
 	display: block;
 	line-height: normal;
@@ -246,11 +257,15 @@ button.ui-button-icons-only {
 .ui-button-text-only .ui-button-text {
 	padding: .4em 1em;
 }
+*/
+/*
 .ui-button-icon-only .ui-button-text,
 .ui-button-icons-only .ui-button-text {
 	padding: .4em;
 	text-indent: -9999999px;
 }
+*/
+/*
 .ui-button-text-icon-primary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
 	padding: .4em 1em .4em 2.1em;
@@ -263,12 +278,16 @@ button.ui-button-icons-only {
 	padding-left: 2.1em;
 	padding-right: 2.1em;
 }
+*/
 /* no icon support for input elements, provide padding by default */
+/*
 input.ui-button {
 	padding: .4em 1em;
 }
+*/
 
 /* button icon element(s) */
+/*
 .ui-button-icon-only .ui-icon,
 .ui-button-text-icon-primary .ui-icon,
 .ui-button-text-icon-secondary .ui-icon,
@@ -293,7 +312,7 @@ input.ui-button {
 	right: .5em;
 }
 
-/* button sets */
+ button sets 
 .ui-buttonset {
 	margin-right: 7px;
 }
@@ -301,14 +320,17 @@ input.ui-button {
 	margin-left: 0;
 	margin-right: -.3em;
 }
+*/
 
 /* workarounds */
 /* reset extra padding in Firefox, see h5bp.com/l */
+/*
 input.ui-button::-moz-focus-inner,
 button.ui-button::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
+*/
 .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
@@ -510,6 +532,7 @@ button.ui-button::-moz-focus-inner {
 	background: none;
 	overflow: auto;
 }
+/*
 .ui-dialog .ui-dialog-buttonpane {
 	text-align: left;
 	border-width: 1px 0 0 0;
@@ -517,6 +540,8 @@ button.ui-button::-moz-focus-inner {
 	margin-top: .5em;
 	padding: .3em 1em .5em .4em;
 }
+*/
+/*
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
 	float: right;
 }
@@ -524,6 +549,7 @@ button.ui-button::-moz-focus-inner {
 	margin: .5em .4em .5em 0;
 	cursor: pointer;
 }
+*/
 .ui-dialog .ui-resizable-se {
 	width: 12px;
 	height: 12px;
@@ -829,6 +855,7 @@ body .ui-tooltip {
 
 /* Component containers
 ----------------------------------*/
+/*
 .ui-widget {
 	font-family: Roboto,sans-serif;
 	font-size: 1em;
@@ -851,13 +878,13 @@ body .ui-tooltip {
 	color: #222;
 }
 .ui-widget-header {
-	border: 1px solid #e78f08;
 	color: #222;
 	font-weight: bold;
 }
 .ui-widget-header a {
 	color: #ffffff;
 }
+*/
 
 /* Interaction states
 ----------------------------------*/

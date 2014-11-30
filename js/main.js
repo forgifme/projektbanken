@@ -53,8 +53,6 @@ $(document).ready(function(){
   $('#close-login-form').click(function(){
     $("#login_form").fadeOut(200);
   });
-      
-});
 
 // --------- To-top button: show after scroll --------
 
@@ -142,3 +140,49 @@ $(document).ready(function(){
     $('#underline5').animate({height: '0'}, 1);
     $('#underline5').css('opacity', 0);
   });
+  
+// --------------------- Modal -------------------
+
+  
+//  HØRER TIL "GAMMEL VERSION"
+//  $('.modal-dialog').click(function(){
+//    $('.modal-dialog div').css('opacity', '0');
+//  });
+
+$("#modal-signup").hide();
+
+  function fnOpenModal() { 
+    $("#modal-signup").show();
+
+    // Define the Dialog and its properties.
+    $("#modal-signup").dialog({
+      resizable: false,
+      modal: true,
+  //    title: "Opret en virksomhedsprofil for at se mere...",
+      height: 580,
+      width: 350,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-signup'
+    });
+  }
+
+  $('.project').click(fnOpenModal);
+  
+// -------- Fill inputs on LinkedIn click -------- 
+  
+  $(function(){
+    $('#linkedIn_signup').click(function() {
+      $("#company-input").val("ITU");
+      $("#depart-input").val("DDKP");
+      $("#name-input").val("Kenny Marek Møller");
+      $("#mail-input").val("kema@itu.dk");
+    });
+  });
+  
+});

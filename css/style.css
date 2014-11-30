@@ -16,7 +16,17 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #f2f1f1;
+  background-color: #f8f7f7;
+}
+
+/* Reset focus effect */
+
+*:focus {
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0px 0px 8px rgba(212, 62, 73, 0.3)
 }
 
 a {
@@ -31,15 +41,15 @@ h1, h2, h3 {
   color: rgb(212,62,73);
 }
 
-a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
+a, p, h4, h5, h6, ul, table, svg, input, button, label, #contact-info {
   font-family: Roboto, sans-serif;
   font-weight: 100;
-  letter-spacing: 0.03em;
 /*  color: rgb(212,62,73);*/
   color: #222;
 }
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a, p, h1, h2, h3, h4, h5, h6, input {
+  letter-spacing: 0.03em;
   margin: 0;
 }
 
@@ -84,6 +94,29 @@ ul {
   padding: 0;
 }
 
+input, button {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8em;
+  width: 200px;
+  background-color: #fff;
+}
+
+button {
+  background-color: #fff; 
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+  cursor: pointer;
+}
+
 blockquote p {
   font-size: 1.8em;
   line-height: 1.4em;
@@ -109,7 +142,7 @@ blockquote p {
 #header {
   position: relative;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 1); 
   z-index: 100;
   /* Hack to let height follow height of content */
   min-height: 5px;
@@ -129,6 +162,11 @@ blockquote p {
   display: block;
   color: #222;
   padding: 20px;
+}
+
+#main_nav-middle li a:hover {
+  background-color: rgb(212,62,73);
+  color: #fff;
 }
 
 #main_nav-left {
@@ -169,6 +207,7 @@ blockquote p {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
 
 #companybox {
@@ -231,6 +270,8 @@ blockquote p {
   width: 100%;
   position: relative;
   font-size: 150px;
+  color: rgb(212,62,73);
+  margin-top: 50px;
 }
 
 #icon-company,
@@ -285,10 +326,8 @@ blockquote p {
 }
 
 #login_btn h5:hover {
-/*
   background-color: rgb(212, 62, 73);
   color: #fff;
-*/
   cursor: pointer;
 }
 
@@ -300,7 +339,7 @@ blockquote p {
   padding: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: #f2f1f1;
+  background-color: #fff;
   z-index: 110;
   /* Hack for at centrere absolute-div */
   left: 0;
@@ -314,16 +353,7 @@ blockquote p {
   color: #ccc;
   top: 5px;
   right: 5px;
-}
-
-#close-login-form:hover {
   cursor: pointer;
-}
-
-#login_form input {
-  margin: 10px auto;
-  padding: 10px;
-  position: relative;
 }
 
 #login_form input[type="text"],
@@ -331,9 +361,8 @@ blockquote p {
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1em;
   width: 200px;
-  background-color: white;
+  background-color: #fff;
 }
 
 input[type="radio"] {
@@ -369,16 +398,8 @@ label {
   font-weight: 500;
 }
 
-#login_form input[type="submit"]{
+#login_form button[type="submit"] {
   width: 222px;
-  background-color: #fff; 
-  text-transform: uppercase;
-}
-
-#login_form input[type="submit"]:hover {
-  background-color: rgb(212, 62, 73);
-  color: #fff;
-  cursor: pointer;
 }
 
 #divider_line {
@@ -844,7 +865,7 @@ label {
   width: 75%;
   height: 6px;
   margin: 0 auto;
-  background: #f2f1f1;
+  background: #f8f7f7;
 }
 
 .content-splitter h2 {
@@ -957,7 +978,7 @@ label {
   z-index: 0; 
 }
 
-/*----------------- Page: projects.html -------------------*/
+/*----------- Page: projects_students.html ------------*/
 
 /* Wheel */
 
@@ -1013,7 +1034,7 @@ svg {
 #projects-wrapper {
   position: relative;
   width: 90%;
-  margin: 50px auto;  
+  margin: 30px auto;  
 }
 
 #projects-header {
@@ -1090,30 +1111,37 @@ svg {
 #projects-header-item-1 {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  z-index: 100;
 }
 
 #projects-header-item-2 {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-left: 24.5%;
+  z-index: 99;
 }
 
 #projects-header-item-3 {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   margin-left: 51%;
+  z-index: 98;
 }
 
 #projects-header-item-4 {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-left: 75.5%;
+  z-index: 97;
 }
 
 .phi-active {
-  -webkit-transform: translateY(5px) translateZ(0);
-  -moz-transfomr: translateY(5px) translateZ(0);
   transform: translateY(5px) translateZ(0);
+  -moz-transfomr: translateY(5px) translateZ(0);
+  -webkit-transform: translateY(5px) translateZ(0);
+  box-shadow: 2px 2px 4px #ececec;
+  -moz-box-shadow: 2px 2px 4px #ececec;
+  -webkit-box-shadow: 2px 2px 4px #ececec;  
 }
 
 #projects-content-wrap {
@@ -1129,12 +1157,13 @@ svg {
   margin: 40px 0 40px 0;
   border-radius: 4px;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .project:hover {
-  box-shadow: 4px 4px 8px #ccc;
-  -moz-box-shadow: 4px 4px 8px #ccc;
-  -webkit-box-shadow: 4px 4px 8px #ccc;  
+  box-shadow: 4px 4px 8px #ececec;
+  -moz-box-shadow: 4px 4px 8px #ececec;
+  -webkit-box-shadow: 4px 4px 8px #ececec;  
   transition-duration: 0.3s;
   -moz-transition-property: bottom;
   -webkit-transition-duration: 0.3s;
@@ -1272,12 +1301,116 @@ svg {
 
 /*----------------- Modal -------------------*/
 
-.validateTips {
-  font-size: 0.8em;
-  color: rgb(212,62,73); 
-  padding: 10px 0 10px 0;
+#modal-signup {
+  position: relative;
+  width: 370px; /* Set in the main.js-file */
+  height: 700px;
+  padding: 0;
 }
 
-.text.ui-widget-content {
-  color: 
+#modal-signup h3 {
+  position: relative;
+  display: block;
+  padding: 15px;
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #999;
+  margin: 0 0 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+#all_inputs-signup {
+  position: relative;
+  margin-top: 6px;
+  /* Hack to set height from content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#modal-signup input {
+  position: relative;
+  display: block;
+  width: 290px;
+  margin: 8px 0 8px 20px;
+  padding: 10px;
+  color: #ccc;
+  float: left;
+  clear: both;
+}
+
+#modal-signup input[type=text] {
+  color: #222;
+}
+
+#modal-signup p {
+  display: block;
+  position: relative;
+  clear: both;
+  font-size: 0.7em;
+  color: #ccc;
+  margin: 0 0 5px 0;
+  padding: 0 30px;
+}
+
+#linkedIn_signup {
+  width: 280px;
+  position: relative;
+  font-size: 1.5em;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0 0 15px 20px;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #4875b4;
+}
+
+#linkedIn-splitter {
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #fff;
+}
+
+#linkedIn_signup p {
+  position: absolute;
+  font-size: 0.7em;
+  font-weight: 400;
+  left: 80px;
+  top: 10px;
+  right: 0;
+  color: #fff;
+  text-align: left;
+}
+
+#linkedIn_signup:hover {
+  opacity: 0.9;
+}
+
+#modal-signup button[type="submit"] {
+  position: absolute;
+  width: 312px;
+  bottom: 5px;
+  left: 20px;
+}
+
+.ui-widget-content {
+	background: #fff;
+	color: #222;
+}
+
+/* Dark bg when modal active */
+.ui-widget-overlay {
+  background: repeat-x scroll 50% 50% #000;
+  opacity: 0.7;
+}
+
+/* Undisplay predefined "jQuery UI" modal styles */
+.ui-widget-header,
+.ui-dialog-titlebar-close,
+.ui-button {
+  display: none;
 }

@@ -1,0 +1,800 @@
+/*------------ Overall css --------------*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/Roboto.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/roboto/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/bitter/Bitter-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/bitter/Bitter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Margin and padding reset */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: Bitter, sans-serif;
+/*  font-style: italic;*/
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a, p, h4, h5, h6, ul, table, svg, input, label, #contact-info {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #222;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: .8em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+blockquote p {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  font-style: italic;
+  color: #222;
+  position: absolute;
+}
+
+.quotationmark {
+  font-size: 8em;
+  color: rgb(212,62,73);
+}
+
+.quote-source {
+  font-size: 1em;
+  line-height: 1em;
+  color: #ccc;
+  top: 100px;
+}
+*/
+
+/*
+#wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1500px;
+  background-color: #CCC;
+}
+*/
+
+.wrapper_not_frontpage {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 600px;
+  width: 100%;
+/*  background-color: rgba(241, 245, 241, 1);*/
+  background-color: #f8f7f7;
+}
+
+/*#companybox {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#studentbox {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#companybox-text,
+#studentbox-text {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: 10%;
+}
+
+#companybox-text h2,
+#studentbox-text h2 {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+}
+
+
+#companybox-text p,
+#studentbox-text p {
+  position: relative;
+  padding: 5px 5px 0 5px;
+  margin-bottom: -40px;
+}
+
+
+#underline1,
+#underline2 {
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+
+.fa {
+  margin: auto;
+  text-align: center;
+}
+
+#icon-company,
+#icon-student {
+  display: block;
+  width: 100%;
+  position: relative;
+  font-size: 150px;
+}
+
+#icon-company,
+#icon-student,
+#companybox-text h2,
+#studentbox-text h2 {
+  opacity: 0.9;
+}
+*/
+/*
+#c-or-s {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 100%;
+  z-index: 100;
+*/
+/* Hack for at centrere absolute-div */
+/*  
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#c-or-s p {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  padding: 10px;
+  background-color: white;
+*/
+  /* Hack for at centrere absolute-div */
+/*  
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login_btn h5 {
+  position: absolute;
+  text-align: center; 
+  top: 60%;
+  padding: 10px;
+  width: 100px;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-transform: uppercase;
+*/
+  /* Hack for at centrere absolute-div */
+/*  
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login_btn h5:hover {
+
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+
+  cursor: pointer;
+}
+*/
+/*
+#login_form {
+*/
+/*  visibility: hidden;*/
+/*
+  position: absolute;
+  top: 130px;
+  width: 240px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  z-index: 110;
+*/
+  /* Hack for at centrere absolute-div */
+/*
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#close-login-form {
+  position: absolute;
+  color: #ccc;
+  top: 5px;
+  right: 5px;
+}
+
+#close-login-form:hover {
+  cursor: pointer;
+}
+
+#login_form input {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+}
+
+#login_form input[type="text"],
+#login_form input[type="submit"] {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 200px;
+  background-color: white;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 100;
+  color: rgb(212, 62, 73);
+  line-height: 2em;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 6px;
+  width: 23px;
+  content: "\f10c";
+}
+
+input[type="radio"]:hover:before + label:hover:before {
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "\f192";
+}
+
+label {
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 500;
+}
+
+#login_form input[type="submit"]{
+  width: 222px;
+  background-color: #fff; 
+  text-transform: uppercase;
+}
+
+#login_form input[type="submit"]:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+  cursor: pointer;
+}
+
+#divider_line {
+  display: absolute;
+  width: 1px;
+  height: 100%;
+  margin: 0 auto;
+  border-left: 1px dashed #ccc;
+}*/
+
+/*----- Footer css --------*/
+#footer_not_frontpage {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  height: 300px; /* Hvis dette ændres skal padding på "wrapper" ændres */
+  background-color: rgb(140, 200, 220);
+  z-index: 0; 
+}
+
+#footer-left {
+  position: relative;
+  width: 45%;
+  margin: 100px auto;
+  float: left;
+}
+
+#contact-info {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-right: 100px;
+  color: #fff;
+  font-size: .8em;
+  line-height: 2em;
+  text-align: right;
+  float: right;
+}
+
+#contact-info strong {
+  font-weight: 400;
+  font-size: 1.2em;w
+  padding-bottom: 6px;
+  border-bottom: 1px solid white;
+}
+
+.contact-info,
+.contact-info a {
+  color: #fff;
+  margin-top: 15px;
+  line-height: 1.6em;
+}
+
+#footer-divider {
+  position: absolute;
+  width: 1px;
+  top: 20%;
+  height: 60%;
+  border-left: 1px solid #fff;
+  left: 45%;
+}
+
+#footer-right {
+  position: relative;
+  width: 55%;
+  margin: 100px auto;
+  float: left;
+}
+
+#sm-icons {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-left: 90px;
+}
+
+.sm {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 3em;
+  padding: 20px;
+}
+
+/*---------- Header --------------*/
+#header {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); 
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+/*  border-bottom: 2px solid rgba(212, 62, 73, 0.5);*/
+}
+
+#main_nav {
+  position: relative;
+  width: 100%;
+  /* Hack to let height follow height of content */
+  min-height: 5px;
+  overflow: hidden;
+}
+
+#main_nav ul li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+}
+
+#main_nav-left {
+  float: left;
+  width: 25%;
+}
+
+#main_nav-left li a {
+  padding: 40px;
+}
+
+#main_nav-middle {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#main_nav-middle li a {
+  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+#main_nav-right {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+#main_nav-right li a {
+  padding: 40px;
+}
+
+/*---------- Content in all the view *-----------*/
+#myStudPage {
+  width: 97%;
+/*  border: 1px solid #CCC;*/
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#myStudHead {
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  min-height: 10px;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 2px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+/*  box-shadow: 2px 2px 1px #888888;*/
+}
+
+/*-------- AVATARS -------------*/
+.avatars {
+  position: relative;
+  width: 24%;
+  min-height: 20px;
+  overflow: hidden;
+  margin: 25px 0 0 10px;
+  display: inline-table;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  margin: 1px 5px 5px 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  float: left;
+}
+
+/*---------- Three main boxes area ----------*/
+#personalContent  {
+  min-height: 200px;
+  overflow: hidden;
+  width: 98%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.boxHeaders {
+  color: black;
+  position: relative;
+  min-height: 5px;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 35px;
+  text-align: center;
+}
+#bh1  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh2  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh3  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+
+.inBoxHeaders {
+  color: black;
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 8px;
+  padding-bottom: 0;
+  padding-left: 6px;
+}
+.smallBoxText {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 65%;
+  min-height: 5px;
+  overflow: auto;
+  font-size: 0.7em;
+  padding-left: 3px;
+}
+
+/*This is for the left chunk*/
+#personalInfo {
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  width: 31%;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxLeft {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+
+/*This is for the central chunk*/
+#activeProjects {
+  width: 31%;
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+/*Smaller boxes in left box*/
+.smallBoxMid {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/ 
+}
+#avatar-p1-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p1-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -32px -8px;
+}
+#avatar-p1-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -31px 1px;
+}
+#avatar-p1-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+#midBox1  {
+  height: 180px;
+/*  display: flex;*/
+}
+#midBox2  {
+  height: 180px;
+/*  display: flex;*/
+}
+
+/*This is the chunk to the right*/
+#previousProjects {
+  position: relative;
+  width: 31%;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxRight {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  border-radius: 2px;
+  background-color: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+#avatars-p2 {
+  margin-top: 50px;
+}
+#avatar-p2-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p2-2 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+
+/*-------- Float animation for hover ------------*/
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-1.5px);
+  transform: translateY(-1.5px);
+}
+
+/* GOOGLE MATRIAL CARDS CSS */
+/*
+#materialBox {
+  width: 250px;
+  height:180px;
+  border-bottom-width: thin;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  position: relative;
+}
+
+#materialContent {
+  width: 165px;
+  margin: 0 auto;
+  height: 80%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-bottom-width: thin;
+  position: relative;
+}
+
+.group        { 
+  position:relative; 
+  margin-bottom:45px;
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:150px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { 
+  outline:none;
+}
+
+/* LABEL */
+/*
+label {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS */
+/*
+.bar  { position:relative; display:block; width:165px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+/*
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+/*
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+/*
+input:focus ~ .highlight { 
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+/*
+@keyframes inputHighlighter {
+  from  { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+*/
