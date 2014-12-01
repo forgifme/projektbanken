@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/my_page-style.css">
+<!--    <link rel="stylesheet" href="css/my_page-style.css">-->
     <link rel="stylesheet" href="css/responsive.css">
     
   </head>	
@@ -22,45 +22,86 @@
   <body>
     <div class="wrapper_not_frontpage">
     
-      <header id="header">
-        <nav id="main_nav">
-          <ul id="main_nav-left">
-            <li><a href="#">Logo</a></li>
-          </ul>
-          <ul id="main_nav-middle">
-            <li><a href="#">Opret Projekt</a></li>
-            <li><a href="#">Se Tilmeldte</a></li>
-            <li><a href="projects_students-with_header.html">Se Projektbasen</a></li>
-          </ul>
-          <ul id="main_nav-right">
-            <li><a href="my_page.html">Navn+Dropd.</a></li>
-          </ul>
-        </nav>
-      </header>
+<!------------------------- MAIN-NAV ---------------------------->  
+
+  <header id="header">
+
+    <nav id="main_nav">
+
+      <ul id="main_nav-left">
+        <li><a href="my_page.html">Logo</a></li>
+      </ul>
+
+      <ul id="main_nav-middle">
+        <li id="nav-create_project" class="nav_item">
+          <a href="create_project-company.html">Opret Projekt
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_subscribed" class="nav_item">
+          <a href="projects_students-after_login.html">Se Tilmeldte
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_projectbase" class="nav_item">
+          <a href="projects_students-after_login.html">Se Projektbasen
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+      </ul>
+
+      <ul id="main_nav-right">
+        <li id="nav-user_dropdown-btn">
+          <div id="avatar-profile-Kenny" class="avatar_profile"></div>
+          <a href="my_page.html">Kenny
+          <i id="nav-user_dropdown-arrow" class="fa fa-chevron-down"></i>
+          </a>   
+
+            <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
+              <li class="dropdown_item">
+                <a href="#">Redigér profil
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+              <li id="log_out-btn">
+                <a href="#">Log ud
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+            </ul>  
+        
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+  
+<!------------------------- MAIN-NAV END ---------------------------->  
     
       <div id="myStudPage">
         <h2 id="myStudHead">Dine oplysninger</h2>
         <div id="personalContent">
           <section id="personalInfo">
-            <h3 class="boxHeaders" id="bh1">Personlige oplysninger</h3>
+            <h3 class="boxHeaders" id="bh1">Oplysninger om virksomhed</h3>
             <a href="edit_profile-info.html">
               <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Navn og alder</h4>
+                <h4 class="inBoxHeaders">3</h4>
               </div>
             </a>
             <a href="edit_profile-info.html">
               <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Universitet/studiested</h4>
+                <h4 class="inBoxHeaders">Online og UX</h4>
               </div>
             </a>  
             <a href="edit_profile-info.html">
               <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Studd.retning</h4>
+                <h4 class="inBoxHeaders">Mea Elmtoft</h4>
               </div>
             </a>  
             <a href="edit_profile-info.html">
               <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Pers. beskriv.</h4>
+                <h4 class="inBoxHeaders">mea@3.dk</h4>
               </div>
             </a>   
           </section>
@@ -70,11 +111,11 @@
             <a href="#">
               <div class="smallBoxMid float" id="midBox1">
                 <h4 class="inBoxHeaders" >Nyt website for X</h4>
-                  <ul id="avatars-p1" class="avatars">
-                    <li id="avatar-p1-1" class="avatar"></li>
-                    <li id="avatar-p1-2" class="avatar"></li>
-                    <li id="avatar-p1-3" class="avatar"></li>
-                    <li id="avatar-p1-4" class="avatar"></li>
+                  <ul id="avatars-p1" class="avatars-my_page">
+                    <li id="avatar-p1-1" class="avatar-my_page"></li>
+                    <li id="avatar-p1-2" class="avatar-my_page"></li>
+                    <li id="avatar-p1-3" class="avatar-my_page"></li>
+                    <li id="avatar-p1-4" class="avatar-my_page"></li>
                   </ul>
                 <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
@@ -82,9 +123,9 @@
             <a href="#">
               <div class="smallBoxMid float" id="midBox2">
                 <h4 class="inBoxHeaders">Regnskabsanalyse</h4>
-                <ul id="avatars-p2" class="avatars">
-                    <li id="avatar-p2-1" class="avatar"></li>
-                    <li id="avatar-p2-2" class="avatar"></li>
+                <ul id="avatars-p2" class="avatars-my_page">
+                    <li id="avatar-p2-1" class="avatar-my_page"></li>
+                    <li id="avatar-p2-2" class="avatar-my_page"></li>
                   </ul>
                 <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
@@ -110,8 +151,30 @@
               </div> 
             </a>   
           </section>
+      
+<!-------------------- MODAL VIEW: EDIT PROFILE -----------------------> 
+<!-- ET ELLER ANDET HER SPILLER IKKE (ellers er det jQuery'en) -->
+<!--
+<form id="modal-edit-profile-company" class="modal-edit-profile" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <div class="all_inputs-signup">
+      <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
+      <input id="depart-input" type="text" name="department" placeholder="Afdeling">
+      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
+      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
+      <input type="password" name="password" placeholder="Kodeord" required>    
+      <input type="password" name="password" placeholder="Bekræft kodeord" required> 
+    </div>
+    <button type="submit">Opdatér</button>
+</form>
+-->
+        
+<!-------------------- MODAL VIEW: EDIT PROFILE END ----------------------->
+        
         </div>
-      </div>
+      
+      </div>       
+
     </div>       
               
 <!--  Dette er kode til Material design input-box            -->
@@ -159,7 +222,9 @@
         </div>  
       </div>
     </footer>
-                  
+    
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/jquery-ui.js"></script>      
                   
   </body>

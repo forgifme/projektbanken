@@ -144,38 +144,37 @@ blockquote p {
   width: 100%;
   background-color: rgba(255, 255, 255, 1); 
   z-index: 100;
-  /* Hack to let height follow height of content */
-  min-height: 5px;
-  overflow: hidden;
+  height: 59px;
+*/
 }
 
 #main_nav {
   position: relative;
   width: 100%;
-  /* Hack to let height follow height of content */
-  min-height: 5px;
-  overflow: hidden;
+  height: inherit;
 }
 
 #main_nav ul li a {
   position: relative;
   display: block;
   color: #222;
-  padding: 20px;
 }
 
+/*
 #main_nav-middle li a:hover {
   background-color: rgb(212,62,73);
   color: #fff;
 }
+*/
 
 #main_nav-left {
+  position: relative;  
   float: left;
   width: 25%;
 }
 
 #main_nav-left li a {
-  padding: 40px;
+  padding: 20px;
 }
 
 #main_nav-middle {
@@ -188,16 +187,94 @@ blockquote p {
   position: relative;
   float: left;
   text-align: center;
+  padding: 20px;
+}
+
+.underline_nav {
+  height: 3px;
+  bottom: 0;
 }
 
 #main_nav-right {
+  position: relative;
   float: right;
   width: 25%;
   text-align: right;
 }
 
+.avatar_profile {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+  
+#avatar-profile-Kenny {
+  position: absolute;
+  top: 13px;
+  right: 105px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 70px;
+  background-position: -20px -6px;
+}
+
+#nav-user_dropdown-btn {
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  min-height: 5px;
+  overflow: visible;
+}
+
 #main_nav-right li a {
-  padding: 40px;
+  padding: 20px;
+  padding-right: 45px;
+}
+
+#nav-user_dropdown-btn a {
+  right: 0px;
+}
+
+#nav-user_dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  font-size: 0.8em;
+}
+
+#nav-user_dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff; 
+  width: 180px;
+  z-index: 100;
+}
+
+#nav-user_dropdown li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+  text-align: right;
+}
+
+#log_out-btn a:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+}
+
+.sideline {
+  position: absolute;
+  width: 3px;
+  background-color: rgb(212,62,73);
+  top: 0;
+}
+
+.sideline_nav {
+  height: 0;
+  left: 0;
 }
 
 /*--------------- Header slut ----------------*/
@@ -241,22 +318,21 @@ blockquote p {
   padding: 5px;
 }
 
-/*
-#companybox-text p,
-#studentbox-text p {
-  position: relative;
-  padding: 5px 5px 0 5px;
-  margin-bottom: -40px;
+.underline {
+  position: absolute;
+  width: 0;
+  background-color: rgb(212,62,73);
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
-*/
 
 #underline1,
 #underline2 {
-  display: block;
-  height: 2px;
-  width: 0;
-  background-color: #ccc;
-  margin: 0 auto;
+  height: 5px;
+  top: 0;
 }
 
 .fa {
@@ -576,7 +652,6 @@ label {
   top: 180px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.75);
-/*  border: 1px solid rgba(212, 62, 73, .5);*/
   border-radius: 4px;
   text-transform: uppercase;
   color: rgb(212, 62, 73);
@@ -586,19 +661,21 @@ label {
   color: #fff;
   background-color: rgba(212, 62, 73, 0.75);
 /*  border: 1px solid rgba(0,0,0,0);*/
+  cursor: pointer;
 }
 
 #intro-3btn {
   position: relative;
   display: block;
   width: 70%;
-  height: 320px;
+  height: 280px;
   background-color: #fff;
 /*  border: 1px solid #ccc;*/
   border-radius: 4px;
   z-index: 100;
-  margin: 60px auto;
+  margin: auto;
   margin-bottom: 250px;
+  overflow: hidden;
 }
 
 .intro-3btn {
@@ -635,7 +712,7 @@ label {
   font-size: 8em;
   font-weight: 100;
   color: rgb(212,62,73);
-  margin-top: 50px;
+  margin-top: 40px;
   z-index: 100;
 }
 
@@ -648,58 +725,13 @@ label {
   top: 65px;
 }
 
-.underline {
-  position: absolute;
-  bottom: 5%;
-  /* Hack for at centrere absolute-div */
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Underlines, being actual lines */
-/*
+
 #underline3,
 #underline4,
 #underline5 {
-  height: 4px;
-  width: 0;
-  background-color: #ccc;
-  margin: 30px auto;
-}
-*/
-
-/* Boxes as alternatives to underines */
-#underline3,
-#underline4,
-#underline5 {
-  height: 0;
-  width: 0;
-  opacity: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin: 0 auto;
-  z-index: 0;
-}
-
-.whitebox-hor,
-.whitebox-ver {
-  position: absolute;
-  z-index: 50;
-  background-color: white;
-}
-
-.whitebox-hor {
-  width: 100%;
-  height: 80%;
-  top: 10%;
-}
-
-.whitebox-ver {
-  width: 80%;
-  height: 100%;
-  left: 10%;
+  height: 5px;
+  bottom: 0;
 }
 
 .intro-3btn p {
@@ -709,7 +741,7 @@ label {
   font-size: 1.2em;
   margin-top: 20px;
   opacity: 0.9;
-  bottom: 35px;
+  bottom: 40px;
   z-index: 100;
   color: #222;
 }
@@ -842,12 +874,10 @@ label {
 
 #twc-create-account h5 {
   top: 0;
-  border: 1px solid #ccc;
 }
 
 #twc-create-account h5:hover {
   background-color: rgb(212,62,73);
-  border: 1px solid rgb(212,62,73);
 }
 
 .content-splitter {
@@ -959,13 +989,11 @@ label {
 #ouc-create-account h5 {
   color: rgb(140, 200, 220);
   top: 0;
-  border: 1px solid #ccc;
 }
 
 #ouc-create-account h5:hover {
   color: #fff;
   background-color: rgb(140, 200, 220);
-  border: 1px solid rgb(140, 200, 220);
 }
 
 #footer_not_frontpage {
@@ -1301,72 +1329,87 @@ svg {
 
 /*----------------- Modal -------------------*/
 
-#modal-signup {
+.modal-signup {
   position: relative;
-  width: 370px; /* Set in the main.js-file */
-  height: 700px;
+  width: 350px; /* Set in the main.js-file */
+  height: 580px; /* Set in the main.js-file */
   padding: 0;
+  background-color: #f8f7f7;
+/* overflow: hidden; */
 }
 
-#modal-signup h3 {
+.form-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f7f7;
+}
+
+.modal-signup h3 {
   position: relative;
   display: block;
   padding: 15px;
   font-weight: 100;
   font-size: 1.2em;
-  color: #999;
-  margin: 0 0 20px 0;
+  color: #222;
+  left: 0;
+  margin: auto;
+  margin-bottom: 10px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+/*  border-bottom: 1px solid #ccc;*/
 }
 
-#all_inputs-signup {
+.all_inputs-signup {
   position: relative;
-  margin-top: 6px;
+  margin-top: 25px;
   /* Hack to set height from content */
   min-height: 5px;
-  overflow: hidden;
 }
 
-#modal-signup input {
+.modal-signup input {
   position: relative;
   display: block;
   width: 290px;
-  margin: 8px 0 8px 20px;
+  margin: 8px 0 8px 4px;
   padding: 10px;
   color: #ccc;
   float: left;
   clear: both;
+  border: none;
 }
 
-#modal-signup input[type=text] {
+.modal-signup input[type=text] {
   color: #222;
 }
 
-#modal-signup p {
+.modal-signup p {
   display: block;
   position: relative;
   clear: both;
   font-size: 0.7em;
   color: #ccc;
   margin: 0 0 5px 0;
-  padding: 0 30px;
+  padding: 0 14px;
 }
 
-#linkedIn_signup {
-  width: 280px;
+.linkedIn_signup {
+  width: 282px;
   position: relative;
   font-size: 1.5em;
   padding: 10px;
   padding-left: 20px;
-  margin: 0 0 15px 20px;
+  margin: 0 auto;
+  margin-left: 4px;
   color: #fff;
   text-align: left;
   border-radius: 4px;
   background-color: #4875b4;
+  cursor: pointer;
 }
 
-#linkedIn-splitter {
+.linkedIn-splitter {
   position: absolute;
   height: 100%;
   width: 60px;
@@ -1375,31 +1418,32 @@ svg {
   border-right: 1px solid #fff;
 }
 
-#linkedIn_signup p {
+.linkedIn_signup p {
   position: absolute;
   font-size: 0.7em;
   font-weight: 400;
-  left: 80px;
+  left: 100px;
   top: 10px;
   right: 0;
   color: #fff;
   text-align: left;
 }
 
-#linkedIn_signup:hover {
+.linkedIn_signup:hover {
   opacity: 0.9;
 }
 
-#modal-signup button[type="submit"] {
+.modal-signup button[type="submit"] {
   position: absolute;
   width: 312px;
   bottom: 5px;
   left: 20px;
+  border: none;
 }
 
 .ui-widget-content {
-	background: #fff;
-	color: #222;
+  background: #fff;
+  color: #222;
 }
 
 /* Dark bg when modal active */
@@ -1414,3 +1458,326 @@ svg {
 .ui-button {
   display: none;
 }
+
+/*-------- Page: my_page.html (opr. Simon) ---------*/
+
+/*---------- Content in all the view *-----------*/
+#myStudPage {
+  width: 97%;
+/*  border: 1px solid #CCC;*/
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#myStudHead {
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  min-height: 10px;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 2px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+/*  box-shadow: 2px 2px 1px #888888;*/
+}
+
+/*-------- AVATARS -------------*/
+.avatars-my_page {
+  position: relative;
+  width: 24%;
+  min-height: 20px;
+  overflow: hidden;
+  margin: 25px 0 0 10px;
+  display: inline-table;
+}
+
+.avatar-my_page {
+  width: 35px;
+  height: 35px;
+  margin: 1px 5px 5px 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  float: left;
+}
+
+/*---------- Three main boxes area ----------*/
+#personalContent  {
+  min-height: 200px;
+  overflow: hidden;
+  width: 98%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.boxHeaders {
+  color: black;
+  position: relative;
+  min-height: 5px;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 35px;
+  text-align: center;
+}
+#bh1  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh2  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh3  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+
+.inBoxHeaders {
+  color: black;
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 8px;
+  padding-bottom: 0;
+  padding-left: 6px;
+}
+.smallBoxText {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 65%;
+  min-height: 5px;
+  overflow: auto;
+  font-size: 0.7em;
+  padding-left: 3px;
+}
+
+/*This is for the left chunk*/
+#personalInfo {
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  width: 31%;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxLeft {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+
+/*This is for the central chunk*/
+#activeProjects {
+  width: 31%;
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+/*Smaller boxes in left box*/
+.smallBoxMid {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/ 
+}
+#avatar-p1-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p1-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -32px -8px;
+}
+#avatar-p1-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -31px 1px;
+}
+#avatar-p1-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+#midBox1  {
+  height: 180px;
+/*  display: flex;*/
+}
+#midBox2  {
+  height: 180px;
+/*  display: flex;*/
+}
+
+/*This is the chunk to the right*/
+#previousProjects {
+  position: relative;
+  width: 31%;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxRight {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  border-radius: 2px;
+  background-color: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+#avatars-p2 {
+  margin-top: 50px;
+}
+#avatar-p2-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p2-2 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+
+/*-------- Float animation for hover ------------*/
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-1.5px);
+  transform: translateY(-1.5px);
+}
+
+/* GOOGLE MATRIAL CARDS CSS */
+/*
+#materialBox {
+  width: 250px;
+  height:180px;
+  border-bottom-width: thin;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  position: relative;
+}
+
+#materialContent {
+  width: 165px;
+  margin: 0 auto;
+  height: 80%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-bottom-width: thin;
+  position: relative;
+}
+
+.group        { 
+  position:relative; 
+  margin-bottom:45px;
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:150px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { 
+  outline:none;
+}
+
+/* LABEL */
+/*
+label {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS */
+/*
+.bar  { position:relative; display:block; width:165px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+/*
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+/*
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+/*
+input:focus ~ .highlight { 
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+/*
+@keyframes inputHighlighter {
+  from  { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+*/
+
+/*------ Page: my_page.html (opr. Simon) END -------*/

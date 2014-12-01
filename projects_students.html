@@ -227,34 +227,15 @@
         </div> 
         
 <!---------------------- MODAL VIEW: SIGNUP -------------------------> 
-        
-<!-- GAMMEL VERSION
-<a href="#open-modal">Open Modal</a>
 
-<div id="open-modal" class="modal-dialog">
-  <div>
-    <a href="#close-modal" class="close-modal fa fa-close"></a>
-    <input type="text" name="name" placeholder="Virksomhed">
-    <input type="text" name="username" placeholder="Brugernavn">
-    <input type="text" name="password" placeholder="Kodeord">
-    <input type="radio" name="com-or-stud" id="radio-com" value="virksomhed">
-    <label for="radio-com">Virksomhed</label>
-    <input type="radio" name="com-or-stud" id="radio-stu" value="studerende">
-    <label for="radio-stu">Studerende</label>
-    <input type="submit" value="Opret">
-  </div>  
-</div>
--->
-
-<form id="modal-signup" action="my_page.html" method="get">
+<form id="modal-signup-company" class="modal-signup" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
     <h3>Opret dig for at se mere...</h3>
-    <a href="#">
-      <div id="linkedIn_signup" class="fa fa-linkedin">
-        <p>Hent fra LinkedIn</p>
-        <div id="linkedIn-splitter"></div>
-      </div>
-    </a>
-    <div id="all_inputs-signup">
+    <div id="linkedIn_signup" class="linkedIn_signup fa fa-linkedin">
+      <p>Hent fra LinkedIn</p>
+      <div class="linkedIn-splitter"></div>
+    </div>
+    <div class="all_inputs-signup">
       <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
       <input id="depart-input" type="text" name="department" placeholder="Afdeling">
       <p>Valgfrit</p>

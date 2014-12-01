@@ -273,7 +273,7 @@ label {
 input:focus ~ label, input:valid ~ label {
   top:-20px;
   font-size:14px;
-  color:#5264AE;
+  color: #ccc;
 }
 
 /* BOTTOM BARS */
@@ -285,12 +285,14 @@ input:focus ~ label, input:valid ~ label {
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#5264AE; 
+  background: rgb(212, 62, 73); 
   transition:0.2s ease all; 
 }
+
 .bar:before {
   left:50%;
 }
+
 .bar:after {
   right:50%; 
 }

@@ -34,12 +34,10 @@
         <p>Projektbanken er til for at give virksomheder mulighed for at få nogle friske perspektiver på deres udfordringer. Som samarbejdsplatform mellem virksomheder og studerende, er det vores vision at lade begge parter drage fordel af hinandens kompetencer og know-how. Vi vil med denne platform lette samarbejdet, så det kræver så få ressourcer som muligt.<br>
       Velkommen til!</p>
       </div>
-
-      <a href="#">  
-        <div class="create-account-btn">
-          <h5>Opret Dig</h5>
-        </div>
-      </a>
+ 
+      <div class="create-account-btn create-account-btn-company">
+        <h5>Opret Dig</h5>
+      </div>
       
     </div>
     
@@ -47,31 +45,25 @@
       <a href="#twc-splitter">
         <div id="three-ways" class="intro-3btn">
           <h2 id="three" class="icon-3btn">2</h2>
-          <div id="underline3" class="underline"></div>
+          <div id="underline3" class="underline_com-3btn underline"></div>
           <p>måder at <br>
             bruge os på...</p>
-          <div class="whitebox-hor"></div> <!--To only show corners -->
-          <div class="whitebox-ver"></div> <!--To only show corners -->
         </div>
       </a>  
       <a href="#ouc-splitter">
         <div id="others-use" class="intro-3btn">
           <i class="icon-3btn fa fa-users"></i>
-          <div id="underline4" class="underline"></div>
+          <div id="underline4" class="underline_com-3btn underline"></div>
           <p>Det bruger<br>
             de andre os til...</p>
-          <div class="whitebox-hor"></div> <!--To only show corners -->
-          <div class="whitebox-ver"></div> <!--To only show corners -->
         </div>
       </a>
       <a href="projects_students.html">
         <div id="see-stud-projects" class="intro-3btn">
           <i class="icon-3btn fa fa-file-text"></i>
-          <div id="underline5" class="underline"></div>
+          <div id="underline5" class="underline_com-3btn underline"></div>
           <p>Se studerendes<br>
             projekter...</p>
-          <div class="whitebox-hor"></div> <!--To only show corners -->
-          <div class="whitebox-ver"></div> <!--To only show corners -->
         </div>
       </a>
     </div>
@@ -98,11 +90,9 @@
           <p>Opret selv et projekt som I gerne vil have nogle studerende indover...Opret selv et projekt som I gerne vil have nogle studerende indover...Opret selv et projekt som I gerne vil have nogle studerende indover...</p>
         </div>
         
-        <a href="#">  
-          <div id="twc-create-account" class="create-account-btn">
-            <h5>Opret Dig</h5>
-          </div>
-        </a>
+        <div id="twc-create-account" class="create-account-btn create-account-btn-company">
+          <h5>Opret Dig</h5>
+        </div>
         
       </div>
     
@@ -135,15 +125,37 @@
           <p>Men hvor vi nu overbringer denne størrelse til det den handler om, så kan der fortælles op til 3 gange. Hvis det er træet til dit bord der får dig op, er det snarere varmen over de andre. Selv om hun har sat alt mere frem, og derfor ikke længere kan betragtes som den glade giver, er det en nem sammenstilling, som bærer ved i lang tid.</p>
         </div>
 
-        <a href="#">  
-          <div id="ouc-create-account" class="create-account-btn">
-            <h5>Opret Dig</h5>
-          </div>
-        </a>
+        <div id="ouc-create-account" class="create-account-btn create-account-btn-company">
+          <h5>Opret Dig</h5>
+        </div>
       
       </div>
         
     </div>
+    
+<!---------------------- MODAL VIEW: SIGNUP -------------------------> 
+
+<form id="modal-signup-company" class="modal-signup" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <h3>Opret dig for at se mere...</h3>
+    <div id="linkedIn_signup" class="linkedIn_signup fa fa-linkedin">
+      <p>Hent fra LinkedIn</p>
+      <div class="linkedIn-splitter"></div>
+    </div>
+    <div class="all_inputs-signup">
+      <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
+      <input id="depart-input" type="text" name="department" placeholder="Afdeling">
+      <p>Valgfrit</p>
+      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
+      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
+      <p>Du kan give andre adgang efter oprettelsen...</p>
+      <input type="password" name="password" placeholder="Kodeord" required>    
+      <input type="password" name="password" placeholder="Bekræft kodeord" required> 
+    </div>
+    <button type="submit">Opret</button>
+</form>
+        
+<!---------------------- MODAL VIEW: SIGNUP END -------------------------> 
     
 <!-------------------------- Bunden ------------------------------->  
   

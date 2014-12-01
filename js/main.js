@@ -18,23 +18,13 @@ $(document).ready(function(){
 //    $(this).css('background-color', '#fff');    
 //  });
   
-// ---------- Animated stroke under word -----------------
+// ---- Animated stroke under word (index.html) -----------
 
-  $('#companybox').mouseenter(function(){
-    $('#companybox-text').children().css('opacity', 1);
-    $('#underline1').animate({width: "100%"}, 250, 'easeInOutQuint');
+  $('#companybox, #studentbox').mouseenter(function(){
+    $(this).find('.underline_index').animate({width: "100%"}, 250, 'easeInOutQuint');
   }).mouseleave(function(){
-    $('#companybox-text').children().css('opacity', 0.9);
-    $('#underline1').animate({width: "0"}, 150, 'easeOutQuint');  
+    $(this).find('.underline_index').animate({width: "0"}, 150, 'easeOutQuint');  
   });
-  
-  $('#studentbox').mouseenter(function(){
-    $('#studentbox-text').children().css('opacity', 1);
-    $('#underline2').animate({width: "100%"}, 250, 'easeInOutQuint');
-  }).mouseleave(function(){
-    $('#studentbox-text').children().css('opacity', 0.9);
-    $('#underline2').animate({width: "0"}, 150, 'easeOutQuint');  
-  }); 
   
 // ---------- Log ind modal -----------------
   
@@ -70,98 +60,50 @@ $(document).ready(function(){
     }
   })
 
-// ---------- Animated stroke under intro-3btn (company) -----------
+// ------ Animated stroke under intro-3btn (company) -----
 
-//  var underlineWidth = '10%';
-//
-//  $('#three-ways').mouseenter(function(){
-//    $('.intro-3btn-content').children().css('opacity', 1);
-//    $('#underline3').animate({width: underlineWidth}, 250, 'easeInOutQuint');
-//  }).mouseleave(function(){
-//    $('.intro-3btn-content').children().css('opacity', 0.9);
-//    $('#underline3').animate({width: "0"}, 150, 'easeOutQuint');
-//  });
-//  
-//  $('#others-use').mouseenter(function(){
-//    $('.intro-3btn-content').children().css('opacity', 1);
-//    $('#underline4').animate({width: underlineWidth}, 250, 'easeInOutQuint');
-//  }).mouseleave(function(){
-//    $('.intro-3btn-content').children().css('opacity', 0.9);
-//    $('#underline4').animate({width: "0"}, 150, 'easeOutQuint');  
-//  }); 
-//
-//  $('#see-stud-projects').mouseenter(function(){
-//    $('.intro-3btn-content').children().css('opacity', 1);
-//    $('#underline5').animate({width: underlineWidth}, 250, 'easeInOutQuint');
-//  }).mouseleave(function(){
-//    $('.intro-3btn-content').children().css('opacity', 0.9);
-//    $('#underline5').animate({width: "0"}, 150, 'easeOutQuint');  
-//  }); 
-
-// ---------- Animated box around intro-3btn (company) -----------
-
-  var underlineWidth = '90%';
-  var underlineHeight = '90%';
-  var easeWidth = 'easeInOutQuint';
-  var easeHeight = 'easeInOutQuint';
-
-  $('#three-ways').mouseenter(function(){
-    $(this).children().css('opacity', 1);
-    $('#underline3').css('opacity', 1);
-    $('#underline3').animate({width: underlineWidth}, 100, easeWidth);
-    $('#underline3').animate({height: underlineHeight}, 100, easeHeight);
+  $('#three-ways, #others-use, #see-stud-projects').mouseenter(function(){
+    $(this).find('.underline_com-3btn').animate({width: '100%'}, 250, 'easeInOutQuint');
   }).mouseleave(function(){
-    $(this).children().css('opacity', 0.9);
-    $('#underline3').animate({width: '0'}, 1);
-    $('#underline3').animate({height: '0'}, 1);
-    $('#underline3').css('opacity', 0);
+    $(this).find('.underline_com-3btn').animate({width: '0'}, 150, 'easeOutQuint');
   });
 
-  $('#others-use').mouseenter(function(){
-    $(this).children().css('opacity', 1);
-    $('#underline4').css('opacity', 1);
-    $('#underline4').animate({width: underlineWidth}, 100, easeWidth);
-    $('#underline4').animate({height: underlineHeight}, 100, easeHeight);
-  }).mouseleave(function(){
-    $(this).children().css('opacity', 0.9);
-    $('#underline4').animate({width: '0'}, 1);
-    $('#underline4').animate({height: '0'}, 1);
-    $('#underline4').css('opacity', 0);
-  });
+// ------- Animated stroke under nav links -----
 
-  $('#see-stud-projects').mouseenter(function(){
-    $(this).children().css('opacity', 1);
-    $('#underline5').css('opacity', 1);
-    $('#underline5').animate({width: underlineWidth}, 100, easeWidth);
-    $('#underline5').animate({height: underlineHeight}, 100, easeHeight);
+  $('.nav_item').mouseenter(function(){
+    $(this).find('.underline').animate({width: "100%"}, 250, 'easeInOutQuint');
   }).mouseleave(function(){
-    $(this).children().css('opacity', 0.9);
-    $('#underline5').animate({width: '0'}, 1);
-    $('#underline5').animate({height: '0'}, 1);
-    $('#underline5').css('opacity', 0);
+    $(this).find('.underline').animate({width: "0%"}, 150, 'easeOutQuint');  
   });
   
-// --------------------- Modal -------------------
+// ----- Animated stroke at side of nav links -----
 
+  $('.dropdown_item').mouseenter(function(){
+    $(this).find('.sideline').animate({height: "100%"}, 250, 'easeInOutQuint');
+  }).mouseleave(function(){
+    $(this).find('.sideline').animate({height: "0%"}, 150, 'easeOutQuint');  
+  });
   
-//  HØRER TIL "GAMMEL VERSION"
+// -------------- Modal - signup company ---------
+
+//  FROM "OLD VERSION"
 //  $('.modal-dialog').click(function(){
 //    $('.modal-dialog div').css('opacity', '0');
 //  });
 
-$("#modal-signup").hide();
+$("#modal-signup-company").hide();
 
   function fnOpenModal() { 
-    $("#modal-signup").show();
+    $("#modal-signup-company").show();
 
     // Define the Dialog and its properties.
-    $("#modal-signup").dialog({
+    $("#modal-signup-company").dialog({
       resizable: false,
       modal: true,
   //    title: "Opret en virksomhedsprofil for at se mere...",
-      height: 580,
+      height: 560,
       width: 350,
-      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup").dialog('close')}); }, // Close modal on bg-click!
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup-company").dialog('close')}); }, // Close modal on bg-click!
 //      buttons: {
 //        "Opret": function () {
 //          $(this).dialog('close');
@@ -172,9 +114,9 @@ $("#modal-signup").hide();
     });
   }
 
-  $('.project').click(fnOpenModal);
+  $('.project, .create-account-btn-company').click(fnOpenModal);
   
-// -------- Fill inputs on LinkedIn click -------- 
+// ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
   
   $(function(){
     $('#linkedIn_signup').click(function() {
@@ -184,5 +126,75 @@ $("#modal-signup").hide();
       $("#mail-input").val("kema@itu.dk");
     });
   });
+  
+// ------------ Modal - project of student ---------
+  
+$("#modal-project_of_student").hide();
+
+  function fnOpenProjectModal() { 
+    $("#modal-project_of_student").show();
+
+    // Define the Dialog and its properties.
+    $("#modal-project_of_student").dialog({
+      resizable: false,
+      modal: true,
+  //    title: "Opret en virksomhedsprofil for at se mere...",
+      height: 560,
+      width: 900,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-project_of_student").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-project_of_student'
+    });
+  }
+
+  $('.project-after_login').click(fnOpenProjectModal);
+  
+// ------------ Modal - edit profile ---------
+// ET ELLER ANDET HER SPILLER IKKE (ellers er det html'en)
+  
+$("#modal-edit-profile-company").hide();
+
+  function fnOpenEditModal() { 
+    $("#modal-edit-profile-company").show();
+
+    // Define the Dialog and its properties.
+    $("#modal-edit-profile-company").dialog({
+      resizable: false,
+      modal: true,
+  //    title: "Opret en virksomhedsprofil for at se mere...",
+      height: 560,
+      width: 900,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-edit-profile-company").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-edit-profile-company'
+    });
+  }
+
+  $('.smallBoxLeft').click(fnOpenEditModal);
+  
+// -------- Dropdown on hover username in nav ---------
+
+$("#nav-user_dropdown-btn").hover(
+  function () {
+     $('#nav-user_dropdown').slideDown('easeOutQuint');
+  }, 
+  function () {
+     $('#nav-user_dropdown').slideUp('medium');
+  }
+);
+  
+  
+  
+  
   
 });

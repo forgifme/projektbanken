@@ -17,27 +17,62 @@
 
 <body>
 
+<!------------------------- MAIN-NAV ---------------------------->  
+
   <header id="header">
 
     <nav id="main_nav">
 
       <ul id="main_nav-left">
-        <li><a href="#">Logo</a></li>
+        <li><a href="my_page.html">Logo</a></li>
       </ul>
 
       <ul id="main_nav-middle">
-        <li><a href="#">Opret Projekt</a></li>
-        <li><a href="#">Se Tilmeldte</a></li>
-        <li><a href="projects_students-with_header.html">Se Projektbasen</a></li>
+        <li id="nav-create_project" class="nav_item">
+          <a href="create_project-company.html">Opret Projekt
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_subscribed" class="nav_item">
+          <a href="projects_students-after_login.html">Se Tilmeldte
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_projectbase" class="nav_item">
+          <a href="projects_students-after_login.html">Se Projektbasen
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
       </ul>
 
       <ul id="main_nav-right">
-        <li><a href="my_page.html">Navn+Dropd.</a></li>
+        <li id="nav-user_dropdown-btn">
+          <div id="avatar-profile-Kenny" class="avatar_profile"></div>
+          <a href="my_page.html">Kenny
+          <i id="nav-user_dropdown-arrow" class="fa fa-chevron-down"></i>
+          </a>   
+
+            <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
+              <li class="dropdown_item">
+                <a href="#">Redigér profil
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+              <li id="log_out-btn">
+                <a href="#">Log ud
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+            </ul>  
+        
+        </li>
       </ul>
 
     </nav>
 
   </header>
+  
+<!------------------------- MAIN-NAV END ---------------------------->  
   
   <div id="wrap_projects" class="wrapper_not_frontpage">
   
@@ -79,7 +114,7 @@
         
 <!------------------------- PROJECT 1 ---------------------------->        
         
-          <div id="project-1" class="project">
+          <div id="project-1" class="project project-after_login">
           
           <ul id="avatars-1" class="avatars">
             <li id="avatar-1-1" class="avatar"></li>
@@ -122,7 +157,7 @@
         
 <!------------------------- PROJECT 2 ----------------------------> 
         
-        <div id="project-2" class="project">
+        <div id="project-2" class="project project-after_login">
           
           <ul id="avatars-2" class="avatars">
             <li id="avatar-2-1" class="avatar"></li>
@@ -164,7 +199,7 @@
         
 <!------------------------- PROJECT 3 ----------------------------> 
         
-        <div id="project-3" class="project">
+        <div id="project-3" class="project project-after_login">
         
           <ul id="avatars-3" class="avatars">
             <li id="avatar-3-1" class="avatar"></li>
@@ -208,7 +243,7 @@
         
 <!------------------------- PROJECT 4 ----------------------------> 
         
-        <div id="project-4" class="project">
+        <div id="project-4" class="project project-after_login">
         
           <ul id="avatars-4" class="avatars">
             <li id="avatar-4-1" class="avatar"></li>
@@ -247,48 +282,18 @@
         
         </div> 
         
-<!---------------------- MODAL VIEW: SIGNUP -------------------------> 
-        
-<!-- GAMMEL VERSION
-<a href="#open-modal">Open Modal</a>
+<!---------------------- MODAL VIEW: PROJECT -------------------------> 
 
-<div id="open-modal" class="modal-dialog">
-  <div>
-    <a href="#close-modal" class="close-modal fa fa-close"></a>
-    <input type="text" name="name" placeholder="Virksomhed">
-    <input type="text" name="username" placeholder="Brugernavn">
-    <input type="text" name="password" placeholder="Kodeord">
-    <input type="radio" name="com-or-stud" id="radio-com" value="virksomhed">
-    <label for="radio-com">Virksomhed</label>
-    <input type="radio" name="com-or-stud" id="radio-stu" value="studerende">
-    <label for="radio-stu">Studerende</label>
-    <input type="submit" value="Opret">
-  </div>  
-</div>
--->
-
-<form id="modal-signup" action="my_page.html" method="get">
-    <h3>Opret dig for at se mere...</h3>
-    <a href="#">
-      <div id="linkedIn_signup" class="fa fa-linkedin">
-        <p>Hent fra LinkedIn</p>
-        <div id="linkedIn-splitter"></div>
+<div id="modal-project_of_student">
+    <h3>Her er et projekt uddybet</h3>
+      <div id="tags-wrap-p1" class="tags-wrap">
+        <p>Tags tilhørende</p>
+        <h4 class="tagwheel_title">Nintendo Slænget</h4>
+        <div class="tagwheel"></div>
       </div>
-    </a>
-    <div id="all_inputs-signup">
-      <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
-      <input id="depart-input" type="text" name="department" placeholder="Afdeling">
-      <p>Valgfrit</p>
-      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
-      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
-      <p>Du kan give andre adgang efter oprettelsen...</p>
-      <input type="password" name="password" placeholder="Kodeord" required>    
-      <input type="password" name="password" placeholder="Bekræft kodeord" required> 
-    </div>
-    <button type="submit">Opret</button>
-</form>
+</div>
         
-<!---------------------- MODAL VIEW: SIGNUP END -------------------------> 
+<!---------------------- MODAL VIEW: PROJECT END -------------------------> 
         
       </div> <!-- projects-content-wrap -->
       
