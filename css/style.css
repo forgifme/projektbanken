@@ -1,0 +1,1783 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/Roboto.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/roboto/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/bitter/Bitter-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('fonts/bitter/Bitter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Margin and padding reset */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f8f7f7;
+}
+
+/* Reset focus effect */
+
+*:focus {
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0px 0px 8px rgba(212, 62, 73, 0.3)
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: Bitter, sans-serif;
+/*  font-style: italic;*/
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  color: rgb(212,62,73);
+}
+
+a, p, h4, h5, h6, ul, table, svg, input, button, label, #contact-info {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+/*  color: rgb(212,62,73);*/
+  color: #222;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, input {
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #222;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: .8em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8em;
+  width: 200px;
+  background-color: #fff;
+}
+
+button {
+  background-color: #fff; 
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+  cursor: pointer;
+}
+
+blockquote p {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  font-style: italic;
+  color: #222;
+  position: absolute;
+}
+
+.quotationmark {
+  font-size: 8em;
+  color: rgb(212,62,73);
+}
+
+.quote-source {
+  font-size: 1em;
+  line-height: 1em;
+  color: #ccc;
+  top: 100px;
+}
+
+/*----------------- Header -------------------*/
+
+#header {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1); 
+  z-index: 100;
+  height: 59px;
+*/
+}
+
+#main_nav {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+#main_nav ul li a {
+  position: relative;
+  display: block;
+  color: #222;
+}
+
+/*
+#main_nav-middle li a:hover {
+  background-color: rgb(212,62,73);
+  color: #fff;
+}
+*/
+
+#main_nav-left {
+  position: relative;  
+  float: left;
+  width: 25%;
+}
+
+#main_nav-left li a {
+  padding: 20px;
+}
+
+#main_nav-middle {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#main_nav-middle li a {
+  width: calc(33.3333333% - 40px); /* 1/3 minus padding */
+  position: relative;
+  float: left;
+  text-align: center;
+  padding: 20px;
+}
+
+.underline_nav {
+  height: 3px;
+  bottom: 0;
+}
+
+#main_nav-right {
+  position: relative;
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+.avatar_profile {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+  
+#avatar-profile-Kenny {
+  position: absolute;
+  top: 13px;
+  right: 105px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 70px;
+  background-position: -20px -6px;
+}
+
+#nav-user_dropdown-btn {
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  min-height: 5px;
+  overflow: visible;
+}
+
+#main_nav-right li a {
+  padding: 20px;
+  padding-right: 45px;
+}
+
+#nav-user_dropdown-btn a {
+  right: 0px;
+}
+
+#nav-user_dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  font-size: 0.8em;
+}
+
+#nav-user_dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff; 
+  width: 180px;
+  z-index: 100;
+}
+
+#nav-user_dropdown li a {
+  position: relative;
+  display: block;
+  color: #222;
+  padding: 20px;
+  text-align: right;
+}
+
+#log_out-btn a:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+}
+
+.sideline {
+  position: absolute;
+  width: 3px;
+  background-color: rgb(212,62,73);
+  top: 0;
+}
+
+.sideline_nav {
+  height: 0;
+  left: 0;
+}
+
+/*--------------- Header slut ----------------*/
+
+#wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+#companybox {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#studentbox {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#companybox-text,
+#studentbox-text {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: 10%;
+}
+
+#companybox-text h2,
+#studentbox-text h2 {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+}
+
+.underline {
+  position: absolute;
+  width: 0;
+  background-color: rgb(212,62,73);
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#underline1,
+#underline2 {
+  height: 5px;
+  top: 0;
+}
+
+.fa {
+  margin: auto;
+  text-align: center;
+}
+
+#icon-company,
+#icon-student {
+  display: block;
+  width: 100%;
+  position: relative;
+  font-size: 150px;
+  color: rgb(212,62,73);
+  margin-top: 50px;
+}
+
+#icon-company,
+#icon-student,
+#companybox-text h2,
+#studentbox-text h2 {
+  opacity: 0.9;
+}
+
+#c-or-s {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 100%;
+  z-index: 100;
+/* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#c-or-s p {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  padding: 10px;
+  background-color: white;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login_btn h5 {
+  position: absolute;
+  text-align: center; 
+  top: 60%;
+  padding: 10px;
+  width: 100px;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login_btn h5:hover {
+  background-color: rgb(212, 62, 73);
+  color: #fff;
+  cursor: pointer;
+}
+
+#login_form {
+/*  visibility: hidden;*/
+  position: absolute;
+  top: 130px;
+  width: 240px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 110;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#close-login-form {
+  position: absolute;
+  color: #ccc;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+#login_form input[type="text"],
+#login_form input[type="submit"] {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  background-color: #fff;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 100;
+  color: rgb(212, 62, 73);
+  line-height: 2em;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 6px;
+  width: 23px;
+  content: "\f10c";
+}
+
+input[type="radio"]:hover:before + label:hover:before {
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "\f192";
+}
+
+label {
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 500;
+}
+
+#login_form button[type="submit"] {
+  width: 222px;
+}
+
+#divider_line {
+  display: absolute;
+  width: 1px;
+  height: 100%;
+  margin: 0 auto;
+  border-left: 1px dashed #ccc;
+}
+
+#footer {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(140, 200, 220);
+  z-index: 0;
+}
+
+#footer-left {
+  position: relative;
+  width: 45%;
+  margin: 100px auto;
+  float: left;
+}
+
+#contact-info {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-right: 100px;
+  color: #fff;
+  font-size: .8em;
+  line-height: 2em;
+  text-align: right;
+  float: right;
+}
+
+#contact-info strong {
+  font-weight: 400;
+  font-size: 1.2em;w
+  padding-bottom: 6px;
+  border-bottom: 1px solid white;
+}
+
+.contact-info,
+.contact-info a {
+  color: #fff;
+  margin-top: 15px;
+  line-height: 1.6em;
+}
+
+#footer-divider {
+  position: absolute;
+  width: 1px;
+  top: 20%;
+  height: 60%;
+  border-left: 1px solid #fff;
+  left: 45%;
+}
+
+#footer-right {
+  position: relative;
+  width: 55%;
+  margin: 100px auto;
+  float: left;
+}
+
+#sm-icons {
+  position: relative;
+  display: block;
+  width: 330px;
+  margin-left: 90px;
+}
+
+.sm {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 3em;
+  padding: 20px;
+}
+
+/*----------------- Page: company-no-login.html -----------------------*/
+
+
+/* Hack to keep footer at bottom */
+.wrapper_not_frontpage {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 3000px;
+}
+
+#to-top {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  z-index: 1000;
+  padding: 10px;
+  padding-right: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #222;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom: 1px solid rgba(212, 62, 73, 0.3);
+}
+
+#to-top:hover {
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  padding-bottom: 12px;
+}
+
+#bg-descr-company {
+  position: absolute;
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover;
+  background-clip: rect(100%, 100px);
+  width: 100%;
+  height: 85%;
+  top: 0;
+  /* Spejlvend billede */
+/*
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+*/
+}
+
+#descr-and-create-acc-btn {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#description {
+  position: relative;
+  display: block;
+  float: left;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+#description h1 {
+  margin: 60px 0 0 20px;
+  padding: 10px;
+  color: rgb(212, 62, 73);
+}
+
+#description p {
+  margin: 0px 20px;
+  padding: 10px;
+  color: #222;
+}
+
+.create-account-btn {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.create-account-btn h5 {
+  position: relative;
+  text-align: center; 
+  font-weight: 400;
+  padding: 10px;
+  width: 100px;
+  top: 180px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: rgb(212, 62, 73);
+}
+
+.create-account-btn h5:hover {
+  color: #fff;
+  background-color: rgba(212, 62, 73, 0.75);
+/*  border: 1px solid rgba(0,0,0,0);*/
+  cursor: pointer;
+}
+
+#intro-3btn {
+  position: relative;
+  display: block;
+  width: 70%;
+  height: 280px;
+  background-color: #fff;
+/*  border: 1px solid #ccc;*/
+  border-radius: 4px;
+  z-index: 100;
+  margin: auto;
+  margin-bottom: 250px;
+  overflow: hidden;
+}
+
+.intro-3btn {
+  position: relative;
+  width: 33.33333333333%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+#three-ways {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#see-stud-projects {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Alternative for animated #underline */
+/*
+#three-ways:hover,
+#others-use:hover,
+#see-stud-projects:hover {
+  border-bottom: 10px solid #ccc;
+} 
+*/
+
+.icon-3btn {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 8em;
+  font-weight: 100;
+  color: rgb(212,62,73);
+  margin-top: 40px;
+  z-index: 100;
+}
+
+#three {
+  position: absolute;
+  width: 100%;
+  font-size: 10em; 
+  font-weight: 600;
+  line-height: 0em;
+  top: 65px;
+}
+
+/* Underlines, being actual lines */
+
+#underline3,
+#underline4,
+#underline5 {
+  height: 5px;
+  bottom: 0;
+}
+
+.intro-3btn p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+  bottom: 40px;
+  z-index: 100;
+  color: #222;
+}
+
+.intro-3btn-content {
+  position: relative;
+  display: block;
+  width: 65%;
+  margin: 100px auto;
+  /* Hack to follow height of content */ 
+  min-height: 10px;
+  overflow: hidden;
+}
+
+.content-splitter-text {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 22px;
+}
+
+#twc-header h2 {
+  padding-bottom: 20px;
+  margin-top: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#three-ways-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+  color: #222;
+  /* Hack to follow height of content */ 
+  min-height: 10px;
+}
+
+.three-ways-content {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 100px 0;
+}
+
+#three-ways-content h3 {
+  position: absolute;
+  width: 45%;
+}
+
+#three-ways-content p {
+  position: absolute;
+  width: 45%;
+  top: 45px; 
+}
+
+.bg-twc {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+}
+
+/* twc-content box 1 */
+#three-ways-content-1 h3 {
+  text-align: right;
+/*  left: 5%;*/
+}
+
+#three-ways-content-1 p {
+  text-align: right;
+/*  left: 5%;*/
+}
+
+#bg-twc-1 {
+  right: 5%;
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+
+/* twc-content box 2 */
+#three-ways-content-2 h3 {
+  right: 0%;
+}
+
+#three-ways-content-2 p {
+  right: 0%;
+}
+
+#bg-twc-2 {
+  left: 5%;
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+
+/* twc-content box 3 
+#three-ways-content-3 h3 {
+  right: 0;
+}
+
+#three-ways-content-3 p {
+  right: 0;
+}
+
+#bg-twc-3 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+*/
+
+#three-ways-content-3-student h3 {
+  text-align: right;
+}
+
+#three-ways-content-3-student p {
+  text-align: right;
+}
+
+#bg-twc-3-student {
+  right: 5%;
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+
+#twc-create-account {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 50px 0;
+}
+
+#twc-create-account h5 {
+  top: 0;
+}
+
+#twc-create-account h5:hover {
+  background-color: rgb(212,62,73);
+}
+
+.content-splitter {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: rgb(140, 200, 220);
+/*
+  background: url(../img/blyantspidser_gammeldags.jpg);
+  background-size: cover;
+*/
+}
+
+.whitebox-content-splitter {
+  width: 75%;
+  height: 6px;
+  margin: 0 auto;
+  background: #f8f7f7;
+}
+
+.content-splitter h2 {
+  top: -50px;
+  height: 0;
+  width: 65%;
+  color: rgb(140, 200, 220);
+}
+
+#twc-splitter {
+  background: rgb(212,62,73);
+}
+
+#twc-splitter h2 {
+  color: rgb(212,62,73);
+}
+
+.quoteblock-others-use {
+  position: absolute;
+  right: 0;
+  width: 45%;
+  height: 140px;
+  z-index: 100;
+}
+
+#quotemark-others-use {
+  height: 100%;
+  position: absolute;
+  float: left;
+  color: rgb(140, 200, 220);
+}
+
+#quote-others-use {
+  position: relative;
+  float: left;
+  width: 80%;
+  padding-left: 20px;
+  margin: 70px 120px;
+}
+
+.others-use-content {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 500px;
+  margin: 100px 0;
+}
+
+.others-use-content h3 {
+  position: absolute;
+  margin-top: 60px;
+  width: 100%;
+  color: rgb(140, 200, 220);
+}
+
+.others-use-content p {
+  position: absolute;
+  width: 100%;
+  top: 330px;
+}
+
+.bg-ouc {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+/* ouc-content box 1 */
+#others-use-1 h3 {
+  top: 225px;
+}
+
+#others-use-1 p {
+  bottom: 0;
+}
+
+#bg-ouc-1 {
+  background: url("../img/blyant_papir.jpg") no-repeat;
+  background-size: cover; 
+}
+/* ou-content box 1 end */
+
+
+#ouc-create-account {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 50px 0;
+}
+
+#ouc-create-account h5 {
+  color: rgb(140, 200, 220);
+  top: 0;
+}
+
+#ouc-create-account h5:hover {
+  color: #fff;
+  background-color: rgb(140, 200, 220);
+}
+
+#footer_not_frontpage {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  height: 300px; /* Hvis dette ændres skal padding på "wrapper" ændres */
+  background-color: rgb(140, 200, 220);
+  z-index: 0; 
+}
+
+/*----------- Page: projects_students.html ------------*/
+
+/* Wheel */
+
+svg {
+  font-size: 0.6em;
+  display: block;
+}
+
+.tags-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.tags-wrap p,
+.tags-wrap h4 {
+  position: absolute;
+  width: 70%;
+  text-align: right; 
+  right: 280px;
+  color: #222;
+}
+
+.tags-wrap p {
+  top: 25px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.tags-wrap h4 {
+  top: 50px;
+}
+
+.tagwheel {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: 40px;
+  top: calc(50% - 105px); /* 50% minus half height */
+}
+
+/* Wheel end */
+
+#wrap_projects {
+  padding-bottom: 300px; /* Højde på footer! */
+  height: 1200px;
+}
+
+#projects-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;  
+}
+
+#projects-header {
+  position: absolute;
+  width: 100%;
+  height: 72px;
+}
+
+#projects-header li {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#projects-header-titles,
+#projects-header-items {
+  position: absolute;
+  width: 100%;
+}
+
+.projects-header-title {
+  width: 50%;
+}
+
+.projects-header-title:hover {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: translateY(1px) translateZ(0);
+  transform: translateY(1px) translateZ(0);
+}
+
+#projects-header-titles ul li {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222;
+  font-size: 0.7em ;
+  top: 0px;
+  float: left;
+}
+
+#projects-header-titles ul li a {
+  padding: 5px 0 5px 0;
+  display: block;
+}
+
+#projects-header-title-1 {
+  width: 49%;
+}
+
+#projects-header-title-2 {
+  width: 49%;
+  left: 2%;
+}
+
+#projects-header-items ul li {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-size: 1em;
+  color: #222;
+  top: 28px;
+  width: 24.5%;
+  left: 0;
+  background-color: #fff;
+}
+
+#projects-header-items ul li a {
+  padding: 10px 0 10px 0;
+  display: block;
+}
+
+#projects-header-item-1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  z-index: 100;
+}
+
+#projects-header-item-2 {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-left: 24.5%;
+  z-index: 99;
+}
+
+#projects-header-item-3 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-left: 51%;
+  z-index: 98;
+}
+
+#projects-header-item-4 {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-left: 75.5%;
+  z-index: 97;
+}
+
+.phi-active {
+  transform: translateY(5px) translateZ(0);
+  -moz-transfomr: translateY(5px) translateZ(0);
+  -webkit-transform: translateY(5px) translateZ(0);
+  box-shadow: 2px 2px 4px #ececec;
+  -moz-box-shadow: 2px 2px 4px #ececec;
+  -webkit-box-shadow: 2px 2px 4px #ececec;  
+}
+
+#projects-content-wrap {
+  position: absolute;
+  margin-top: 70px; /* Height of #projects-header */
+  width: 100%;
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  margin: 40px 0 40px 0;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 4px 4px 8px #ececec;
+  -moz-box-shadow: 4px 4px 8px #ececec;
+  -webkit-box-shadow: 4px 4px 8px #ececec;  
+  transition-duration: 0.3s;
+  -moz-transition-property: bottom;
+  -webkit-transition-duration: 0.3s;
+  transform: translateY(5px) translateZ(0);
+  -moz-transform: translateY(5px) translateZ(0);
+  -webkit-transform: translateY(5px) translateZ(0);
+}
+
+.project-headline h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #222;
+  text-align: left;
+  padding: 5px;
+  margin: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.p-data-table {
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: #222;
+  top: 100px;
+  left: 40px;
+}
+
+.p-data {
+  padding: 5px;
+/*  border-bottom: 1px solid #ccc;*/
+}
+
+.p-data-headline {
+  font-weight: 700;
+}
+
+.avatars {
+  position: absolute;
+  margin: 30px 0 0 40px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+#avatar-1-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-1-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-1-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-1-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-2-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-2-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-2-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-3-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+#avatar-3-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-3-5 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -24px 4px;
+}
+
+#avatar-4-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -20px -3px;
+}
+
+#avatar-4-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -24px -4px;
+}
+
+/*----------------- Modal -------------------*/
+
+.modal-signup {
+  position: relative;
+  width: 350px; /* Set in the main.js-file */
+  height: 580px; /* Set in the main.js-file */
+  padding: 0;
+  background-color: #f8f7f7;
+/* overflow: hidden; */
+}
+
+.form-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f7f7;
+}
+
+.modal-signup h3 {
+  position: relative;
+  display: block;
+  padding: 15px;
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #222;
+  left: 0;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+/*  border-bottom: 1px solid #ccc;*/
+}
+
+.all_inputs-signup {
+  position: relative;
+  margin-top: 25px;
+  /* Hack to set height from content */
+  min-height: 5px;
+}
+
+.modal-signup input {
+  position: relative;
+  display: block;
+  width: 290px;
+  margin: 8px 0 8px 4px;
+  padding: 10px;
+  color: #ccc;
+  float: left;
+  clear: both;
+  border: none;
+}
+
+.modal-signup input[type=text] {
+  color: #222;
+}
+
+.modal-signup p {
+  display: block;
+  position: relative;
+  clear: both;
+  font-size: 0.7em;
+  color: #ccc;
+  margin: 0 0 5px 0;
+  padding: 0 14px;
+}
+
+.linkedIn_signup {
+  width: 282px;
+  position: relative;
+  font-size: 1.5em;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0 auto;
+  margin-left: 4px;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #4875b4;
+  cursor: pointer;
+}
+
+.linkedIn-splitter {
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #fff;
+}
+
+.linkedIn_signup p {
+  position: absolute;
+  font-size: 0.7em;
+  font-weight: 400;
+  left: 100px;
+  top: 10px;
+  right: 0;
+  color: #fff;
+  text-align: left;
+}
+
+.linkedIn_signup:hover {
+  opacity: 0.9;
+}
+
+.modal-signup button[type="submit"] {
+  position: absolute;
+  width: 312px;
+  bottom: 5px;
+  left: 20px;
+  border: none;
+}
+
+.ui-widget-content {
+  background: #fff;
+  color: #222;
+}
+
+/* Dark bg when modal active */
+.ui-widget-overlay {
+  background: repeat-x scroll 50% 50% #000;
+  opacity: 0.7;
+}
+
+/* Undisplay predefined "jQuery UI" modal styles */
+.ui-widget-header,
+.ui-dialog-titlebar-close,
+.ui-button {
+  display: none;
+}
+
+/*-------- Page: my_page.html (opr. Simon) ---------*/
+
+/*---------- Content in all the view *-----------*/
+#myStudPage {
+  width: 97%;
+/*  border: 1px solid #CCC;*/
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#myStudHead {
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  min-height: 10px;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 2px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+/*  box-shadow: 2px 2px 1px #888888;*/
+}
+
+/*-------- AVATARS -------------*/
+.avatars-my_page {
+  position: relative;
+  width: 24%;
+  min-height: 20px;
+  overflow: hidden;
+  margin: 25px 0 0 10px;
+  display: inline-table;
+}
+
+.avatar-my_page {
+  width: 35px;
+  height: 35px;
+  margin: 1px 5px 5px 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  float: left;
+}
+
+/*---------- Three main boxes area ----------*/
+#personalContent  {
+  min-height: 200px;
+  overflow: hidden;
+  width: 98%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.boxHeaders {
+  color: black;
+  position: relative;
+  min-height: 5px;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 35px;
+  text-align: center;
+}
+#bh1  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh2  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+#bh3  {
+  border-bottom: 2px solid rgba(140, 200, 220, 0.8);
+}
+
+.inBoxHeaders {
+  color: black;
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 8px;
+  padding-bottom: 0;
+  padding-left: 6px;
+}
+.smallBoxText {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 65%;
+  min-height: 5px;
+  overflow: auto;
+  font-size: 0.7em;
+  padding-left: 3px;
+}
+
+/*This is for the left chunk*/
+#personalInfo {
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  width: 31%;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxLeft {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+
+/*This is for the central chunk*/
+#activeProjects {
+  width: 31%;
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+/*Smaller boxes in left box*/
+.smallBoxMid {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/ 
+}
+#avatar-p1-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p1-2 {
+  background: url(../img/avatars/luigi.jpg) no-repeat;
+  background-size: 100px;
+  background-position: -32px -8px;
+}
+#avatar-p1-3 {
+  background: url(../img/avatars/princess.gif) no-repeat;
+  background-size: 100px;
+  background-position: -31px 1px;
+}
+#avatar-p1-4 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+#midBox1  {
+  height: 180px;
+/*  display: flex;*/
+}
+#midBox2  {
+  height: 180px;
+/*  display: flex;*/
+}
+
+/*This is the chunk to the right*/
+#previousProjects {
+  position: relative;
+  width: 31%;
+  min-height: 100px;
+  overflow: hidden;
+  float: left;
+}
+/*Smaller boxes in left box*/
+.smallBoxRight {
+  min-height: 50px; 
+  overflow: hidden; 
+  width: 95%;
+  margin: 10px 0 0 10px;
+  border-radius: 2px;
+  background-color: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+/*  box-shadow: 1px 1px .5px #888888;*/
+}
+#avatars-p2 {
+  margin-top: 50px;
+}
+#avatar-p2-1 {
+  background: url(../img/avatars/super_mario.jpg) no-repeat;
+  background-size: 85px;
+  background-position: -28px -8px;
+}
+#avatar-p2-2 {
+  background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
+  background-size: 75px;
+  background-position: -31px -1px;
+}
+
+/*-------- Float animation for hover ------------*/
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-1.5px);
+  transform: translateY(-1.5px);
+}
+
+/* GOOGLE MATRIAL CARDS CSS */
+/*
+#materialBox {
+  width: 250px;
+  height:180px;
+  border-bottom-width: thin;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  position: relative;
+}
+
+#materialContent {
+  width: 165px;
+  margin: 0 auto;
+  height: 80%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-bottom-width: thin;
+  position: relative;
+}
+
+.group        { 
+  position:relative; 
+  margin-bottom:45px;
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:150px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { 
+  outline:none;
+}
+
+/* LABEL */
+/*
+label {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS */
+/*
+.bar  { position:relative; display:block; width:165px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+/*
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+/*
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+/*
+input:focus ~ .highlight { 
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+/*
+@keyframes inputHighlighter {
+  from  { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+*/
+
+/*------ Page: my_page.html (opr. Simon) END -------*/

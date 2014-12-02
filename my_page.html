@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+   
+    <title>Min side | Projektbanken</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="ggl.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+<!--    <link rel="stylesheet" href="css/responsive.css">-->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/my_page-style.css">-->
+    <link rel="stylesheet" href="css/responsive.css">
+    
+  </head>	
+   
+  <body>
+    <div class="wrapper_not_frontpage">
+    
+<!------------------------- MAIN-NAV ---------------------------->  
+
+  <header id="header">
+
+    <nav id="main_nav">
+
+      <ul id="main_nav-left">
+        <li><a href="my_page.html">Logo</a></li>
+      </ul>
+
+      <ul id="main_nav-middle">
+        <li id="nav-create_project" class="nav_item">
+          <a href="create_project-company.html">Opret Projekt
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_subscribed" class="nav_item">
+          <a href="projects_students-after_login.html">Se Tilmeldte
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_projectbase" class="nav_item">
+          <a href="projects_students-after_login.html">Se Projektbasen
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+      </ul>
+
+      <ul id="main_nav-right">
+        <li id="nav-user_dropdown-btn">
+          <div id="avatar-profile-Kenny" class="avatar_profile"></div>
+          <a href="my_page.html">Kenny
+          <i id="nav-user_dropdown-arrow" class="fa fa-chevron-down"></i>
+          </a>   
+
+            <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
+              <li class="dropdown_item">
+                <a href="#">Redigér profil
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+              <li id="log_out-btn">
+                <a href="#">Log ud
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+            </ul>  
+        
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+  
+<!------------------------- MAIN-NAV END ---------------------------->  
+    
+      <div id="myStudPage">
+        <h2 id="myStudHead">Dine oplysninger</h2>
+        <div id="personalContent">
+          <section id="personalInfo">
+            <h3 class="boxHeaders" id="bh1">Oplysninger om virksomhed</h3>
+            <a href="edit_profile-info.html">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">3</h4>
+              </div>
+            </a>
+            <a href="edit_profile-info.html">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Online og UX</h4>
+              </div>
+            </a>  
+            <a href="edit_profile-info.html">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">Mea Elmtoft</h4>
+              </div>
+            </a>  
+            <a href="edit_profile-info.html">
+              <div class="smallBoxLeft float">
+                <h4 class="inBoxHeaders">mea@3.dk</h4>
+              </div>
+            </a>   
+          </section>
+          
+          <section id="activeProjects">
+            <h3 class="boxHeaders" id="bh2">Nuværende projekter</h3>
+            <a href="#">
+              <div class="smallBoxMid float" id="midBox1">
+                <h4 class="inBoxHeaders" >Nyt website for X</h4>
+                  <ul id="avatars-p1" class="avatars-my_page">
+                    <li id="avatar-p1-1" class="avatar-my_page"></li>
+                    <li id="avatar-p1-2" class="avatar-my_page"></li>
+                    <li id="avatar-p1-3" class="avatar-my_page"></li>
+                    <li id="avatar-p1-4" class="avatar-my_page"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="smallBoxMid float" id="midBox2">
+                <h4 class="inBoxHeaders">Regnskabsanalyse</h4>
+                <ul id="avatars-p2" class="avatars-my_page">
+                    <li id="avatar-p2-1" class="avatar-my_page"></li>
+                    <li id="avatar-p2-2" class="avatar-my_page"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxMid float">
+                <h4 class="inBoxHeaders">Ny grafisk identitet for X</h4>
+              </div>
+            </a>  
+          </section>
+    
+        
+          <section id="previousProjects">
+            <h3 class="boxHeaders" id="bh3">Historik</h3>
+            <a href="#">
+              <div class="smallBoxRight float">
+                <h4 class="inBoxHeaders">Det der awesome projekt</h4>
+              </div>
+            </a>  
+            <a href="#">
+              <div class="smallBoxRight float">
+                <h4 class="inBoxHeaders">Ny hjerne til Julie</h4>
+              </div> 
+            </a>   
+          </section>
+      
+<!-------------------- MODAL VIEW: EDIT PROFILE -----------------------> 
+<!-- ET ELLER ANDET HER SPILLER IKKE (ellers er det jQuery'en) -->
+<!--
+<form id="modal-edit-profile-company" class="modal-edit-profile" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <div class="all_inputs-signup">
+      <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
+      <input id="depart-input" type="text" name="department" placeholder="Afdeling">
+      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
+      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
+      <input type="password" name="password" placeholder="Kodeord" required>    
+      <input type="password" name="password" placeholder="Bekræft kodeord" required> 
+    </div>
+    <button type="submit">Opdatér</button>
+</form>
+-->
+        
+<!-------------------- MODAL VIEW: EDIT PROFILE END ----------------------->
+        
+        </div>
+      
+      </div>       
+
+    </div>       
+              
+<!--  Dette er kode til Material design input-box            -->
+                    
+<!--
+      <div id="materialBox">
+        <form>
+          <div id="materialContent">
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Name</label>
+            </div>
+            <div class="group">
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+--> 
+    
+    <footer>
+      <div id="footer_not_frontpage">
+        <div id="footer-left">
+          <div id="contact-info">
+            <strong>Projektbanken</strong>
+            <p class="contact-info">
+              <a href="mailto:goddaw@projektbanken.dk?Subject=Goddaw">goddaw@projektbanken.dk</a><br>
+              +45 49 82 73 39
+            </p>
+          </div>
+        </div>
+        <div id="footer-divider"></div>
+        <div id="footer-right">
+          <div id="sm-icons">
+            <a href="http://www.twitter.com"><i id="twitter" class="sm fa fa-twitter"></i></a>
+            <a href="http://www.facebook.com"><i id="facebook" class="sm fa fa-facebook"></i></a>
+            <a href="http://www.linkedin.com"><i id="linked_in" class="sm fa fa-linkedin"></i></a>
+            <a href="http://www.instagram.com"><i id="instagram" class="sm fa fa-instagram"></i></a>
+          </div>
+        </div>  
+      </div>
+    </footer>
+    
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/d3.v2.js"></script> <!-- script bag wheel script -->
+  <script src="js/wheel.js"></script>
+  <script src="js/modal.js"></script>
+  
+  <script type="text/javascript">
+    drawPie("TagsP1", dataSet1, "#tags-wrap-p1 .tagwheel", "colorScale20", 10, 100, 50, 0);
+    drawPie("TagsP2", dataSet2, "#tags-wrap-p2 .tagwheel", "colorScale20", 10, 100, 50, 0);
+   drawPie("TagsP3", dataSet3, "#tags-wrap-p3 .tagwheel", "colorScale20", 10, 100, 50, 0);
+   drawPie("TagsP4", dataSet4, "#tags-wrap-p4 .tagwheel", "colorScale20", 10, 100, 50, 0);
+  </script>    
+                  
+  </body>
+
+</html>
