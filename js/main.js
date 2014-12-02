@@ -59,13 +59,38 @@ $(document).ready(function(){
       $('#to-top').fadeOut('fast');
     }
   })
+  
+// ------- To-top button: Smooth transition --------
+ 
+var scrollSpeed1 = 300; 
+var scrollSpeed2 = 500;   
+  
+$("#to-top").click(function() {
+    $('html, body').animate({
+        scrollTop: $("html").offset().top
+    -40}, scrollSpeed1);
+});
+  
+// ------- Anchorlinks: Smooth transition -------- 
+  
+$("#three-ways").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#twc-splitter").offset().top
+    -40}, scrollSpeed2);
+});
+  
+$("#others-use").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#ouc-splitter").offset().top
+    -40}, scrollSpeed2);
+});
 
 // ------ Animated stroke under intro-3btn (company) -----
 
   $('#three-ways, #others-use, #see-stud-projects').mouseenter(function(){
-    $(this).find('.underline_com-3btn').animate({width: '100%'}, 250, 'easeInOutQuint');
+    $(this).find('.underline_com-3btn, .underline_stu-3btn').animate({width: '100%'}, 250, 'easeInOutQuint');
   }).mouseleave(function(){
-    $(this).find('.underline_com-3btn').animate({width: '0'}, 150, 'easeOutQuint');
+    $(this).find('.underline_com-3btn, .underline_stu-3btn').animate({width: '0'}, 150, 'easeOutQuint');
   });
 
 // ------- Animated stroke under nav links -----
@@ -93,7 +118,7 @@ $(document).ready(function(){
 
 $("#modal-signup-company").hide();
 
-  function fnOpenModal() { 
+  function fnOpenModalCompany() { 
     $("#modal-signup-company").show();
 
     // Define the Dialog and its properties.
@@ -101,7 +126,7 @@ $("#modal-signup-company").hide();
       resizable: false,
       modal: true,
   //    title: "Opret en virksomhedsprofil for at se mere...",
-      height: 560,
+      height: 630,
       width: 350,
       open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup-company").dialog('close')}); }, // Close modal on bg-click!
 //      buttons: {
@@ -114,16 +139,60 @@ $("#modal-signup-company").hide();
     });
   }
 
-  $('.project, .create-account-btn-company').click(fnOpenModal);
+  $('.project, .create-account-btn-company').click(fnOpenModalCompany);
   
 // ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
   
   $(function(){
-    $('#linkedIn_signup').click(function() {
-      $("#company-input").val("ITU");
+    $('#linkedIn-company_signup').click(function() {
+      $("#company-input").val("IT Universitetet");
       $("#depart-input").val("DDKP");
-      $("#name-input").val("Kenny Marek Møller");
+      $("#firstname-input").val("Kenny");
+      $("#lastname-input").val("Marek Møller");
       $("#mail-input").val("kema@itu.dk");
+    });
+  });
+  
+// -------------- Modal - signup student ---------
+
+//  FROM "OLD VERSION"
+//  $('.modal-dialog').click(function(){
+//    $('.modal-dialog div').css('opacity', '0');
+//  });
+
+$("#modal-signup-student").hide();
+
+  function fnOpenModalStudent() { 
+    $("#modal-signup-student").show();
+
+    // Define the Dialog and its properties.
+    $("#modal-signup-student").dialog({
+      resizable: false,
+      modal: true,
+  //    title: "Opret en virksomhedsprofil for at se mere...",
+      height: 520,
+      width: 350,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup-student").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-signup'
+    });
+  }
+
+  $('.company, .create-account-btn-student').click(fnOpenModalStudent);
+  
+// ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
+  
+  $(function(){
+    $('#linkedIn-student_signup').click(function() {
+      $("#firstname-input").val("John");
+      $("#lastname-input").val("Johnson");
+      $("#mail-input").val("jojo@itu.dk");
+      $("#institution-input").val("IT Universitetet");
     });
   });
   
@@ -155,7 +224,6 @@ $("#modal-project_of_student").hide();
   $('.project-after_login').click(fnOpenProjectModal);
   
 // ------------ Modal - edit profile ---------
-// ET ELLER ANDET HER SPILLER IKKE (ellers er det html'en)
   
 $("#modal-edit-profile-company").hide();
 
@@ -168,7 +236,7 @@ $("#modal-edit-profile-company").hide();
       modal: true,
   //    title: "Opret en virksomhedsprofil for at se mere...",
       height: 560,
-      width: 900,
+      width: 350,
       open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-edit-profile-company").dialog('close')}); }, // Close modal on bg-click!
 //      buttons: {
 //        "Opret": function () {
@@ -180,7 +248,22 @@ $("#modal-edit-profile-company").hide();
     });
   }
 
-  $('.smallBoxLeft').click(fnOpenEditModal);
+  $('.smallBoxLeft, #dropdown_item-edit_profile').click(fnOpenEditModal);
+  
+// ^^^^^^^^^ Update profile information ^^^^^^^^^
+// VIRKER IKKE - Skal opdatere input på my_page når profil opdateres
+  
+$('.projects-header-item-no_login').click(function() {
+  $('.projects-header-item-no_login').removeClass('phi-active-no_login');
+  $(this).addClass('phi-active-no_login');
+});
+  
+// ---- add active class on project header item (no_login) ----  
+  
+$('#edit_profile-update').click(function() {
+  var companyInput = $('#company-input').text();
+  $('#profile_info-company').val(companyInput);
+});
   
 // -------- Dropdown on hover username in nav ---------
 
@@ -193,8 +276,7 @@ $("#nav-user_dropdown-btn").hover(
   }
 );
   
-  
-  
+
   
   
 });

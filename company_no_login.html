@@ -19,7 +19,7 @@
 
   <div id="wrap_cnl" class="wrapper_not_frontpage">
   
-    <a href="#wrap_cnl">
+    <a>
       <h4 id="to-top" class="fa fa-chevron-up"></h4>
     </a>
     
@@ -31,7 +31,7 @@
       
       <div id="description">
         <h1>Projektbanken</h1>
-        <p>Projektbanken er til for at give virksomheder mulighed for at få nogle friske perspektiver på deres udfordringer. Som samarbejdsplatform mellem virksomheder og studerende, er det vores vision at lade begge parter drage fordel af hinandens kompetencer og know-how. Vi vil med denne platform lette samarbejdet, så det kræver så få ressourcer som muligt.<br>
+        <p>Projektbanken er til for at give virksomheder mulighed for at få nogle friske perspektiver på deres udfordringer. Som samarbejdsplatform mellem virksomheder og studerende, er det vores vision at lade begge parter drage fordel af hinandens kompetencer og know-how. Vi vil med denne platform lette samarbejdet, så det kræver så få ressourcer som muligt.<br><br>
       Velkommen til!</p>
       </div>
  
@@ -42,15 +42,15 @@
     </div>
     
     <div id="intro-3btn">
-      <a href="#twc-splitter">
+      <a> <!-- Smooth scroll enabled in main.js -->
         <div id="three-ways" class="intro-3btn">
           <h2 id="three" class="icon-3btn">2</h2>
           <div id="underline3" class="underline_com-3btn underline"></div>
           <p>måder at <br>
             bruge os på...</p>
         </div>
-      </a>  
-      <a href="#ouc-splitter">
+      </a>  <!-- Smooth scroll enabled in main.js -->
+      <a>
         <div id="others-use" class="intro-3btn">
           <i class="icon-3btn fa fa-users"></i>
           <div id="underline4" class="underline_com-3btn underline"></div>
@@ -72,7 +72,7 @@
     
   <div id="twc-splitter" class="content-splitter">
     <div class="whitebox-content-splitter"></div>
-    <h2 id="twc-header" class="content-splitter-text">2 måder at bruge os på...</h2>
+    <h1 id="twc-header" class="content-splitter-text">2 måder at bruge os på...</h1>
   </div>  
     
     <div class="intro-3btn-content">
@@ -102,7 +102,7 @@
     
   <div id="ouc-splitter" class="content-splitter">
     <div class="whitebox-content-splitter"></div>
-    <h2 class="content-splitter-text">Det bruger de andre os til...</h2>  
+    <h1 id="ouc-header" class="content-splitter-text">Det bruger de andre os til...</h1>  
   </div>
     
 
@@ -135,10 +135,10 @@
     
 <!---------------------- MODAL VIEW: SIGNUP -------------------------> 
 
-<form id="modal-signup-company" class="modal-signup" action="my_page.html" method="get">
+<form id="modal-signup-company" class="modal modal-signup" action="my_page.html" method="get">
   <div class="form-bg"></div> 
     <h3>Opret dig for at se mere...</h3>
-    <div id="linkedIn_signup" class="linkedIn_signup fa fa-linkedin">
+    <div id="linkedIn-company_signup" class="linkedIn_signup fa fa-linkedin">
       <p>Hent fra LinkedIn</p>
       <div class="linkedIn-splitter"></div>
     </div>
@@ -146,9 +146,10 @@
       <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
       <input id="depart-input" type="text" name="department" placeholder="Afdeling">
       <p>Valgfrit</p>
-      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
-      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
-      <p>Du kan give andre adgang efter oprettelsen...</p>
+      <input id="firstname-input" type="text" name="first name" placeholder="Dit fornavn" required>  
+      <input id="lastname-input" type="text" name="last name" placeholder="Dit efternavn" required>
+      <input id="mail-input" type="text" id="mail" name="username" placeholder="a@eks.dk, b@eks.dk, c@eks.dk..." required>
+      <p>Første mail = administrator. Næste mails får besked om at oprette sig under jeres virksomhedsprofil.</p>
       <input type="password" name="password" placeholder="Kodeord" required>    
       <input type="password" name="password" placeholder="Bekræft kodeord" required> 
     </div>

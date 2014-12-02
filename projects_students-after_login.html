@@ -53,7 +53,7 @@
           </a>   
 
             <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
-              <li class="dropdown_item">
+              <li id="dropdown_item-edit_profile" class="dropdown_item">
                 <a href="#">Redigér profil
                   <div class="sideline_nav sideline"></div>
                 </a>
@@ -294,6 +294,26 @@
 </div>
         
 <!---------------------- MODAL VIEW: PROJECT END -------------------------> 
+        
+<!---------------- MODAL VIEW: EDIT PROFILE -------------------> 
+
+<form id="modal-edit-profile-company" class="modal modal-edit-profile" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <h3>Redigér profil</h3>
+    <div class="all_inputs-signup">
+      <input id="company-input" type="text" name="company" value="IT Universitetet" required>  
+      <input id="depart-input" type="text" name="department" value="DDKP">
+      <input id="firstname-input" type="text" name="first name" value="Kenny" required>  
+      <input id="lastname-input" type="text" name="last name" value="Marek Møller" required>
+      <input id="mail-input" type="text" id="mail" name="username" value="kema@itu.dk" required>
+      <input type="password" name="password" placeholder="Gammelt kodeord" required> 
+      <input type="password" name="password" placeholder="Nyt kodeord" required> 
+      <input type="password" name="password" placeholder="Bekræft nyt kodeord" required> 
+    </div>
+    <button type="submit">Opdater</button>
+</form>
+        
+<!--------------- MODAL VIEW: EDIT PROFILE END ------------------>
         
       </div> <!-- projects-content-wrap -->
       

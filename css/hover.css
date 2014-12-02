@@ -1801,9 +1801,9 @@
 .bubble-float-bottom:hover, .bubble-float-bottom:focus, .bubble-float-bottom:active {
   -webkit-transform: translateY(5px) translateZ(0);
   transform: translateY(5px) translateZ(0);
-  box-shadow: 2px 2px 4px #ececec;
-  -moz-box-shadow: 2px 2px 4px #ececec;
-  -webkit-box-shadow: 2px 2px 4px #ececec; 
+  box-shadow: 4px 4px 8px #dcdcdc;
+  -moz-box-shadow: 4px 4px 8px #dcdcdc;
+  -webkit-box-shadow: 4px 4px 8px #dcdcdc; 
 }
 .bubble-float-bottom:hover:before, .bubble-float-bottom:focus:before, .bubble-float-bottom:active:before {
   bottom: -10px;

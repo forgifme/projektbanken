@@ -25,36 +25,8 @@
     
     
     <div id="projects-wrapper">
-
-<!----------------------- PROJECT-NAV --------------------------> 
       
-      <div id="projects-header">
-        
-        <div id="projects-header-titles">
-          <ul>
-            <li id="projects-header-title-1" class="projects-header-title">
-              <a href="#">Projekter af</a></li>
-            <li id="projects-header-title-2" class="projects-header-title">
-              <a href="#">Tilmeldte</a></li>
-          </ul>
-        </div>
-        
-        <div id="projects-header-items">
-          <ul>
-            <li id="projects-header-item-1" class="phi-active bubble-float-bottom">
-              <a href="#">Studerende</a></li>
-            <li id="projects-header-item-2" class="bubble-float-bottom">
-              <a href="#">Virksomheder</a></li>
-            <li id="projects-header-item-3" class="bubble-float-bottom">
-              <a href="#">Studerende</a></li>
-            <li id="projects-header-item-4" class="bubble-float-bottom">
-              <a href="#">Virksomheder</a></li>
-          </ul>
-        </div>
-        
-      </div>
-      
-      <div id="projects-content-wrap">
+      <h2 id="header-projects_students-no_login" class="header">Studerendes projekter</h2>
         
 <!------------------------- PROJECT 1 ---------------------------->        
         
@@ -225,13 +197,47 @@
           </div>
         
         </div> 
+      
+<!----------------------- PROJECT-NAV --------------------------> 
+      
+      <div id="projects-header-no_login">
+        
+<!--
+        <div id="projects-header-titles">
+          <ul>
+            <li id="projects-header-title-1" class="projects-header-title">
+              <a href="#">Projekter af</a></li>
+            <li id="projects-header-title-2" class="projects-header-title">
+              <a href="#">Tilmeldte</a></li>
+          </ul>
+        </div>
+-->
+        
+        <div id="projects-header-items">
+          <ul>
+            <li id="projects-header-item-1" class="phi-active-no_login bubble-float-top projects-header-item-no_login">
+              <a href="#">Studerende</a></li>
+            <li id="projects-header-item-2" class="bubble-float-top projects-header-item-no_login">
+              <a href="#">Virksomheder</a></li>
+<!--
+            <li id="projects-header-item-3" class="bubble-float-bottom">
+              <a href="#">Studerende</a></li>
+            <li id="projects-header-item-4" class="bubble-float-bottom">
+              <a href="#">Virksomheder</a></li>
+-->
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div id="projects-content-wrap">
         
 <!---------------------- MODAL VIEW: SIGNUP -------------------------> 
 
-<form id="modal-signup-company" class="modal-signup" action="my_page.html" method="get">
+<form id="modal-signup-company" class="modal modal-signup" action="my_page.html" method="get">
   <div class="form-bg"></div> 
     <h3>Opret dig for at se mere...</h3>
-    <div id="linkedIn_signup" class="linkedIn_signup fa fa-linkedin">
+    <div id="linkedIn-company_signup" class="linkedIn_signup fa fa-linkedin">
       <p>Hent fra LinkedIn</p>
       <div class="linkedIn-splitter"></div>
     </div>
@@ -239,9 +245,10 @@
       <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
       <input id="depart-input" type="text" name="department" placeholder="Afdeling">
       <p>Valgfrit</p>
-      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
-      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
-      <p>Du kan give andre adgang efter oprettelsen...</p>
+      <input id="firstname-input" type="text" name="first name" placeholder="Dit fornavn" required>  
+      <input id="lastname-input" type="text" name="last name" placeholder="Dit efternavn" required>
+      <input id="mail-input" type="text" id="mail" name="username" placeholder="a@eks.dk, b@eks.dk, c@eks.dk..." required>
+      <p>Første mail = administrator. Næste mails får besked om at oprette sig under jeres virksomhedsprofil.</p>
       <input type="password" name="password" placeholder="Kodeord" required>    
       <input type="password" name="password" placeholder="Bekræft kodeord" required> 
     </div>

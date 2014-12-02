@@ -20,7 +20,7 @@
   </head>	
    
   <body>
-    <div class="wrapper_not_frontpage">
+  <div id="wrapper-my_page" class="wrapper_not_frontpage">
     
 <!------------------------- MAIN-NAV ---------------------------->  
 
@@ -58,7 +58,7 @@
           </a>   
 
             <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
-              <li class="dropdown_item">
+              <li id="dropdown_item-edit_profile" class="dropdown_item">
                 <a href="#">Redigér profil
                   <div class="sideline_nav sideline"></div>
                 </a>
@@ -80,36 +80,44 @@
 <!------------------------- MAIN-NAV END ---------------------------->  
     
       <div id="myStudPage">
-        <h2 id="myStudHead">Dine oplysninger</h2>
+<!--        <h3 id="myStudHead">Dine oplysninger</h3>-->
         <div id="personalContent">
           <section id="personalInfo">
-            <h3 class="boxHeaders" id="bh1">Oplysninger om virksomhed</h3>
-            <a href="edit_profile-info.html">
-              <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">3</h4>
-              </div>
-            </a>
-            <a href="edit_profile-info.html">
-              <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Online og UX</h4>
-              </div>
-            </a>  
-            <a href="edit_profile-info.html">
-              <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">Mea Elmtoft</h4>
-              </div>
-            </a>  
-            <a href="edit_profile-info.html">
-              <div class="smallBoxLeft float">
-                <h4 class="inBoxHeaders">mea@3.dk</h4>
-              </div>
-            </a>   
+            <h3 class="boxHeaders" id="bh1">Dine oplysninger
+              <div class="underline_nav underline"></div>
+            </h3>
+            <div id="allSmallBoxLeft">
+                <div id="smallBoxLeft1" class="smallBox smallBoxLeft float">
+                  <h4 id="profile_info-company" class="inBoxHeaders">IT Universitetet</h4>
+                </div>
+              
+                <div id="smallBoxLeft2" class="smallBox smallBoxLeft float">
+                  <h4 id="profile_info-department" class="inBoxHeaders">DDKP</h4>
+                </div>
+              
+                <div id="smallBoxLeft3" class="smallBox smallBoxLeft float">
+                  <h4 id="profile_info-name" class="inBoxHeaders">Kenny Marek Møller</h4>
+                </div>
+
+                <div id="smallBoxLeft4" class="smallBox smallBoxLeft float">
+                  <h4 id="profile_info-mail" class="inBoxHeaders">kema@itu.dk</h4>
+                </div>
+
+            </div>
           </section>
           
           <section id="activeProjects">
-            <h3 class="boxHeaders" id="bh2">Nuværende projekter</h3>
+            <h3 class="boxHeaders" id="bh2">Nuværende projekter
+              <div class="underline_nav underline"></div>
+            </h3>
+          <div id="allSmallBoxMiddle">
             <a href="#">
-              <div class="smallBoxMid float" id="midBox1">
+              <div class="smallBox smallBoxMid float" id="midBox1">
+<!--
+                  <div id="tags-wrap-p1" class="tags-wrap">
+                      <div class="tagwheel tagwheel-my_page"></div>
+                  </div>
+-->
                 <h4 class="inBoxHeaders" >Nyt website for X</h4>
                   <ul id="avatars-p1" class="avatars-my_page">
                     <li id="avatar-p1-1" class="avatar-my_page"></li>
@@ -117,59 +125,84 @@
                     <li id="avatar-p1-3" class="avatar-my_page"></li>
                     <li id="avatar-p1-4" class="avatar-my_page"></li>
                   </ul>
-                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
               </div>
             </a>
             <a href="#">
-              <div class="smallBoxMid float" id="midBox2">
+              <div class="smallBox smallBoxMid float" id="midBox2">
                 <h4 class="inBoxHeaders">Regnskabsanalyse</h4>
-                <ul id="avatars-p2" class="avatars-my_page">
+                  <ul id="avatars-p2" class="avatars-my_page">
                     <li id="avatar-p2-1" class="avatar-my_page"></li>
                     <li id="avatar-p2-2" class="avatar-my_page"></li>
                   </ul>
-                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="smallBoxText">Lorem ipsum dolor...</p>
               </div>
             </a>  
             <a href="#">
-              <div class="smallBoxMid float">
+              <div class="smallBox smallBoxMid float">
                 <h4 class="inBoxHeaders">Ny grafisk identitet for X</h4>
+                  <ul id="avatars-p3" class="avatars-my_page">
+                    <li id="avatar-p3-1" class="avatar-my_page"></li>
+                    <li id="avatar-p3-2" class="avatar-my_page"></li>
+                    <li id="avatar-p3-3" class="avatar-my_page"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum.</p>
               </div>
-            </a>  
+            </a>
+          </div>
           </section>
     
         
           <section id="previousProjects">
-            <h3 class="boxHeaders" id="bh3">Historik</h3>
+            <h3 class="boxHeaders" id="bh3">Tidligere projekter
+              <div class="underline_nav underline"></div>
+            </h3>
+            <div id="allSmallBoxRight">
             <a href="#">
-              <div class="smallBoxRight float">
+              <div class="smallBox smallBoxRight float">
                 <h4 class="inBoxHeaders">Det der awesome projekt</h4>
+                  <ul id="avatars-p1" class="avatars-my_page">
+                    <li id="avatar-p1-1" class="avatar-my_page"></li>
+                    <li id="avatar-p1-2" class="avatar-my_page"></li>
+                    <li id="avatar-p1-3" class="avatar-my_page"></li>
+                    <li id="avatar-p1-4" class="avatar-my_page"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum.</p>
               </div>
             </a>  
             <a href="#">
-              <div class="smallBoxRight float">
+              <div class="smallBox smallBoxRight float">
                 <h4 class="inBoxHeaders">Ny hjerne til Julie</h4>
+                  <ul id="avatars-p3" class="avatars-my_page">
+                    <li id="avatar-p3-1" class="avatar-my_page"></li>
+                    <li id="avatar-p3-2" class="avatar-my_page"></li>
+                    <li id="avatar-p3-3" class="avatar-my_page"></li>
+                  </ul>
+                <p class="smallBoxText">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum. Lorem ipsum dolor sit amet...</p>
               </div> 
             </a>   
+            </div>
           </section>
       
-<!-------------------- MODAL VIEW: EDIT PROFILE -----------------------> 
-<!-- ET ELLER ANDET HER SPILLER IKKE (ellers er det jQuery'en) -->
-<!--
-<form id="modal-edit-profile-company" class="modal-edit-profile" action="my_page.html" method="get">
+<!---------------- MODAL VIEW: EDIT PROFILE -------------------> 
+
+<form id="modal-edit-profile-company" class="modal modal-edit-profile" action="my_page.html" method="get">
   <div class="form-bg"></div> 
+    <h3>Redigér profil</h3>
     <div class="all_inputs-signup">
-      <input id="company-input" type="text" name="company" placeholder="Virksomhed" required>  
-      <input id="depart-input" type="text" name="department" placeholder="Afdeling">
-      <input id="name-input" type="text" id="navn" name="username" placeholder="Dit navn" required>
-      <input id="mail-input" type="text" id="mail" name="username" placeholder="Mail" required>
-      <input type="password" name="password" placeholder="Kodeord" required>    
-      <input type="password" name="password" placeholder="Bekræft kodeord" required> 
+      <input id="company-input" type="text" name="company" value="IT Universitetet" required>  
+      <input id="depart-input" type="text" name="department" value="DDKP">
+      <input id="firstname-input" type="text" name="first name" value="Kenny" required>  
+      <input id="lastname-input" type="text" name="last name" value="Marek Møller" required>
+      <input id="mail-input" type="text" id="mail" name="username" value="kema@itu.dk" required>
+      <input type="password" name="password" placeholder="Gammelt kodeord" required> 
+      <input type="password" name="password" placeholder="Nyt kodeord" required> 
+      <input type="password" name="password" placeholder="Bekræft nyt kodeord" required> 
     </div>
-    <button type="submit">Opdatér</button>
+    <button id="edit_profile-update" type="submit">Opdater</button>
 </form>
--->
         
-<!-------------------- MODAL VIEW: EDIT PROFILE END ----------------------->
+<!--------------- MODAL VIEW: EDIT PROFILE END ------------------>
         
         </div>
       
