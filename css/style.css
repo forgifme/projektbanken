@@ -16,7 +16,12 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #f2f1f1;
+}
+
+/* BG-colors */
+
+html, body, wrapper, #companybox, #studentbox, #c-or-s, .whitebox-content-splitter, #login_form, .form-bg {
+  background-color: #f8f7f7;
 }
 
 /* Reset focus effect */
@@ -109,7 +114,6 @@ input, button {
 button {
   background-color: #fff; 
   text-transform: uppercase;
-  font-weight: 400;
   letter-spacing: 0.05em;
 }
 
@@ -206,7 +210,6 @@ blockquote p {
 
 .avatar_profile {
   border-radius: 50%;
-  border: 1px solid #ccc;
   display: inline-block;
 }
   
@@ -214,9 +217,9 @@ blockquote p {
   position: absolute;
   top: 13px;
   right: 105px;
-  width: 30px;
-  height: 30px;
-  background: url(../img/avatars/luigi.jpg) no-repeat;
+  width: 35px;
+  height: 35px;
+  background: url(../img/avatars/kim_vilfort.jpg) no-repeat;
   background-size: 70px;
   background-position: -20px -6px;
 }
@@ -310,12 +313,13 @@ blockquote p {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  top: 10%;
+  top: 150px;
 }
 
-#companybox-text h2,
-#studentbox-text h2 {
-  display: inline-block;
+#companybox-text h1,
+#studentbox-text h1 {
+  font-weight: 100;
+  font-size: 3em;
   position: relative;
   padding: 5px;
 }
@@ -377,7 +381,6 @@ blockquote p {
   text-align: center;
   top: 30%;
   padding: 10px;
-  background-color: white;
   /* Hack for at centrere absolute-div */
   left: 0;
   right: 0;
@@ -388,12 +391,12 @@ blockquote p {
 #login_btn h5 {
   position: absolute;
   text-align: center; 
-  top: 60%;
+  top: 350px;
   padding: 10px;
   width: 100px;
-  background-color: white;
+  color: #aaa;
+  background-color: #fff;
   z-index: 100;
-  border: 1px solid #ccc;
   border-radius: 4px;
   text-transform: uppercase;
   /* Hack for at centrere absolute-div */
@@ -412,12 +415,11 @@ blockquote p {
 #login_form {
 /*  visibility: hidden;*/
   position: absolute;
-  top: 130px;
+  top: 320px;
   width: 240px;
   padding: 20px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
+/*  border: 1px solid #fff;*/
+  border-radius: 8px;
   z-index: 110;
   /* Hack for at centrere absolute-div */
   left: 0;
@@ -435,12 +437,19 @@ blockquote p {
 }
 
 #login_form input[type="text"],
-#login_form input[type="submit"] {
+#login_form input[type="password"],
+#login_form button[type="submit"] {
   display: block;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   width: 200px;
   background-color: #fff;
+  font-size: 1em; 
+}
+
+#login_form button[type="submit"]:hover {
+  color: #fff;
+  background-color: rgb(212, 62, 73);
 }
 
 input[type="radio"] {
@@ -485,7 +494,7 @@ label {
   width: 1px;
   height: 100%;
   margin: 0 auto;
-  border-left: 1px dashed #ccc;
+  border-left: 1px dashed #fff;
 }
 
 #footer {
@@ -582,6 +591,7 @@ label {
   color: #fff;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  cursor: pointer;
 }
 
 #to-top:hover {
@@ -772,7 +782,6 @@ label {
   width: 75%;
   height: 6px;
   margin: 0 auto;
-  background: #f2f1f1;
 }
 
 .content-splitter-text {
@@ -1005,7 +1014,7 @@ label {
   z-index: 0; 
 }
 
-/*----------- Page: projects_students.html ------------*/
+/*----------- Page: projects-no_login.html ------------*/
 
 /* Wheel */
 
@@ -1053,21 +1062,44 @@ svg {
 
 /* Wheel end */
 
-#wrap_projects {
-  padding-bottom: 300px; /* Højde på footer! */
-  height: 1200px;
-}
-
-#projects-wrapper {
+#wrap-projects-no_login,
+#wrap-projects-after_login {
   position: relative;
-  width: 90%;
-  margin: 30px auto;  
+  height: 1250px;
 }
 
-#header-projects_students-no_login {
-  color: #222;
+#student_projects-wrapper,
+#company_projects-wrapper,
+#registered_companies-wrapper,
+#registered_students-wrapper,
+#student_projects-wrapper-after_login,
+#company_projects-wrapper-after_login,
+#registered_students-wrapper-after_login, 
+#registered_companies-wrapper-after_login {
+  position: absolute;
+  width: 90%;
+  margin: 30px auto; 
+  left: 0;
+  right: 0;
+}
+
+#student_projects-wrapper-after_login,
+#company_projects-wrapper-after_login,
+#registered_students-wrapper-after_login, 
+#registered_companies-wrapper-after_login {
+    margin: 120px auto; 
+}
+
+#header-projects_students-no_login,
+#header-projects_companies-no_login,
+#header-registered_students-no_login, 
+#header-registered_companies-no_login {
+  font-weight: 100;
+  font-size: 3.5em;
+  letter-spacing: 0.1em;
+  color: #ccc;
   text-align: center;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
 }
 
 /* Bubble Float Bottom */
@@ -1151,17 +1183,20 @@ svg {
 }
 /* Bubble Float Top END */
 
-#projects-header {
+#projects-header-no_login,
+#projects-header-after_login {
   position: absolute;
-  width: 100%;
+  width: 50%; /* 100% before fix */
   height: 72px;
+  left: 37.5%; /* Fix while we only have 2 to choose from */
 }
 
 #projects-header-no_login {
-  position: absolute;
-  width: 100%;
-  height: 72px;
-  left: 25%; /* Fix while we only have 2 to choose from */
+  top: 1380px;
+}
+
+#projects-header-after_login {
+  top: 20px;
 }
 
 #projects-header-titles,
@@ -1216,40 +1251,44 @@ svg {
   width: 24.5%;
   left: 0;
   background-color: #fff;
+  cursor: pointer;
 }
 
-#projects-header-items ul li a {
+#projects-header-items ul li {
   padding: 10px 0 10px 0;
   display: block;
 }
 
-#projects-header-item-1 {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+#projects-header-item-1-no_login,
+#projects-header-item-1-after_login {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   z-index: 100;
 }
 
-#projects-header-item-2 {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+#projects-header-item-2-no_login,
+#projects-header-item-2-after_login{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   margin-left: 24.5%;
   z-index: 99;
 }
 
 #projects-header-item-3 {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   margin-left: 51%;
   z-index: 98;
 }
 
 #projects-header-item-4 {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   margin-left: 75.5%;
   z-index: 97;
 }
 
+/*
 .phi-active {
   box-shadow: 2px -2px 8px #dcdcdc;
   -moz-box-shadow: 2px -2px 8px #dcdcdc;
@@ -1269,6 +1308,7 @@ svg {
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent #fff transparent;
 }
+*/
 
 .phi-active-no_login {
   box-shadow: 2px 2px 8px #dcdcdc;
@@ -1290,7 +1330,28 @@ svg {
   border-color: transparent transparent #fff transparent;
 }
 
-#projects-content-wrap {
+.phi-active-after_login {
+    box-shadow: 2px -2px 8px #dcdcdc;
+  -moz-box-shadow: 2px -2px 8px #dcdcdc;
+  -webkit-box-shadow: 2px -2px 8px #dcdcdc; 
+  transform: translateY(5px) translateZ(0);
+  -moz-transfomr: translateY(5px) translateZ(0);
+  -webkit-transform: translateY(5px) translateZ(0); 
+}
+
+.phi-active-after_login:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  bottom: -10px;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #fff transparent transparent transparent;
+}
+
+#student_projects-content-wrap,
+#company_projects-content-wrap {
   position: absolute;
   margin-top: 70px; /* Height of #projects-header */
   width: 100%;
@@ -1306,7 +1367,13 @@ svg {
   cursor: pointer;
 }
 
-.project:hover {
+#student-project-1,
+#company-project-1 {
+  margin-top: 20px;
+}
+
+.project:hover,
+.registered:hover {
   box-shadow: 2px -2px 16px #dcdcdc;
   -moz-box-shadow: 2px -2px 16px #dcdcdc;
   -webkit-box-shadow: 2px -2px 16px #dcdcdc; 
@@ -1323,14 +1390,16 @@ svg {
   font-weight: 900;
   color: #222;
   text-align: left;
-  padding: 5px;
+  padding: 5px 0;
   margin: 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #ccc;
 }
 
+.cp-data-table,
 .p-data-table {
   position: absolute;
+  width: 480px;
   font-size: 0.8em;
   font-weight: 100;
   color: #222;
@@ -1338,26 +1407,73 @@ svg {
   left: 40px;
 }
 
+.cp-data-table {
+  top: 90px;
+  left: 270px;
+}
+
 .p-data {
   padding: 5px;
 /*  border-bottom: 1px solid #ccc;*/
+}
+
+.cp-data {
+  line-height: 1.8em;
 }
 
 .p-data-headline {
   font-weight: 700;
 }
 
+.cp-data-headline {
+  top: 0;
+  font-weight: 700;
+}
+
+.company-logo {
+  position: absolute; 
+  width: 270px;
+  height: 100%;
+  margin-right: 10px;
+/*  border: 1px solid #ccc;*/
+  display: inline-block;
+}
+
+#logo-1 {
+  background: url(../img/logos/apple.png) no-repeat;
+  background-size: 160px;
+  background-position: center;
+}
+
+#logo-2 {
+  background: url(../img/logos/siemens.jpg) no-repeat;
+  background-size: 240px;
+  background-position: center;
+}
+
+#logo-3 {
+  background: url(../img/logos/lego.png) no-repeat;
+  background-size: 140px;
+  background-position: center;
+}
+
+#logo-4 {
+  background: url(../img/logos/3.jpg) no-repeat;
+  background-size: 130px;
+  background-position: center;
+}
+
 .avatars {
   position: absolute;
-  margin: 30px 0 0 40px;
+  margin: 30px 0 0 45px;
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+/*  border: 1px solid #ccc;*/
   display: inline-block;
 }
 
@@ -1434,15 +1550,209 @@ svg {
 }
 
 #avatar-4-1 {
-  background: url(../img/avatars/super_mario.jpg) no-repeat;
-  background-size: 85px;
-  background-position: -20px -3px;
+  background: url(../img/avatars/kim_vilfort.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #avatar-4-2 {
-  background: url(../img/avatars/luigi.jpg) no-repeat;
-  background-size: 100px;
-  background-position: -24px -4px;
+  background: url(../img/avatars/john_f_jensen.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*----------- Page: registered-no_login.html ------------*/
+
+#wrap-registered-no_login {
+  position: relative;
+  height: 1000px;
+}
+
+.registered-row {
+  position: relative;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.registered {
+  position: relative;
+  display: inline-block;
+  width: 49%;
+  height: 300px;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.registered:first-child {
+  margin-right: 1%;
+}
+
+.reg-tags-wrap {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 40%;
+  overflow: hidden;
+}
+
+.reg-tags-wrap p,
+.reg-tags-wrap h4 {
+  position: absolute;
+  width: 100%;
+  text-align: center; 
+  right: 0;
+  color: #222;
+}
+
+.reg-tags-wrap p {
+  top: 255px;
+/*  text-transform: uppercase;*/
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.reg-tags-wrap h4 {
+  top: 50px;
+}
+
+.reg-tagwheel {
+  position: absolute;
+  width: 169px;
+  height: 169px;
+  right: calc(50% - 85px);
+  top: calc(50% - 100px); /* 50% minus half height */
+}
+
+.reg-company-name,
+.reg-student-name {
+  position: absolute;
+  font-size: 1.2em;
+/*  text-transform: uppercase;*/
+  top: 250px;
+  width: 60%;
+  color: #aaa;
+  font-weight: 100;
+  text-align: center;
+}
+
+.reg-company-logo {
+  position: absolute;
+  width: 60%;
+  height: 240px;
+}
+
+.reg-student-pic {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 30px;
+  left: calc(30% - 100px);
+  border-radius: 50%;
+}
+
+
+
+#reg_logo-1 {
+  background: url(../img/logos/arla.png) no-repeat;
+  background-size: 210px;
+  background-position: center;
+}
+
+#reg_logo-2 {
+  background: url(../img/logos/siemens.jpg) no-repeat;
+  background-size: 310px;
+  background-position: center;
+}
+
+#reg_logo-3 {
+  background: url(../img/logos/3.jpg) no-repeat;
+  background-size: 130px;
+  background-position: center;
+}
+
+#reg_logo-4 {
+  background: url(../img/logos/lego.png) no-repeat;
+  background-size: 140px;
+  background-position: center;
+}
+
+#reg_logo-5 {
+  background: url(../img/logos/google.png) no-repeat;
+  background-size: 230px;
+  background-position: center;
+}
+
+#reg_logo-6 {
+  background: url(../img/logos/apple.png) no-repeat;
+  background-size: 160px;
+  background-position: center;
+}
+
+#reg_pic-1 {
+  background: url(../img/avatars/soren_colding.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#reg_pic-2 {
+  background: url(../img/avatars/john_f_jensen.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#reg_pic-3 {
+  background: url(../img/avatars/kim_vilfort.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#reg_pic-4 {
+  background: url(../img/avatars/karim_zaza.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#reg_pic-5 {
+  background: url(../img/avatars/frank_strandli.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#reg_pic-6 {
+  background: url(../img/avatars/soren_frederiksen.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.reg-splitter-ver {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #eee;
+  left: 60%;
+  z-index: 100;
+}
+
+/*
+.reg-splitter-hor {
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background-color: #eee;
+  top: 240px;
+  z-index: 100;
+}
+*/
+
+#registered-header-no_login {
+  position: absolute;
+  width: 50%; /* 100% before fix */
+  height: 72px;
+  top: 1140px;
+  left: 37.5%; /* Fix while we only have 2 to choose from */
 }
 
 /*----------------- Modal -------------------*/
@@ -1461,7 +1771,6 @@ svg {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #f2f1f1;
 }
 
 .modal h3 {
@@ -1743,11 +2052,10 @@ svg {
 
 .avatar-my_page {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-right: 8px;
   border-radius: 50%;
-  border: 1px solid #ccc;
   float: left;
 }
 

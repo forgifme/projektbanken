@@ -1,7 +1,7 @@
       // This example lays out multiple interactive pie charts on a page with multiple HTML layout constructs.
       // Created by Frank Guerino : "http://www.guerino.net"
 
-var hoverColor = "White";
+var hoverColor = this;
 
       // Data Used for this example...
       var dataSet1 = [
@@ -9,11 +9,9 @@ var hoverColor = "White";
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"}];
 
       var dataSet2 = [
-        {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"}];
 
@@ -24,6 +22,47 @@ var hoverColor = "White";
         {magnitude: 1, link: "index.html"}];
 
       var dataSet4 = [
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet5 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet6 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet7 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet8 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet9 = [
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet10 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet11 = [
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"},
+        {magnitude: 1, link: "index.html"}];
+
+      var dataSet12 = [
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"},
         {magnitude: 1, link: "index.html"},

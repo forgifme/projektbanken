@@ -109,6 +109,76 @@ $("#others-use").click(function() {
     $(this).find('.sideline').animate({height: "0%"}, 150, 'easeOutQuint');  
   });
   
+// hide/show resp. stud/comp (no_login) projects on nav btn click
+
+$("#company_projects-wrapper").hide();
+  
+$("#projects-header-item-1-no_login").click(function(){
+  $("#company_projects-wrapper").fadeOut(500);
+  $("#student_projects-wrapper").fadeIn(500);
+});
+  
+$("#projects-header-item-2-no_login").click(function(){
+  $("#student_projects-wrapper").fadeOut(500);
+  $("#company_projects-wrapper").fadeIn(500);
+});  
+  
+// hide/show resp. stud/comp (no_login) registered on nav btn click
+
+$("#registered_students-wrapper").hide();
+  
+$("#projects-header-item-1-no_login").click(function(){
+  $("#registered_companies-wrapper").fadeOut(500);
+  $("#registered_students-wrapper").fadeIn(500);
+});
+  
+$("#projects-header-item-2-no_login").click(function(){
+  $("#registered_students-wrapper").fadeOut(500);
+  $("#registered_companies-wrapper").fadeIn(500);
+});  
+  
+// ---- add active class on project header item (no_login) ----  
+  
+$('.projects-header-item-no_login').click(function() {
+  $('.projects-header-item-no_login').removeClass('phi-active-no_login');
+  $(this).addClass('phi-active-no_login');
+});
+  
+// hide/show resp. stud/comp (after_login) projects on nav btn click
+
+$("#company_projects-wrapper-after_login").hide();
+  
+$("#projects-header-item-1-after_login").click(function(){
+  $("#company_projects-wrapper-after_login").fadeOut(500);
+  $("#student_projects-wrapper-after_login").fadeIn(500);
+});
+  
+$("#projects-header-item-2-after_login").click(function(){
+  $("#student_projects-wrapper-after_login").fadeOut(500);
+  $("#company_projects-wrapper-after_login").fadeIn(500);
+});  
+  
+// hide/show resp. stud/comp (after_login) registered on nav btn click
+
+$("#registered_students-wrapper-after_login").hide();
+  
+$("#projects-header-item-1-after_login").click(function(){
+  $("#registered_companies-wrapper-after_login").fadeOut(500);
+  $("#registered_students-wrapper-after_login").fadeIn(500);
+});
+  
+$("#projects-header-item-2-after_login").click(function(){
+  $("#registered_students-wrapper-after_login").fadeOut(500);
+  $("#registered_companies-wrapper-after_login").fadeIn(500);
+});  
+  
+// ---- add active class on project header item (after_login) ----  
+  
+$('.projects-header-item-after_login').click(function() {
+  $('.projects-header-item-after_login').removeClass('phi-active-after_login');
+  $(this).addClass('phi-active-after_login');
+});
+  
 // -------------- Modal - signup company ---------
 
 //  FROM "OLD VERSION"
@@ -183,7 +253,7 @@ $("#modal-signup-student").hide();
     });
   }
 
-  $('.company, .create-account-btn-student').click(fnOpenModalStudent);
+  $('.registered, .create-account-btn-student').click(fnOpenModalStudent);
   
 // ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
   
@@ -223,6 +293,33 @@ $("#modal-project_of_student").hide();
 
   $('.project-after_login').click(fnOpenProjectModal);
   
+// ------------ Modal - profile of company ---------
+  
+$("#modal-profile_of_company").hide();
+
+  function fnOpenRegisteredModal() { 
+    $("#modal-profile_of_company").show();
+
+    // Define the Dialog and its properties.
+    $("#modal-profile_of_company").dialog({
+      resizable: false,
+      modal: true,
+  //    title: "Opret en virksomhedsprofil for at se mere...",
+      height: 560,
+      width: 900,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-profile_of_company").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-profile_of_company'
+    });
+  }
+
+  $('.registered-after_login').click(fnOpenRegisteredModal);
+  
 // ------------ Modal - edit profile ---------
   
 $("#modal-edit-profile-company").hide();
@@ -252,13 +349,6 @@ $("#modal-edit-profile-company").hide();
   
 // ^^^^^^^^^ Update profile information ^^^^^^^^^
 // VIRKER IKKE - Skal opdatere input på my_page når profil opdateres
-  
-$('.projects-header-item-no_login').click(function() {
-  $('.projects-header-item-no_login').removeClass('phi-active-no_login');
-  $(this).addClass('phi-active-no_login');
-});
-  
-// ---- add active class on project header item (no_login) ----  
   
 $('#edit_profile-update').click(function() {
   var companyInput = $('#company-input').text();
