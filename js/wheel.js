@@ -2,74 +2,75 @@
       // Created by Frank Guerino : "http://www.guerino.net"
 
 var hoverColor = this;
+var link = "#";
 
       // Data Used for this example...
       var dataSet1 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet2 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet3 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet4 = [
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link}];
 
       var dataSet5 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet6 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet7 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet8 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet9 = [
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link}];
 
       var dataSet10 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet11 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
       var dataSet12 = [
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"},
-        {magnitude: 1, link: "index.html"}];
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link},
+        {magnitude: 1, link: link}];
 
 // Tagwheel MED labels
 //      var dataSet1 = [
@@ -234,7 +235,7 @@ var hoverColor = this;
           .attr("color_value", function(d, i) { return colorScale(i); }) // Bar fill color...
           .attr("index_value", function(d, i) { return "index-" + i; })
           .attr("class", function(d, i) { return "pie-" + pieName + "-arc-index-" + i; })
-          .style("stroke", "White" )
+          .style("stroke", "none" )
           .attr("d", arc)
           .on('mouseover', synchronizedMouseOver)
           .on("mouseout", synchronizedMouseOut)
@@ -255,9 +256,10 @@ var hoverColor = this;
             d.innerRadius = innerRadius; // Set Inner Coordinate
             return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
           })
-          .style("fill", "White")
-          .style("font", "normal 16px Roboto")
-          .text(function(d) { return d.data.magnitude; });
+// TEKST PÅ HJUL
+//          .style("fill", "White")
+//          .style("font", "normal 16px Roboto")
+//          .text(function(d) { return d.data.magnitude; });
 
         // Computes the angle of an arc, converting from radians to degrees.
         function angle(d) {

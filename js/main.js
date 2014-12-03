@@ -195,7 +195,6 @@ $("#modal-signup-company").hide();
     $("#modal-signup-company").dialog({
       resizable: false,
       modal: true,
-  //    title: "Opret en virksomhedsprofil for at se mere...",
       height: 630,
       width: 350,
       open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#modal-signup-company").dialog('close')}); }, // Close modal on bg-click!
@@ -208,8 +207,36 @@ $("#modal-signup-company").hide();
       dialogClass: 'modal modal-signup'
     });
   }
-
+  
   $('.project, .create-account-btn-company').click(fnOpenModalCompany);
+  
+// ---------- Open 'modal-select_tags' as next step ------
+  
+$(".modal-select_tags").hide();  
+  
+ function fnOpenModalSelectTags() { 
+    $("#modal-signup-company").hide(); // Hide first step
+    $('.ui-widget-overlay').hide(); // Hide first steps overlay
+    $(".modal-select_tags").show();
+
+    // Define the Dialog and its properties.
+    $(".modal-select_tags").dialog({
+      resizable: false,
+      modal: true,
+      height: 630,
+      width: 350,
+      open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $(".modal-select_tags").dialog('close')}); }, // Close modal on bg-click!
+//      buttons: {
+//        "Opret": function () {
+//          $(this).dialog('close');
+//          window.location = "my_page.html";
+//        }
+//      },
+      dialogClass: 'modal modal-select_tags'
+    });
+  }
+
+  $('.signup-next-btn').click(fnOpenModalSelectTags);
   
 // ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
   

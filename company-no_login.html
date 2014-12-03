@@ -129,10 +129,10 @@
       </div>
         
     </div>
-    
+      
 <!---------------------- MODAL VIEW: SIGNUP ----------------------> 
 
-<form id="modal-signup-company" class="modal modal-signup" action="my_page.html" method="get">
+<form id="modal-signup-company" class="modal modal-signup">
   <div class="form-bg"></div> 
     <h3>Opret dig for at se mere...</h3>
     <div id="linkedIn-company_signup" class="linkedIn_signup fa fa-linkedin">
@@ -150,10 +150,36 @@
       <input type="password" name="password" placeholder="Kodeord" required>    
       <input type="password" name="password" placeholder="Bekræft kodeord" required> 
     </div>
+  <button type="submit" class="signup-next-btn">Næste</button>
+</form>
+        
+<!-------------------- MODAL VIEW: SIGNUP END --------------------->
+<!-------------------- MODAL VIEW: SELECT TAGS --------------------> 
+
+<form id="modal-select_tags" class="modal modal-select_tags" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <h3>Vælg dine fagområder</h3>
+    <div class="all_inputs-select_tags">
+      <label for="tag-selector">Vælg fagområde(r)</label>
+      <select id="tag-selector" name="Vælg fagområde" multiple>
+        <option>Kommunikation</option>
+        <option>Programmering</option>
+        <option>Marketing</option>
+        <option>Design</option>
+        <option>HR</option>
+        <option>Journalistik</option>
+      </select>
+    </div>
+  
+    <div id="tags-wrap-st1" class="select-tags-wrap">
+      <p>Vi laver et hjul med fagområder til jer, så det er let at sammenligne med andres</p>
+      <div id="tagwheel-signup" class="tagwheel"></div>
+    </div>
+    
     <button type="submit">Opret</button>
 </form>
         
-<!-------------------- MODAL VIEW: SIGNUP END ---------------------> 
+<!---------------- MODAL VIEW: SELECT TAGS END ------------------> 
     
 <!-------------------------- Bunden ------------------------------->  
   
@@ -188,10 +214,7 @@
   <script src="js/modal.js"></script>
   
   <script type="text/javascript">
-    drawPie("TagsP1", dataSet1, "#tags-wrap-p1 .tagwheel", "colorScale20", 10, 100, 50, 0);
-    drawPie("TagsP2", dataSet2, "#tags-wrap-p2 .tagwheel", "colorScale20", 10, 100, 50, 0);
-   drawPie("TagsP3", dataSet3, "#tags-wrap-p3 .tagwheel", "colorScale20", 10, 100, 50, 0);
-   drawPie("TagsP4", dataSet4, "#tags-wrap-p4 .tagwheel", "colorScale20", 10, 100, 50, 0);
+   drawPie("TagsST1", dataSet5, "#tags-wrap-st1 .tagwheel", "colorScale20", 10, 100, 50, 0);
   </script>
   
 </body>

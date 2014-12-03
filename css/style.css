@@ -1653,8 +1653,6 @@ svg {
   border-radius: 50%;
 }
 
-
-
 #reg_logo-1 {
   background: url(../img/logos/arla.png) no-repeat;
   background-size: 210px;
@@ -1765,6 +1763,10 @@ svg {
 /* overflow: hidden; */
 }
 
+.modal-edit-profile .all_inputs-signup {
+  margin-top: 0;
+}
+
 .form-bg {
   position: absolute;
   left: 0;
@@ -1793,6 +1795,7 @@ svg {
   /* Hack to set height from content */
   min-height: 5px;
 }
+
 
 .modal input {
   position: relative;
@@ -1859,6 +1862,13 @@ svg {
   opacity: 0.9;
 }
 
+.all_inputs-select_tags {
+  position: relative;
+  margin-top: 10px;
+  /* Hack to set height from content */
+  min-height: 5px;
+}
+
 .modal button[type="submit"] {
   position: absolute;
   background-color: #e2e1e1;
@@ -1888,6 +1898,29 @@ svg {
 .ui-dialog-titlebar-close,
 .ui-button {
   display: none;
+}
+
+#tags-wrap-st1 {
+  position: absolute;
+  height: 310px;
+  border-top: 1px solid #e2e1e1;
+  top: 250px;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#tags-wrap-st1 p {
+  font-size: 0.8em;
+  color: #222;
+  top: 0;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#tagwheel-signup {
+  top: 80px;
+  left: 68px;
 }
 
 /*-------- Page: my_page.html (opr. Simon) ---------*/
@@ -1957,7 +1990,8 @@ svg {
 }
 
 .smallBox:hover,
-#allSmallBoxLeft:hover {
+#allSmallBoxLeft:hover,
+#smallBoxLeft5:hover {
   box-shadow: 2px -2px 8px #dcdcdc;
   -moz-box-shadow: 2px -2px 8px #dcdcdc;
   -webkit-box-shadow: 2px -2px 8px #dcdcdc; 
@@ -1971,7 +2005,7 @@ svg {
 
 .smallBoxText {
   font-size: 0.8em;
-  padding:20px;
+  padding: 20px;
 }
 
 #allSmallBoxLeft,
@@ -2020,6 +2054,28 @@ svg {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border: none;
+}
+
+#smallBoxLeft5 {
+  margin-top: 8px;
+  text-align: center;
+  height: 290px;
+  border-radius: 4px;
+}
+
+#mp1-tagwheel {
+  top: 50px;
+}
+
+#avatar-tagwheel-Kenny {
+  position: absolute;
+  top: 105px;
+  right: 95px;
+  width: 100px;
+  height: 100px;
+  background: url(../img/avatars/kim_vilfort.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /*This is for the central chunk*/
@@ -2097,10 +2153,6 @@ svg {
   background: url(../img/avatars/donkey_kong.jpeg) no-repeat;
   background-size: 55px;
   background-position: -21px 0px;
-}
-
-.modal-edit-profile .all_inputs-signup {
-  margin-top: 0;
 }
 
 #avatar-p3-1 {
