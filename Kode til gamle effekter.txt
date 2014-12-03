@@ -1,0 +1,209 @@
+//----------------- HJØRNE HOVEREFFEKT PÅ 3-VALGSKNAP -------------//
+
+//-------------------------- html --------------------------//    
+    
+    <div id="intro-3btn">
+      <a href="#twc-splitter">
+        <div id="three-ways" class="intro-3btn">
+          <h2 id="three" class="icon-3btn">2</h2>
+          <div id="underline3" class="underline"></div>
+          <p>måder at <br>
+            bruge os på...</p>
+          <div class="whitebox-hor"></div> <!--To only show corners -->
+          <div class="whitebox-ver"></div> <!--To only show corners -->
+        </div>
+      </a>  
+      <a href="#ouc-splitter">
+        <div id="others-use" class="intro-3btn">
+          <i class="icon-3btn fa fa-users"></i>
+          <div id="underline4" class="underline"></div>
+          <p>Det bruger<br>
+            de andre os til...</p>
+          <div class="whitebox-hor"></div> <!--To only show corners -->
+          <div class="whitebox-ver"></div> <!--To only show corners -->
+        </div>
+      </a>
+      <a href="projects_students.html">
+        <div id="see-stud-projects" class="intro-3btn">
+          <i class="icon-3btn fa fa-file-text"></i>
+          <div id="underline5" class="underline"></div>
+          <p>Se studerendes<br>
+            projekter...</p>
+          <div class="whitebox-hor"></div> <!--To only show corners -->
+          <div class="whitebox-ver"></div> <!--To only show corners -->
+        </div>
+      </a>
+    </div>
+    
+//-------------------------- css --------------------------//  
+
+#intro-3btn {
+  position: relative;
+  display: block;
+  width: 70%;
+  height: 320px;
+  background-color: #fff;
+/*  border: 1px solid #ccc;*/
+  border-radius: 4px;
+  z-index: 100;
+  margin: 60px auto;
+  margin-bottom: 250px;
+}
+
+.intro-3btn {
+  position: relative;
+  width: 33.33333333333%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+#three-ways {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#see-stud-projects {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Alternative for animated #underline */
+/*
+#three-ways:hover,
+#others-use:hover,
+#see-stud-projects:hover {
+  border-bottom: 10px solid #ccc;
+} 
+*/
+
+.icon-3btn {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 8em;
+  font-weight: 100;
+  color: rgb(212,62,73);
+  margin-top: 50px;
+  z-index: 100;
+}
+
+#three {
+  position: absolute;
+  width: 100%;
+  font-size: 10em; 
+  font-weight: 600;
+  line-height: 0em;
+  top: 65px;
+}
+
+.underline {
+  position: absolute;
+  bottom: 5%;
+  /* Hack for at centrere absolute-div */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Underlines, being actual lines */
+/*
+#underline3,
+#underline4,
+#underline5 {
+  height: 4px;
+  width: 0;
+  background-color: #ccc;
+  margin: 30px auto;
+}
+*/
+
+/* Boxes as alternatives to underines */
+#underline3,
+#underline4,
+#underline5 {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.whitebox-hor,
+.whitebox-ver {
+  position: absolute;
+  z-index: 50;
+  background-color: white;
+}
+
+.whitebox-hor {
+  width: 100%;
+  height: 80%;
+  top: 10%;
+}
+
+.whitebox-ver {
+  width: 80%;
+  height: 100%;
+  left: 10%;
+}
+
+.intro-3btn p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+  bottom: 35px;
+  z-index: 100;
+  color: #222;
+}
+
+//-------------------------- jQuery --------------------------//  
+
+var underlineWidth = '90%';
+  var underlineHeight = '90%';
+  var easeWidth = 'easeInOutQuint';
+  var easeHeight = 'easeInOutQuint';
+
+  $('#three-ways').mouseenter(function(){
+    $(this).children().css('opacity', 1);
+    $('#underline3').css('opacity', 1);
+    $('#underline3').animate({width: underlineWidth}, 100, easeWidth);
+    $('#underline3').animate({height: underlineHeight}, 100, easeHeight);
+  }).mouseleave(function(){
+    $(this).children().css('opacity', 0.9);
+    $('#underline3').animate({width: '0'}, 1);
+    $('#underline3').animate({height: '0'}, 1);
+    $('#underline3').css('opacity', 0);
+  });
+
+  $('#others-use').mouseenter(function(){
+    $(this).children().css('opacity', 1);
+    $('#underline4').css('opacity', 1);
+    $('#underline4').animate({width: underlineWidth}, 100, easeWidth);
+    $('#underline4').animate({height: underlineHeight}, 100, easeHeight);
+  }).mouseleave(function(){
+    $(this).children().css('opacity', 0.9);
+    $('#underline4').animate({width: '0'}, 1);
+    $('#underline4').animate({height: '0'}, 1);
+    $('#underline4').css('opacity', 0);
+  });
+
+  $('#see-stud-projects').mouseenter(function(){
+    $(this).children().css('opacity', 1);
+    $('#underline5').css('opacity', 1);
+    $('#underline5').animate({width: underlineWidth}, 100, easeWidth);
+    $('#underline5').animate({height: underlineHeight}, 100, easeHeight);
+  }).mouseleave(function(){
+    $(this).children().css('opacity', 0.9);
+    $('#underline5').animate({width: '0'}, 1);
+    $('#underline5').animate({height: '0'}, 1);
+    $('#underline5').css('opacity', 0);
+  });
+
+//----------------- HJØRNE HOVEREFFEKT PÅ 3-VALGSKNAP SLUT -------------//

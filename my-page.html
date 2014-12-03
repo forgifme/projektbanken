@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  
+<head>
+  
+  <title>The Projectbank</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/wheel.css">
+  
+</head>
+  
+
+<body>
+  
+  <header>
+    
+  </header>
+
+  <div id="wrapper">
+    
+    <div class="tagwheel-arla-wrapper" id="tagwheel-arla">
+      <div id="tagwheel-arla-wrapper-2">
+        <h3>Arlas tags</h3>
+        <div class="tagwheel"></div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <footer>
+    
+    <div id="footer">
+      <div id="footer-left">
+        <div id="contact-info">
+          <strong>Projektbanken</strong>
+          <p class="contact-info">
+            <a href="mailto:goddaw@projektbanken.dk?Subject=Goddaw">goddaw@projektbanken.dk</a><br>
+            +45 49 82 73 39
+          </p>
+        </div>
+      </div>
+      <div id="footer-divider"></div>
+      <div id="footer-right">
+        <div id="sm-icons">
+          <a href="http://www.twitter.com"><i id="twitter" class="sm fa fa-twitter"></i></a>
+          <a href="http://www.facebook.com"><i id="facebook" class="sm fa fa-facebook"></i></a>
+          <a href="http://www.linkedin.com"><i id="linked_in" class="sm fa fa-linkedin"></i></a>
+          <a href="http://www.instagram.com"><i id="instagram" class="sm fa fa-instagram"></i></a>
+        </div>
+      </div>  
+    </div>
+    
+  </footer>
+
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/d3.v2.js"></script> <!-- script bag wheel script -->
+  <script src="js/wheel.js"></script>
+  
+  <script type="text/javascript">
+    drawPie("ArlaTags", dataSet1, "#tagwheel-arla .tagwheel", "colorScale20", 10, 100, 50, 0);
+  </script>
+  
+</body>
+  
+  
+</html>

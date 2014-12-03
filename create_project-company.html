@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+   
+    <title>Min side | Projektbanken</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="ggl.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+<!--    <link rel="stylesheet" href="css/responsive.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hover.css">
+
+  </head>	
+   
+  <body>
+  
+<!------------------------- MAIN-NAV ---------------------------->  
+
+  <header id="header">
+
+    <nav id="main_nav">
+
+      <ul id="main_nav-left">
+        <li><a href="my_page.html">Logo</a></li>
+      </ul>
+
+      <ul id="main_nav-middle">
+        <li id="nav-create_project" class="nav_item">
+          <a href="create_project-company.html">Opret Projekt
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_subscribed" class="nav_item">
+          <a href="projects_students-after_login.html">Se Tilmeldte
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+        <li id="nav-see_projectbase" class="nav_item">
+          <a href="projects_students-after_login.html">Se Projektbasen
+            <div class="underline_nav underline"></div>
+          </a>
+        </li>
+      </ul>
+
+      <ul id="main_nav-right">
+        <li id="nav-user_dropdown-btn">
+          <div id="avatar-profile-Kenny" class="avatar_profile"></div>
+          <a href="my_page.html">Kenny
+          <i id="nav-user_dropdown-arrow" class="fa fa-chevron-down"></i>
+          </a>   
+
+            <ul id="nav-user_dropdown"> <!-- Actual nav dropdown -->
+              <li class="dropdown_item">
+                <a href="#">Redigér profil
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+              <li id="log_out-btn">
+                <a href="#">Log ud
+                  <div class="sideline_nav sideline"></div>
+                </a>
+              </li>
+            </ul>  
+        
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+  
+<!------------------------- MAIN-NAV END ---------------------------->  
+    
+    <div class="wrapper_not_frontpage">
+      <div id="cpWrapper">
+<!------------------------- BREADCRUMPS START ---------------------             -->
+        <div id="bcHeadBox">
+          <h3 id ="bcHead">Opret projekt</h3>
+        </div>
+
+        <div id="bcBoxc">
+
+          <div id="bcULc">
+            <ul>
+              <li id="bcUL1c">
+                <p>Titel</p>
+              </li>
+              <li id="bcUL2c">
+                <p>Beskrivelse</p>
+              </li>
+              <li id="bcUL3c">
+                <p>Fagområder</p>
+              </li>
+              <li id="bcUL4c">
+                <p>Uddannelse</p>
+              </li>
+              <li id="bcUL5c">
+                <p>Deadline</p>
+              </li>
+              <li id="bcUL6c">
+                <p>Tid</p>
+              </li>
+              <li id="bcUL7c">
+                <p>Resourcer</p>
+              </li>
+              <li id="bcUL8c">
+                <p>Kontakt</p>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      
+<!------------------------- BREADCRUMPS END ----------------------->
+        
+<!------------------------- CONTENT IN STEP 1 --------------------->
+        <div id="step1-content" class="step-content-com">
+          <h4>Titel på projektet</h4>
+          <form>
+              <input type="text" name="firstname" autofocus placeholder="Skriv titel her" size="500" required>
+            <br>
+          </form>
+          <button type="submit" >Næste trin</button>
+        </div>
+        <br> 
+<!-------------------- END OF CONTENT IN STEP 1 ------------------->
+<!------------------------- CONTENT IN STEP 2 --------------------->
+        <div id="step2-content" class="step-content-com">
+          <h4>Beskrivelse af projektet</h4>
+          <form>
+            <p>Beskriv projektet i kassen herunder. (max 500 tegn)</p>
+            <br>
+            <textarea autofocus maxlength="500" name="Beskrivelse" placeholder="Beskriv dit projekt her" rows="10" cols="50"></textarea>
+          </form>
+          <br>
+          <button type="submit" >Næste trin</button>
+        </div>
+        <br> 
+<!-------------------- END OF CONTENT IN STEP 2 ------------------->
+<!------------------------- CONTENT IN STEP 3 --------------------->
+      
+        <div id="step3-content" class="step-content-com">
+          <h4>Vælg fagområder i listen</h4>
+          <form>
+            <br>
+            <p>Vælg de emner og evner, der er relevante for jeres projekt. Vælg eksempelvis "marketing", "SEO", "kommunikation" eller "Cost-benefit-analyse".<br>Hold 'Ctrl' (PC) eller 'cmd' (Mac) nede for at vælge flere.</p>
+            <br>
+       <!--   HVIS VI FØLER FOR DET: http://loudev.com/ ELLER: http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/#basic  -->
+            <select multiple required>
+              <option value="None" selected>Ingen</option>
+              <option value="Tag1">HR</option>
+              <option value="Tag2">Grafisk design</option>
+              <option value="Tag3">Analytiker</option>
+              <option value="Tag4">Erhvervsøkonomi</option>
+              <option value="Tag5">Webdesign</option>
+              <option value="Tag6">Kommunikation</option>
+              <option value="Tag7">Marketing</option>
+              <option value="Tag8">SEO</option>
+              <option value="Tag9">Journalistik</option>
+              <option value="Tag10">Programmering</option>
+              <option value="Tag10">Finansiering</option>
+            </select>
+            <br>
+            <button type="submit" >Næste trin</button>
+          </form>
+        </div>
+<!-------------------- END OF CONTENT IN STEP 3 ------------------->
+<!------------------------- CONTENT IN STEP 4 --------------------->
+      
+        <div id="step4-content" class="step-content-com">
+          <h4>Studerendes uddannelsesbaggrund</h4>
+          <br>  
+          <p>Hold 'Ctrl' (PC) eller 'cmd' (Mac) nede for at vælge flere.</p>
+            <ul id="step4UL">
+              <li class="step4formBox">
+                <form>
+                  <h5>Uddannelsesinstitutioner</h5>
+                  <br>
+                  <p>Vælg uddannelsesinstitution(er) herunder.</p>
+                  <br>
+       <!--   HVIS VI FØLER FOR DET: http://loudev.com/ ELLER: http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/#basic  -->
+                  <select multiple="multiple">
+                    <option value="none" selected>Ingen</option>
+                    <option value="udd2">KU</option>
+                    <option value="udd3">RUC</option>
+                    <option value="udd4">Erhvervs akademi</option>
+                    <option value="udd5">ITU</option>
+                    <option value="udd6">Journalisthøjskolen</option>
+                    <option value="udd7">CBS</option>
+                    <option value="udd8">AAU</option>
+                    <option value="udd9">AU</option>
+                    <option value="udd10">SDU</option>
+                  </select>
+                </form>
+              </li>
+              <li class="step4formBox">
+                <form>
+                  <h5>Vælg semestre</h5>
+                  <br>
+                  <p>Vælg hvor langt de studerende skal være.</p>
+                  <br>
+                  <select multiple>
+                    <option value="none" selected>Ingen</option>
+                    <option value="all">Vælg alle</option>
+                    <option value="bac">//Bachelor//</option>
+                    <option value="allb">Alle bac.</option>
+                    <option value="1sem">1.Semester</option>
+                    <option value="2sem">2.Semester</option>
+                    <option value="3sem">3.Semester</option>
+                    <option value="4sem">4.Semester</option>
+                    <option value="5sem">5.Semester</option>
+                    <option value="6sem">6.Semester</option>
+                    <option value=""></option>
+                    <option value="Master">//Kandidat//</option>
+                    <option value="allm">Alle cand</option>
+                    <option value="7sem">7.Semester</option>
+                    <option value="8sem">8.Semester</option>
+                    <option value="9sem">9.Semester</option>
+                    <option value="10sem">10.Semester</option>
+                  </select>
+                </form>
+              </li>
+            </ul>
+          <br>
+          <button type="submit" >Næste trin</button> 
+        </div>
+<!-------------------- END OF CONTENT IN STEP 4 ------------------->
+<!------------------------- CONTENT IN STEP 5 --------------------->
+      
+        <div id="step5-content" class="step-content-com">
+          <h4>Deadline for projektet</h4>
+          <br>
+          <p>Indtast den formodede slutdato for projektet og sæt flueben, hvis datoen er fleksibel.</p>
+          <form>
+            <input type="text" name="dato" placeholder="Indtast dato her" required id="dateinput">
+            <p>Markér herunder om datoen er fleksibel.</p>
+            <div id="checkboxdiv">
+              <label><input type="checkbox" name="checkbox"> Ja</label>
+              <label><input type="checkbox" name="checkbox"> Nej</label>
+            </div>  
+          </form>
+          <br>
+          <button type="submit" >Næste trin</button>
+        </div>
+<!-------------------- END OF CONTENT IN STEP 5 ------------------->
+<!------------------------- CONTENT IN STEP 6 --------------------->
+      
+        <div id="step6-content" class="step-content-com">
+          <h4>Tid</h4>
+          <br>
+          <p>Skriv her hvor meget tid I (cirka) har til projektet.</p>
+          <br>
+          <input type="text" name="tid" placeholder="Fx 1 time/ugen indtil deadline" required>
+          <br>
+          <button type="submit" >Næste trin</button>
+        </div>
+<!-------------------- END OF CONTENT IN STEP 6 ------------------->
+<!------------------------- CONTENT IN STEP 7 --------------------->
+      
+        <div id="step7-content" class="step-content-com">
+          <h4>Resourcer</h4>
+          <br>
+          <p>Vælg til venstre hvilke resourcer I ønsker de studerende skal byde ind med. Vælg til højre hvilke resourcer I selv kan stille til rådighed.<br>Hold 'ctrl' (PC) eller 'cmd' (Mac) nede for at vælge flere.</p>
+          <ul id="step7UL">
+              <li class="step7formBox">
+                <form>
+                  <h5>Studerendes resourcer</h5>
+                  <br>
+                  <!--   HVIS VI FØLER FOR DET: http://loudev.com/ ELLER: http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/#basic  -->
+                  <select multiple="multiple">
+                    <option value="none" selected>Ingen</option>
+                    <option value="res1">Res1</option>
+                    <option value="res2">Res2</option>
+                    <option value="res3">Res3</option>
+                    <option value="res4">Res4</option>
+                    <option value="res5">Res5</option>
+                    <option value="res6">Res6</option>
+                    <option value="res7">Res7</option>
+                    <option value="res8">Res8</option>
+                    <option value="res9">Res9</option>
+                  </select>
+                </form>
+              </li>
+              <li class="step4formBox">
+                <form>
+                  <h5>Resourcer til rådighed</h5>
+                  <br>
+                  <select multiple>
+                    <option value="none" selected>Ingen</option>
+                    <option value="res1">Res1</option>
+                    <option value="res2">Res2</option>
+                    <option value="res3">Res3</option>
+                    <option value="res4">Res4</option>
+                    <option value="res5">Res5</option>
+                    <option value="res6">Res6</option>
+                    <option value="res7">Res7</option>
+                    <option value="res8">Res8</option>
+                  </select>
+                </form>
+              </li>
+            </ul>
+          <br>
+          <button type="submit" >Næste trin</button>
+        </div>
+<!-------------------- END OF CONTENT IN STEP 7 ------------------->
+<!------------------------- CONTENT IN STEP 8 --------------------->
+      
+        <div id="step8-content" class="step-content-com">
+          <h4>Kontakt</h4>
+          <br>
+          <p>Angiv herunder hvem og hvordan I kan kontaktes.</p>
+              <!--     "OPRET DIG" FORM FRA MODAL HER     -->
+          <br>
+          <a href="thankyou.html">
+            <button type="submit" >Næste trin</button>
+          </a>
+        </div>
+<!-------------------- END OF CONTENT IN STEP 8 ------------------->
+      </div>
+    </div>
+    
+    <footer>
+      <div id="footer_not_frontpage">
+        <div id="footer-left">
+          <div id="contact-info">
+            <strong>Projektbanken</strong>
+            <p class="contact-info">
+              <a href="mailto:goddaw@projektbanken.dk?Subject=Goddaw">goddaw@projektbanken.dk</a><br>
+              +45 49 82 73 39
+            </p>
+          </div>
+        </div>
+        <div id="footer-divider"></div>
+        <div id="footer-right">
+          <div id="sm-icons">
+            <a href="http://www.twitter.com"><i id="twitter" class="sm fa fa-twitter"></i></a>
+            <a href="http://www.facebook.com"><i id="facebook" class="sm fa fa-facebook"></i></a>
+            <a href="http://www.linkedin.com"><i id="linked_in" class="sm fa fa-linkedin"></i></a>
+            <a href="http://www.instagram.com"><i id="instagram" class="sm fa fa-instagram"></i></a>
+          </div>
+        </div>  
+      </div>
+    </footer>
+           
+    <script src="js/dropdown.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-ui.js"></script>
+                  
+  </body>
+
+</html>
