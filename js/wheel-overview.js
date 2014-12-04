@@ -1,86 +1,28 @@
       // This example lays out multiple interactive pie charts on a page with multiple HTML layout constructs.
       // Created by Frank Guerino : "http://www.guerino.net"
 
-var hoverColor = this;
+var hoverColor = "#222";
+var labelTextColor = "#222";
+var hoverColorTextandLabel = "#222";
 var link = "#";
 
       // Data Used for this example...
-      var dataSet1 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
+      var dataSet13 = [
+        {legendLabel: "Kommunikation", magnitude: 1, link: link},
+        {legendLabel: "Grafisk Design", magnitude: 1, link: link},
+        {legendLabel: "Front-end", magnitude: 1, link: link},
+        {legendLabel: "Arkitektur", magnitude: 1, link: link},
+        {legendLabel: "Journalistik", magnitude: 1, link: link},
+        {legendLabel: "Regnskabsanalyse", magnitude: 1, link: link},
+        {legendLabel: "Økonomi", magnitude: 1, link: link},
+        {legendLabel: "Tekstforfatning", magnitude: 1, link: link},
+        {legendLabel: "Erhvervsøkonomi", magnitude: 1, link: link},
+        {legendLabel: "Photoshop", magnitude: 1, link: link},
+        {legendLabel: "Oversættelse", magnitude: 1, link: link},
+        {legendLabel: "Naturvidenskab", magnitude: 1, link: link},
+        {legendLabel: "Sundhed & Ernæring", magnitude: 1, link: link},
+        {legendLabel: "Programmering", magnitude: 1, link: link}];
 
-      var dataSet2 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet3 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet4 = [
-        {magnitude: 1, link: link}];
-
-      var dataSet5 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet6 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet7 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet8 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet9 = [
-        {magnitude: 1, link: link}];
-
-      var dataSet10 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet11 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-      var dataSet12 = [
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link},
-        {magnitude: 1, link: link}];
-
-// Tagwheel MED labels
-//      var dataSet1 = [
-//        {legendLabel: "Legend String 1", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 2", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 3", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 4", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 5", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 6", magnitude: 1, link: "index.html"},
-//        {legendLabel: "Legend String 7", magnitude: 1, link: "index.html"}];
 
       function drawPie( pieName, dataSet, selectString, colors, margin, outerRadius, innerRadius, sortArcs ) {
 
@@ -124,10 +66,10 @@ var link = "#";
 	var pieWidthTotal = outerRadius * 2;;
 	var pieCenterX = outerRadius + margin/2;
 	var pieCenterY = outerRadius + margin/2;
-        var legendBulletOffset = 30;
-        var legendVerticalOffset = outerRadius - margin;
+        var legendBulletOffset = -15;
+        var legendVerticalOffset = outerRadius + margin -15;
         var legendTextOffset = 20;
-        var textVerticalSpace = 20;
+        var textVerticalSpace = 25;
 
 	var canvasHeight = 0;
         var pieDrivenHeight = outerRadius*2 + margin*2;
@@ -156,11 +98,11 @@ var link = "#";
 
           var bulletSelector = "." + "pie-" + pieName + "-legendBullet-" + indexValue;
           var selectedLegendBullet = d3.selectAll(bulletSelector);
-          selectedLegendBullet.style("fill", hoverColor);
+          selectedLegendBullet.style("fill", hoverColorTextandLabel);
 
           var textSelector = "." + "pie-" + pieName + "-legendText-" + indexValue;
           var selectedLegendText = d3.selectAll(textSelector);
-          selectedLegendText.style("fill", hoverColor);
+          selectedLegendText.style("fill", hoverColorTextandLabel);
         };
 
         var synchronizedMouseOut = function() {
@@ -179,7 +121,7 @@ var link = "#";
 
           var textSelector = "." + "pie-" + pieName + "-legendText-" + indexValue;
           var selectedLegendText = d3.selectAll(textSelector);
-          selectedLegendText.style("fill", "Blue");
+          selectedLegendText.style("fill", labelTextColor);
         };
 
         var tweenPie = function (b) {
@@ -240,7 +182,7 @@ var link = "#";
           .on('mouseover', synchronizedMouseOver)
           .on("mouseout", synchronizedMouseOut)
           .transition()
-            .ease("none") //Kan også bruge "bounce"
+            .ease("bounce")
             .duration(1000)
             .delay(function(d, i) { return i * 50; })
             .attrTween("d", tweenPie);
@@ -256,9 +198,9 @@ var link = "#";
             d.innerRadius = innerRadius; // Set Inner Coordinate
             return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
           })
-// TEXT ON WHEEL REMOVED
+// TEXT ON WHEEL REMOVED 
 //          .style("fill", "White")
-//          .style("font", "normal 16px Roboto")
+//          .style("font", "normal 12px Arial")
 //          .text(function(d) { return d.data.magnitude; });
 
         // Computes the angle of an arc, converting from radians to degrees.
@@ -268,18 +210,18 @@ var link = "#";
         }
 
         // Plot the bullet circles...
-//        canvas.selectAll("circle")
-//          .data(dataSet).enter().append("svg:circle") // Append circle elements
-//          .attr("cx", pieWidthTotal + legendBulletOffset)
-//          .attr("cy", function(d, i) { return i*textVerticalSpace - legendVerticalOffset; } )
-//          .attr("stroke-width", ".5")
-//          .style("fill", function(d, i) { return colorScale(i); }) // Bullet fill color
-//          .attr("r", 5)
-//          .attr("color_value", function(d, i) { return colorScale(i); }) // Bar fill color...
-//          .attr("index_value", function(d, i) { return "index-" + i; })
-//          .attr("class", function(d, i) { return "pie-" + pieName + "-legendBullet-index-" + i; })
-//          .on('mouseover', synchronizedMouseOver)
-//          .on("mouseout", synchronizedMouseOut);
+        canvas.selectAll("circle")
+          .data(dataSet).enter().append("svg:circle") // Append circle elements
+          .attr("cx", pieWidthTotal + legendBulletOffset)
+          .attr("cy", function(d, i) { return i*textVerticalSpace - legendVerticalOffset; } )
+          .attr("stroke-width", ".5")
+          .style("fill", function(d, i) { return colorScale(i); }) // Bullet fill color
+          .attr("r", 5)
+          .attr("color_value", function(d, i) { return colorScale(i); }) // Bar fill color...
+          .attr("index_value", function(d, i) { return "index-" + i; })
+          .attr("class", function(d, i) { return "pie-" + pieName + "-legendBullet-index-" + i; })
+          .on('mouseover', synchronizedMouseOver)
+          .on("mouseout", synchronizedMouseOut);
 
         // Create hyper linked text at right that acts as label key...
         canvas.selectAll("a.legend_link")
@@ -298,8 +240,9 @@ var link = "#";
               .attr("color_value", function(d, i) { return colorScale(i); }) // Bar fill color...
               .attr("index_value", function(d, i) { return "index-" + i; })
               .attr("class", function(d, i) { return "pie-" + pieName + "-legendText-index-" + i; })
-              .style("fill", "Blue")
-              .style("font", "normal 1.5em Arial")
+              .style("fill", labelTextColor)
+              .attr("color_value", function(d, i) { return colorScale(i);})
+              .style("font", "400 1.2em Roboto")
               .on('mouseover', synchronizedMouseOver)
               .on("mouseout", synchronizedMouseOut);
 

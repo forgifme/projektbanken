@@ -357,9 +357,24 @@
       
     </div> <!-- registered_students-wrapper-after_login -->
         
+<!------------------------- TAGOVERVIEW -------------------------->
+    
+    <div class="tag_overview">
+      
+      <h4>Søg på fagområder</h4>
+<!--    <i id="tag_overview-up_btn" class="fa fa-chevron-up"></i>-->
+      
+      <div id="tags-wrap-to1" class="overview-tags-wrap">
+        <div id="overview-tagwheel" class="tagwheel"></div>
+        <p>Tryk på fagområde<br> for at søge</p>
+      </div>
+      
+    </div>
+    
+<!----------------------- TAGOVERVIEW END ------------------------>  
 <!------------------- MODAL VIEW: REGISTERED ----------------------> 
 
-<div id="modal-profile_of_company">
+<div id="modal-profile_of_company" class="modal">
     <h3>Her er en profil</h3>
       <div id="tags-wrap-c1" class="tags-wrap">
         <p>Tags tilhørende</p>
@@ -368,7 +383,26 @@
       </div>
 </div>
         
-<!---------------- MODAL VIEW: PROJECT END --------------------> 
+<!---------------- MODAL VIEW: REGISTERED END -------------------->
+<!---------------- MODAL VIEW: EDIT PROFILE -------------------> 
+
+<form id="modal-edit-profile-company" class="modal modal-edit-profile" action="my_page.html" method="get">
+  <div class="form-bg"></div> 
+    <h3>Redigér profil</h3>
+    <div class="all_inputs-signup">
+      <input id="company-input" type="text" name="company" value="IT Universitetet" required>  
+      <input id="depart-input" type="text" name="department" value="DDKP">
+      <input id="firstname-input" type="text" name="first name" value="Kenny" required>  
+      <input id="lastname-input" type="text" name="last name" value="Marek Møller" required>
+      <input id="mail-input" type="text" id="mail" name="username" value="kema@itu.dk" required>
+      <input type="password" name="password" placeholder="Gammelt kodeord" required> 
+      <input type="password" name="password" placeholder="Nyt kodeord" required> 
+      <input type="password" name="password" placeholder="Bekræft nyt kodeord" required> 
+    </div>
+    <button type="submit">Opdater</button>
+</form>
+        
+<!--------------- MODAL VIEW: EDIT PROFILE END ------------------>
     
   </div> <!-- wrapper_not_frontpage -->
  
@@ -402,6 +436,7 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/d3.v2.js"></script> <!-- script bag wheel script -->
   <script src="js/wheel.js"></script>
+  <script src="js/wheel-overview.js"></script>
   <script src="js/modal.js"></script>
   
   <script type="text/javascript">
@@ -418,6 +453,8 @@
    drawPie("TagsS4", dataSet10, "#tags-wrap-s4 .reg-tagwheel", "colorScale20", 10, 80, 40, 0);
    drawPie("TagsS5", dataSet11, "#tags-wrap-s5 .reg-tagwheel", "colorScale20", 10, 80, 40, 0);
    drawPie("TagsS6", dataSet12, "#tags-wrap-s6 .reg-tagwheel", "colorScale20", 10, 80, 40, 0);
+    
+   drawPie("TagsTO1", dataSet13, "#tags-wrap-to1 .tagwheel", "colorScale20", 10, 60, 30, 0);
   </script>
   
 </body>

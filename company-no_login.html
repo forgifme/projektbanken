@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/hover.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/multi-select.css">
   <link rel="stylesheet" href="css/responsive.css">
 
 </head>
@@ -132,7 +133,7 @@
       
 <!---------------------- MODAL VIEW: SIGNUP ----------------------> 
 
-<form id="modal-signup-company" class="modal modal-signup">
+<div id="modal-signup-company" class="modal modal-signup">
   <div class="form-bg"></div> 
     <h3>Opret dig for at se mere...</h3>
     <div id="linkedIn-company_signup" class="linkedIn_signup fa fa-linkedin">
@@ -151,7 +152,7 @@
       <input type="password" name="password" placeholder="Bekræft kodeord" required> 
     </div>
   <button type="submit" class="signup-next-btn">Næste</button>
-</form>
+</div>
         
 <!-------------------- MODAL VIEW: SIGNUP END --------------------->
 <!-------------------- MODAL VIEW: SELECT TAGS --------------------> 
@@ -159,9 +160,10 @@
 <form id="modal-select_tags" class="modal modal-select_tags" action="my_page.html" method="get">
   <div class="form-bg"></div> 
     <h3>Vælg dine fagområder</h3>
+<!--
     <div class="all_inputs-select_tags">
       <label for="tag-selector">Vælg fagområde(r)</label>
-      <select id="tag-selector" name="Vælg fagområde" multiple>
+      <select id="tags-select" name="Vælg fagområde" multiple>
         <option>Kommunikation</option>
         <option>Programmering</option>
         <option>Marketing</option>
@@ -170,6 +172,26 @@
         <option>Journalistik</option>
       </select>
     </div>
+-->
+
+  <div class="ms-container"> <!-- CSS in multi-select.css -->
+    
+    <select multiple="multiple" id="tags-select" class="searchable" name="tags-select[]">
+      <option value='elem_1'>Kommunikation</option>
+      <option value='elem_2'>Grafisk Design</option>
+      <option value='elem_3'>Front-end</option>
+      <option value='elem_4'>Arkitektur</option>
+      <option value='elem_1'>Journalistik</option>
+      <option value='elem_2'>Regnskabsanalyse</option>
+      <option value='elem_3'>Økonomi</option>
+      <option value='elem_4'>Tekstforfatning</option>
+      <option value='elem_1'>Erhvervsøkonomi</option>
+      <option value='elem_2'>Photoshop</option>
+      <option value='elem_3'>Oversættelse</option>
+      <option value='elem_4'>Naturvidenskab</option>
+      <option value='elem_2'>Programmering</option>
+    </select>
+  </div>
   
     <div id="tags-wrap-st1" class="select-tags-wrap">
       <p>Vi laver et hjul med fagområder til jer, så det er let at sammenligne med andres</p>
@@ -211,7 +233,10 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/d3.v2.js"></script> <!-- script bag wheel script -->
   <script src="js/wheel.js"></script>
+  <script src="js/wheel-overview.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/jquery.multi-select.js"></script>
+
   
   <script type="text/javascript">
    drawPie("TagsST1", dataSet5, "#tags-wrap-st1 .tagwheel", "colorScale20", 10, 100, 50, 0);

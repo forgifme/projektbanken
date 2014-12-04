@@ -237,6 +237,7 @@ $(".modal-select_tags").hide();
   }
 
   $('.signup-next-btn').click(fnOpenModalSelectTags);
+
   
 // ^^^^^^^^^ Fill inputs on LinkedIn click ^^^^^^^^^
   
@@ -386,14 +387,92 @@ $('#edit_profile-update').click(function() {
 
 $("#nav-user_dropdown-btn").hover(
   function () {
-     $('#nav-user_dropdown').slideDown('easeOutQuint');
+     $('#nav-user_dropdown').slideDown('medium');
   }, 
   function () {
      $('#nav-user_dropdown').slideUp('medium');
   }
 );
   
+// ------------ Show tagoverview on hover  ---------
+  
+$(".tag_overview").mouseenter(function(){
+  $(".tag_overview").animate({
+    bottom: 0,
+    'background-color': "#fff"
+  }, 500);
+}).mouseleave(function(){
+  $(".tag_overview").animate({
+    bottom: -375,
+    'background-color': "#222"
+  }, 500)
+});
 
+// --------- Create project breadcrumb mechanism  ------
+  
+$('.step-content').hide();
+$('.step1').show();
+  
+$('.step1 button').click(function(){
+  $('.step1').hide("slide", {direction: "left"}, 200);
+  $('.step2').show("slide", {direction: "right"}, 200);
+  $('.bc1').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc2').addClass('bc-active');
+});
+  
+$('.step2 button').click(function(){
+  $('.step2').hide("slide", {direction: "left"}, 200);
+  $('.step3').show("slide", {direction: "right"}, 200);
+  $('.bc2').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc3').addClass('bc-active');
+});
+  
+$('.step3 #next_step_3').click(function(){
+  $('.step3').hide("slide", {direction: "left"}, 200);
+  $('.step4').show("slide", {direction: "right"}, 200);
+  $('.bc3').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc4').addClass('bc-active');
+});
+
+$('.step4 button').click(function(){
+  $('.step4').hide("slide", {direction: "left"}, 200);
+  $('.step5').show("slide", {direction: "right"}, 200);
+  $('.bc4').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc5').addClass('bc-active');
+});
+  
+$('.step5 button').click(function(){
+  $('.step5').hide("slide", {direction: "left"}, 200);
+  $('.step6').show("slide", {direction: "right"}, 200);
+  $('.bc5').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc6').addClass('bc-active');
+});
+  
+$('.step6 button').click(function(){
+  $('.step6').hide("slide", {direction: "left"}, 200);
+  $('.step7').show("slide", {direction: "right"}, 200);
+  $('.bc6').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc7').addClass('bc-active');
+});
+  
+$('.step7 button').click(function(){
+  $('.step7').hide("slide", {direction: "left"}, 200);
+  $('.step8').show("slide", {direction: "right"}, 200);
+  $('.bc7').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc8').addClass('bc-active');
+});
+  
+$('.step8 button').click(function(){
+  $('.step8').hide("slide", {direction: "left"}, 200);
+  $('.step9').show("slide", {direction: "right"}, 200);
+  $('.bc8').removeClass('bc-active').addClass('bc-past_step');
+  $('.bc9').addClass('bc-active');
+});
+
+
+// -- Modal: extern multiple select tags (signup & create project) --
+  
+$('#tags-select').multiSelect({});
   
   
 });
