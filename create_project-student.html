@@ -86,27 +86,30 @@
           <div id="bcULs">
             <ul>
               <li id="bcUL1s">
-                <p>Titel</p>
+                <p>Gruppe</p>
               </li>
               <li id="bcUL2s">
-                <p>Beskrivelse</p>
+                <p>Titel</p>
               </li>
               <li id="bcUL3s">
-                <p>Fagområder</p>
+                <p>Beskrivelse</p>
               </li>
               <li id="bcUL4s">
-                <p>Uddannelse</p>
+                <p>Fagområder</p>
               </li>
               <li id="bcUL5s">
-                <p>Deadline</p>
+                <p>Studie</p>
               </li>
               <li id="bcUL6s">
-                <p>Tid</p>
+                <p>Deadline</p>
               </li>
               <li id="bcUL7s">
-                <p>Resourcer</p>
+                <p>Tid</p>
               </li>
               <li id="bcUL8s">
+                <p>Resourcer</p>
+              </li>
+              <li id="bcUL9s">
                 <p>Kontakt</p>
               </li>
 
@@ -116,9 +119,35 @@
         </div>
       
 <!------------------------- BREADCRUMPS END ----------------------->
-        
 <!------------------------- CONTENT IN STEP 1 --------------------->
         <div id="step1-content-stud" class="step-content-stud">
+          <ul id="step8UL-stud">
+            <li class="step1formBox-stud">
+              <form>
+                <h4>Vælg gruppemedlemmer</h4>
+                <br>
+                  <!--   Indsæt valg-.js som også benyttet før + http://stackoverflow.com/questions/3467514/how-to-show-select-in-sorted-order  -->
+                <select multiple="multiple">
+                  <option value="none" selected>Ingen</option>
+                  <option value="res1">Louise Andersen</option>
+                  <option value="res2">Chu Yi Sung</option>
+                  <option value="res3">Mohammed Abdi</option>
+                  <option value="res4">Peter Svendsen</option>
+                  <option value="res5">Søren Johansen</option>
+                  <option value="res6">Sanne Gravgaard</option>
+                  <option value="res7">Bodil Andersen</option>
+                  <option value="res8">Jean Pedersen</option>
+                  <option value="res9">Jesper Stærk</option>
+                </select>
+              </form>
+            </li>
+          </ul>
+          <button type="submit" >Næste trin</button>
+        </div>
+        <br> 
+<!-------------------- END OF CONTENT IN STEP 1 ------------------->      
+<!------------------------- CONTENT IN STEP 2 --------------------->
+        <div id="step2-content-stud" class="step-content-stud">
           <h4>Titel på projektet</h4>
           <br>
           <form>
@@ -128,9 +157,9 @@
           <button type="submit" >Næste trin</button>
         </div>
         <br> 
-<!-------------------- END OF CONTENT IN STEP 1 ------------------->
-<!------------------------- CONTENT IN STEP 2 --------------------->
-        <div id="step2-content-stud" class="step-content-stud">
+<!-------------------- END OF CONTENT IN STEP 2 ------------------->
+<!------------------------- CONTENT IN STEP 3 --------------------->
+        <div id="step3-content-stud" class="step-content-stud">
           <h4>Beskrivelse af projektet</h4>
           <form>
             <p>Beskriv projektet i kassen herunder. (max 500 tegn)</p>
@@ -141,10 +170,10 @@
           <button type="submit" >Næste trin</button>
         </div>
         <br> 
-<!-------------------- END OF CONTENT IN STEP 2 ------------------->
-<!------------------------- CONTENT IN STEP 3 --------------------->
+<!-------------------- END OF CONTENT IN STEP 3 ------------------->
+<!------------------------- CONTENT IN STEP 4 --------------------->
       
-        <div id="step3-content-stud" class="step-content-stud">
+        <div id="step4-content-stud" class="step-content-stud">
           <h4>Vælg fagområder i listen</h4>
           <br>
           <p>Vælg de emner og evner, der er relevante for jeres projekt. Vælg eksempelvis "marketing", "SEO", "kommunikation" eller "Cost-benefit-analyse".<br>Hold 'Ctrl' (PC) eller 'cmd' (Mac) nede for at vælge flere.</p>
@@ -153,31 +182,36 @@
        <!--   HVIS VI FØLER FOR DET: http://loudev.com/ ELLER: http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/#basic  -->
             <select multiple required>
               <option value="None" selected>Ingen</option>
-              <option value="Tag1">HR</option>
+              <option value="Tag1">Økonomi</option>
               <option value="Tag2">Grafisk design</option>
-              <option value="Tag3">Analytiker</option>
+              <option value="Tag3">Frontend</option>
               <option value="Tag4">Erhvervsøkonomi</option>
               <option value="Tag5">Webdesign</option>
               <option value="Tag6">Kommunikation</option>
-              <option value="Tag7">Marketing</option>
-              <option value="Tag8">SEO</option>
-              <option value="Tag9">Journalistik</option>
+              <option value="Tag7">Arkitektur</option>
+              <option value="Tag8">Regnskabsanalyse</option>
+              <option value="Tag9">Tekstforfatning</option>
               <option value="Tag10">Programmering</option>
               <option value="Tag10">Finansiering</option>
+              <option value="Tag10">Erhvervsøkonomi</option>
+              <option value="Tag10">Photoshop</option>
+              <option value="Tag10">Oversættelse</option>
+              <option value="Tag10">Naturvidenskab</option>
+              <option value="Tag10">medicin</option>
             </select>
             <button type="submit" >Næste trin</button>
           </form>
         </div>
-<!-------------------- END OF CONTENT IN STEP 3 ------------------->
-<!------------------------- CONTENT IN STEP 4 --------------------->
+<!-------------------- END OF CONTENT IN STEP 4 ------------------->
+<!------------------------- CONTENT IN STEP 5 --------------------->
       
-        <div id="step4-content-stud" class="step-content-stud">
+        <div id="step5-content-stud" class="step-content-stud">
           <h4>Jeres studie</h4>
           <br>
           <p>Vælg jeres studie i listen herunder, og angiv også hvilket semester I er på.</p>
           <br>  
-            <ul id="step4UL-stud">
-              <li class="step4formBox-stud">
+            <ul id="step5UL-stud">
+              <li class="step5formBox-stud">
                 <form>
                   <h5>Uddannelsesinstitution</h5>
                   <br>
@@ -197,7 +231,7 @@
                   </select>
                 </form>
               </li>
-              <li class="step4formBox-stud">
+              <li class="step5formBox-stud">
                 <form>
                   <h5>Vælg semester</h5>
                   <br>
@@ -223,16 +257,16 @@
           <br>
           <button type="submit" >Næste trin</button> 
         </div>
-<!-------------------- END OF CONTENT IN STEP 4 ------------------->
-<!------------------------- CONTENT IN STEP 5 --------------------->
+<!-------------------- END OF CONTENT IN STEP 5 ------------------->
+<!------------------------- CONTENT IN STEP 6 --------------------->
       
-        <div id="step5-content-stud" class="step-content-stud">
-          <h4>Deadline for projektet</h4>
+        <div id="step6-content-stud" class="step-content-stud">
+          <h4>Deadline for eksamen</h4>
           <br>
-          <p>Indtast den formodede slutdato for projektet og sæt flueben, hvis datoen er fleksibel.</p>
+          <p>Indtast datoen for aflevering af eksamenen tilhørende projektet, og sæt flueben i "JA" hvis slutdatoen for projektet er mere fleksibel.</p>
           <form>
             <input type="text" name="dato" placeholder="Indtast dato her" required id="dateinput-stud">
-            <p>Markér herunder om datoen er fleksibel.</p>
+            <p>Markér her om datoen er fleksibel.</p>
             <div id="checkboxdiv-stud">
               <label><input type="checkbox" name="checkbox"> Ja</label>
               <label><input type="checkbox" name="checkbox"> Nej</label>
@@ -241,10 +275,10 @@
           <br>
           <button type="submit" >Næste trin</button>
         </div>
-<!-------------------- END OF CONTENT IN STEP 5 ------------------->
-<!------------------------- CONTENT IN STEP 6 --------------------->
+<!-------------------- END OF CONTENT IN STEP 6 ------------------->
+<!------------------------- CONTENT IN STEP 7 --------------------->
       
-        <div id="step6-content-stud" class="step-content-stud">
+        <div id="step7-content-stud" class="step-content-stud">
           <h4>Tid</h4>
           <br>
           <p>Skriv her hvor meget tid I (cirka) vil bruge på projektet.</p>
@@ -253,16 +287,16 @@
           <br>
           <button type="submit" >Næste trin</button>
         </div>
-<!-------------------- END OF CONTENT IN STEP 6 ------------------->
-<!------------------------- CONTENT IN STEP 7 --------------------->
+<!-------------------- END OF CONTENT IN STEP 7 ------------------->
+<!------------------------- CONTENT IN STEP 8 --------------------->
       
-        <div id="step7-content-stud" class="step-content-stud">
+        <div id="step8-content-stud" class="step-content-stud">
           <h4>Resourcer</h4>
           <br>
           <p>Vælg til venstre hvilke resourcer I ønsker de studerende skal byde ind med. Vælg til højre hvilke resourcer I selv kan stille til rådighed.<br>Hold 'ctrl' (PC) eller 'cmd' (Mac) nede for at vælge flere.</p>
           <br>
-          <ul id="step7UL-stud">
-              <li class="step7formBox-stud">
+          <ul id="step8UL-stud">
+              <li class="step8formBox-stud">
                 <form>
                   <h5>Studerendes resourcer</h5>
                   <br>
@@ -281,7 +315,7 @@
                   </select>
                 </form>
               </li>
-              <li class="step7formBox-stud">
+              <li class="step8formBox-stud">
                 <form>
                   <h5>Resourcer til rådighed</h5>
                   <br>
@@ -302,10 +336,10 @@
           <br>
           <button type="submit" >Næste trin</button>
         </div>
-<!-------------------- END OF CONTENT IN STEP 7 ------------------->
-<!------------------------- CONTENT IN STEP 8 --------------------->
+<!-------------------- END OF CONTENT IN STEP 8 ------------------->
+<!------------------------- CONTENT IN STEP 9 --------------------->
         
-        <div id="step8-content-stud" class="step-content-stud">
+        <div id="step9-content-stud" class="step-content-stud">
           <h4>Kontakt</h4>
           <br>
           <p>Angiv herunder hvem og hvordan I kan kontaktes.</p>
@@ -315,7 +349,7 @@
             <button type="submit" >Næste trin</button>
           </a>
         </div>
-<!-------------------- END OF CONTENT IN STEP 8 ------------------->
+<!-------------------- END OF CONTENT IN STEP 9 ------------------->
       </div>
     </div>
     
